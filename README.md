@@ -64,7 +64,7 @@ Berikut adalah tautan untuk Dataset katalog buku yang sudah divalidasi:
 ### Guest
 Role Guest adalah pengguna yang belum melakukan login saat masuk aplikasi. Guest hanya dapat mengakses module:
 1. Katalog Buku, tapi tidak bisa melihat detail buku, hanya judulnya saja.
-2. Authentiaksi (Register)
+2. Authentikasi (Register)
 
 ### User
 Role User adalah pengguna utama di aplikasi ini, user dapat mengakses module:
