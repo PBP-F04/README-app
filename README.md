@@ -45,7 +45,7 @@ Modul Katalog Buku adalah fitur yang menampilkan daftar lengkap buku yang tersed
 memungkinkan pengguna untuk memutar atau mendengarkan musik.
 
 ### 7. Autentikasi
-*Modul `Authentikasi` akan dikerjakan secara bersama oleh **Seluruh anggota F04***
+*Modul `Autentikasi` akan dikerjakan secara bersama oleh **Seluruh anggota F04***
 
 Sistem autentikasi utama aplikasi `README` untuk register, login, dan logout.
 
