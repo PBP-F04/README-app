@@ -137,3 +137,8 @@ GitHub.sublime-settings
 .history
 .DS_Store
 .vscode
+bun.lockb
+yar.lock
+package-lock.json
+node_modules
+```

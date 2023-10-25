@@ -1,0 +1,143 @@
+{% extends 'base-tailwind.html' %}
+{% load static %}
+{% block content %}
+    <div class="relative py-4 w-full flex flex-col justify-center items-center">
+        <div class="relative flex flex-col items-center top-20">
+            <h1 class="flex font-InterBold text-4xl text-center">Create Your Account</h1>
+            <div class="flex flex-col w-[300px] mt-10 gap-3">
+                <div class="flex flex-col gap-2">
+                    <input
+                            class="text-[16px] rounded-[10px] px-2 py-1 border-[rgba(168, 168, 168, 0.5)] border-[1px] hover:border-[#727bfc] transition-all font-Inter"
+                            placeholder="Email"
+                            name="email"
+                            id="email-input"
+                            type="email"
+                    />
+                    <p class="text-[14px] text-red-400 font-Inter px-4" id="email-messages"></p>
+                </div>
+
+
+                <div class="flex flex-col gap-2">
+                    <input
+                            class="text-[16px] rounded-[10px] px-2 py-1 border-[rgba(168, 168, 168, 0.5)] border-[1px] hover:border-[#727bfc] font-Inter"
+                            placeholder="Password"
+                            name="password"
+                            type="password"
+                            id="password-input"
+
+                    />
+                    <p class="text-[14px] text-red-400 font-Inter px-4" id="password-messages"></p>
+
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <input
+                            class="text-[16px] rounded-[10px] px-2 py-1 border-[rgba(168, 168, 168, 0.5)] border-[1px] hover:border-[#727bfc] font-Inter"
+                            placeholder="Re-enter Password"
+                            name="enter-password"
+                            type="password"
+                            id="confirm-password-input"
+                    />
+                    <p class="text-[14px] text-red-400 font-Inter px-4" id="confirm-password-messages"></p>
+
+                </div>
+
+                <button
+                        class="p-2 rounded-[10px] text-[16px] text-white bg-[#4661E6] hover:bg-[#2F4FE2] transition-all text-center font-InterBold mt-4"
+                        id="register-button"
+                >
+                    Register
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            return regex.test(email);
+        }
+
+        async function register() {
+            const email = document.getElementById('email-input').value;
+            const password = document.getElementById('password-input').value;
+            const confirmPassword = document.getElementById('confirm-password-input').value;
+
+            const emailMessages = document.getElementById('email-messages');
+            const passwordMessages = document.getElementById('password-messages');
+            const confirmPasswordMessages = document.getElementById('confirm-password-messages');
+
+            if (email.length === 0) {
+                emailMessages.innerHTML = 'Email must not be empty';
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                emailMessages.innerHTML = 'Email is not valid';
+                return;
+            }
+
+            if (password.length === 0) {
+                passwordMessages.innerHTML = 'Password must not be empty';
+                return;
+            }
+
+            if (password.length < 8) {
+                passwordMessages.innerHTML = 'Password must be at least 8 characters long';
+                return;
+            }
+
+            if (confirmPassword.length === 0) {
+                confirmPasswordMessages.innerHTML = 'Confirm password must not be empty';
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                confirmPasswordMessages.innerHTML = 'Passwords do not match';
+                return;
+            }
+
+            const response = await fetch({% url 'authentication:register' %}, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                    confirmPassword: confirmPassword
+                })
+            })
+            const data = await response.json();
+
+            if (data.status === 200) {
+                alert('Account created successfully');
+                window.location.href = "{% url 'authentication:login' %}";
+
+            } else if (data.status === 400) {
+                if (data.errorCode === 401 || data.errorCode === 402) {
+                    emailMessages.innerHTML = data.message;
+                }
+            }
+            console.log(data);
+        }
+
+        document.getElementById('register-button').addEventListener('click', register);
+        document.getElementById('email-input').addEventListener('input', () => {
+            document.getElementById('email-messages').innerHTML = '';
+        });
+        document.getElementById('password-input').addEventListener('input', () => {
+            document.getElementById('password-messages').innerHTML = '';
+        });
+
+        document.getElementById('confirm-password-input').addEventListener('input', () => {
+            document.getElementById('confirm-password-messages').innerHTML = '';
+        });
+        document.getElementById('confirm-password-input').addEventListener('keyup', function (e) {
+            if (e.key === 'Enter') {
+                register();
+            }
+        })
+    </script>
+{% endblock content %}

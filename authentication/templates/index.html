@@ -1,0 +1,103 @@
+{% extends 'base-tailwind.html' %}
+{% load static %}
+{% block content %}
+    <div class="relative py-4 w-full flex flex-col justify-center items-center">
+        <div class="relative flex flex-col items-center top-20">
+            <h1 class="flex font-InterBold text-4xl text-center">Welcome Back</h1>
+            <div class="flex flex-col gap-2 w-[250px] mt-10">
+                <input
+                        class="text-[16px] rounded-[10px] px-2 py-1 border-[rgba(168, 168, 168, 0.5)] border-[1px] hover:border-[#727bfc] transition-all font-Inter"
+                        placeholder="Email"
+                        type="email"
+                        name="email"
+                        id="email-input"
+                />
+
+                <input
+                        class="text-[16px] rounded-[10px] px-2 py-1 border-[rgba(168, 168, 168, 0.5)] border-[1px] hover:border-[#727bfc] font-Inter"
+                        placeholder="Password"
+                        name="password"
+                        type="password"
+                        id="password-input"
+                />
+
+                <div class='flex flex-col font-Inter text-[16px] items-center justify-center' id="messages">
+                </div>
+
+                <button
+                        class="p-2 rounded-[10px] text-[16px] text-white bg-[#4661E6] hover:bg-[#2F4FE2] transition-all text-center font-InterBold mt-4"
+                        id="login-button"
+                >
+                    Login
+                </button>
+
+                <button
+                        type="submit"
+                        class="p-2 rounded-[10px] text-[16px] bg-[#333333] text-white hover:bg-[#999999] transition-all text-center font-InterBold"
+                        id="register-button"
+                >
+                    Don't have an account?
+                </button>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function register() {
+            window.location.href = "{% url 'authentication:register' %}";
+        }
+
+        async function login() {
+
+            const email = document.getElementById("email-input").value;
+            const password = document.getElementById("password-input").value;
+
+            if (email.length === 0 || password.length === 0) {
+                document.getElementById("messages").innerHTML = `
+                    <p>Email or password cannot be empty</p>
+                `;
+                return;
+            }
+
+            const response = await fetch("{% url 'authentication:login' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                },
+                body: JSON.stringify({
+                    email,
+                    password
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.status === 200) {
+                window.location.href = "{% url 'authentication:test' %}";
+
+            } else {
+                document.getElementById("messages").innerHTML = `
+                    <p>${data.message}</p>
+                `;
+            }
+            console.log(data);
+        }
+
+        document.getElementById("login-button").addEventListener("click", login);
+        document.getElementById("register-button").addEventListener("click", register);
+        document.getElementById('password-input').addEventListener('keyup', function (e) {
+            if (e.key === 'Enter') {
+                login();
+            }
+        })
+        document.getElementById('email-input').addEventListener('input', () => {
+            document.getElementById("messages").innerHTML = ``;
+        })
+        document.getElementById('password-input').addEventListener('input', () => {
+            document.getElementById("messages").innerHTML = ``;
+        })
+    </script>
+{% endblock content %}

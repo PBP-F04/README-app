@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "InterBold";
+    src: url("../fonts/Inter-Bold.ttf");
+}
+
+body {
+    font-family: "Inter", serif;
+}
+
+::placeholder {
+    color: #a0aec0;
+    font-family: "Inter", serif;
+    font-size: 16px;
+}
