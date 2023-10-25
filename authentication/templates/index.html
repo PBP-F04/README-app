@@ -21,7 +21,8 @@
                         id="password-input"
                 />
 
-                <div class='flex flex-col font-Inter text-[16px] items-center justify-center' id="messages">
+                <div class='flex flex-col font-Inter text-[16px] items-center justify-center text-red-400'
+                     id="messages">
                 </div>
 
                 <button
@@ -45,6 +46,12 @@
     </div>
 
     <script>
+
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            return regex.test(email);
+        }
+
         function register() {
             window.location.href = "{% url 'authentication:register' %}";
         }
@@ -57,6 +64,13 @@
             if (email.length === 0 || password.length === 0) {
                 document.getElementById("messages").innerHTML = `
                     <p>Email or password cannot be empty</p>
+                `;
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                document.getElementById("messages").innerHTML = `
+                    <p>Email is not valid</p>
                 `;
                 return;
             }
