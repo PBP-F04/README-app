@@ -27,7 +27,7 @@ Modul Pinjam Buku adalah fitur yang memungkinkan pengguna untuk mencari dan memi
 ### 3. Review Buku 
 *Modul `Review Buku` akan dikerjakan oleh: **Ayundha Sachi Mulia***
 
-Modul Review Buku adalah fitur untuk memberikan bintang atau nilai dan ulasan terhadap buku yang telah dibaca. Pengguna dapat berbagi pendapat mereka mengenai buku yang dibaca dan memberikan rekomendasi ke pengguna lainnya berdasarkan minat mereka. Fitur ini juga me
+Modul Review Buku adalah fitur untuk memberikan bintang atau nilai dan ulasan terhadap buku yang telah dibaca. Pengguna dapat berbagi pendapat mereka mengenai buku yang dibaca dan memberikan rekomendasi ke pengguna lainnya berdasarkan minat mereka. Fitur ini juga memungkinkan pengguna untuk melihat ulasan buku dari pengguna lain.
 
 ### 4. Katalog Buku
 *Modul `Katalog Buku` akan dikerjakan oleh: **Muhammad Haekal Kalipaksi***
@@ -37,7 +37,7 @@ Modul Katalog Buku adalah fitur yang menampilkan daftar lengkap buku yang tersed
 ### 5. Forum Diskusi Buku
 *Modul `Forum Diskusi Buku` akan dikerjakan oleh: **Shanahan Danualif Erwin***
 
-Modul Katalog Buku adalah fitur yang menampilkan daftar lengkap buku yang tersedia. Pengguna dapat menjelajahi katalog tersebut untuk mencari buku sesuai kategori, melihat informasi tentang buku, dan juga membaca sinopsis singkat mengenai buku yang dilihat. Pengguna, dapat mengurutkan buku berdasarkan jumlah pembaca atau jumlah disukai, serta pengguna dapat menerapkan filter buku berdasarkan kategori.Pengguna dapat membuka detail buku, yang berisi informasi detail buku, tombol untuk membaca dan meminjam buku, tombol untuk menyukai buku, ulasan buku, pengguna yang sedang membaca buku, dan banyak diskusi buku. 
+Modul Forum Diskusi Buku adalah wadah komunitas dimana pengguna dapat berpartisipasi dalam percakapan tentang buku. Pengguna dapat membuat topik diskusi tentang buku tertentu, berbagi pendapat mereka, bertanya pertanyaan, dan berinteraksi dengan pengguna lain yang memiliki minat serupa. Modul ini mempromosikan dialog dan pertukaran ide antara pengguna yang gemar membaca. Modul ini juga memungkinan pengguna untuk mem-filter diskusi yang ada berdasarkan judul diskusi, jumlah interaksi dalam diskusi, dan jumlah upvote dalam forum diskusi buku tertentu. 
 
 ### 6. Putar Lagu
 *Modul `Putar Lagu` akan dikerjakan secara bersama oleh **Seluruh anggota F04***
