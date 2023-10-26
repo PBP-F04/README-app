@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authentication',
+    'KatalogBuku',
     'django_extensions',
     'django_browser_reload'
 ]
