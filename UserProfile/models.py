@@ -1,10 +1,13 @@
+import uuid
 from django.db import models
+from authentication.models import User
 
 # Create your models here.
 class Profile(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     profile_img = models.URLField()
-    username = models.CharField()
-    name = models.CharField()
+    username = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
     description = models.TextField()
-    #fav_category = models.ManyToManyField()
-    #user = models.OneToOneField()
+    favorite_category = models.ManyToManyField('KatalogBuku.Category', related_name='profiles', blank=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
