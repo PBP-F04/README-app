@@ -1,10 +1,18 @@
 {% extends 'base-tailwind.html' %}
 {% load static %}
 {% block content %}
-    <div class="relative py-4 w-full flex flex-col justify-center items-center">
-        <div class="relative flex flex-col items-center top-20">
+    <div class="relative py-4 w-full flex flex-col justify-center items-center bg-[#F5F7FA]">
+        <div class="relative flex flex-col items-center top-32 border-[1px] w-[80%] lg:w-[50%] rounded-3xl border-gray-400 shadow-2xl p-5 h-[500px] justify-center gap-10">
+            <div class="relative w-16 h-16">
+                <img
+                        src="{% static 'images/logo.png' %}"
+                        alt="logo"
+                        class="w-full h-full object-contain"
+                />
+
+            </div>
             <h1 class="flex font-InterBold text-4xl text-center">Welcome Back</h1>
-            <div class="flex flex-col gap-2 w-[250px] mt-10">
+            <div class="flex flex-col gap-2 w-[70%] lg:w-[40%]">
                 <input
                         class="text-[16px] rounded-[10px] px-2 py-1 border-[rgba(168, 168, 168, 0.5)] border-[1px] hover:border-[#727bfc] transition-all font-Inter"
                         placeholder="Email"
@@ -21,12 +29,12 @@
                         id="password-input"
                 />
 
-                <div class='flex flex-col font-Inter text-[16px] items-center justify-center text-red-400'
+                <div class='flex flex-col font-Inter text-[16px] items-center justify-center text-[#D9534F]'
                      id="messages">
                 </div>
 
                 <button
-                        class="p-2 rounded-[10px] text-[16px] text-white bg-[#4661E6] hover:bg-[#2F4FE2] transition-all text-center font-InterBold mt-4"
+                        class="p-2 rounded-[10px] text-[16px] text-white bg-[#5068A9] hover:bg-[#738AB1] transition-all text-center font-InterBold mt-4"
                         id="login-button"
                 >
                     Login
