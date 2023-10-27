@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'KatalogBuku',
     'django_extensions',
     'django_browser_reload',
-    'UserProfile'
+    'UserProfile',
+    'ForumDiskusi',
 ]
 
 MIDDLEWARE = [
