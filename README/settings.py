@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'authentication',
     'KatalogBuku',
     'django_extensions',
-    'django_browser_reload'
+    'django_browser_reload',
+    'UserProfile'
 ]
 
 MIDDLEWARE = [
