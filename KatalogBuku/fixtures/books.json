@@ -1,0 +1,1802 @@
+[
+  {
+    "pk": "53ca46cd-5213-441d-8721-8b2f74ac1e30",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69681",
+      "issued": "2023-01-01",
+      "title": "The Southern war poetry of the Civil War",
+      "author": "Ellinger, Esther Parker, 1893-1943",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69681/pg69681.txt",
+      "subject": "United States",
+      "synopsis": "Immerse yourself in the captivating realms of \"The Southern war poetry of the Civil War\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Ellinger, Esther Parker, 1893-1943, effortlessly transports readers through the profound depths of United States, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The Southern war poetry of the Civil War.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.740Z",
+      "updated_at": "2023-10-27T14:21:55.740Z"
+    }
+  },
+  {
+    "pk": "ce369265-86b5-47e7-babf-47a21e8c91af",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69682",
+      "issued": "2023-01-01",
+      "title": "Tom Swift circling the globe; or, The daring cruise of the Air Monarch",
+      "author": "Appleton, Victor",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69682/pg69682.txt",
+      "subject": "Science fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Tom Swift circling the globe; or, The daring cruise of the Air Monarch\", an extraordinary work categorized under Science Fiction. This diverse and multifaceted book, penned by the illustrious Appleton, Victor, effortlessly transports readers through the profound depths of Science fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Tom Swift circling the globe; or, The daring cruise of the Air Monarch.\"",
+      "category": [
+        "7b5901e5-c710-4b16-90f4-c40810305217"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "601d196d-5936-4c8f-9f60-c4ac8809f363",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69683",
+      "issued": "2023-01-01",
+      "title": "Men without women",
+      "author": "Hemingway, Ernest, 1899-1961",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69683/pg69683.txt",
+      "subject": "Short stories, American",
+      "synopsis": "Immerse yourself in the captivating realms of \"Men without women\", an extraordinary work categorized under Short Stories. This diverse and multifaceted book, penned by the illustrious Hemingway, Ernest, 1899-1961, effortlessly transports readers through the profound depths of Short stories, American, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Men without women.\"",
+      "category": [
+        "363b57c0-8ad9-410c-9053-3cd3262dc4cf"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "c832bca1-a561-4d64-82aa-1abd1e2e9eec",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69685",
+      "issued": "2023-01-02",
+      "title": "Just sweethearts: A Christmas love story",
+      "author": "Edwards, Harry Stillwell, 1855-1938",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69685/pg69685.txt",
+      "subject": "Christmas stories",
+      "synopsis": "Immerse yourself in the captivating realms of \"Just sweethearts: A Christmas love story\", an extraordinary work categorized under Short Stories. This diverse and multifaceted book, penned by the illustrious Edwards, Harry Stillwell, 1855-1938, effortlessly transports readers through the profound depths of Christmas stories, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Just sweethearts: A Christmas love story.\"",
+      "category": [
+        "363b57c0-8ad9-410c-9053-3cd3262dc4cf"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "2ef5b24b-9f79-4836-8d3f-37c1de923e1f",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69690",
+      "issued": "2023-01-02",
+      "title": "Look out for paint: A farce comedy in three acts",
+      "author": "Shea, Cornelius, 1863-1920",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69690/pg69690.txt",
+      "subject": "Comedies",
+      "synopsis": "Immerse yourself in the captivating realms of \"Look out for paint: A farce comedy in three acts\", an extraordinary work categorized under Comedy. This diverse and multifaceted book, penned by the illustrious Shea, Cornelius, 1863-1920, effortlessly transports readers through the profound depths of Comedies, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Look out for paint: A farce comedy in three acts.\"",
+      "category": [
+        "5ca28a53-6214-4be5-8694-a6303abcf15a"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "c7b01a9c-c9ec-41ec-ac04-106171f1726a",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69692",
+      "issued": "2023-01-02",
+      "title": "Frederick Douglass",
+      "author": "Washington, Booker T., 1856-1915",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69692/pg69692.txt",
+      "subject": "Douglass, Frederick, 1818-1895",
+      "synopsis": "Immerse yourself in the captivating realms of \"Frederick Douglass\", an extraordinary work categorized under Biography. This diverse and multifaceted book, penned by the illustrious Washington, Booker T., 1856-1915, effortlessly transports readers through the profound depths of Douglass, Frederick, 1818-1895, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Frederick Douglass.\"",
+      "category": [
+        "93415a97-12b2-484e-bddd-f75a73cb40b9"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "a02714e6-cad7-43a0-be57-9ddb065c9e0a",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69696",
+      "issued": "2023-01-06",
+      "title": "The Star of India",
+      "author": "Ellis, Edward Sylvester, 1840-1916",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69696/pg69696.txt",
+      "subject": "India",
+      "synopsis": "Immerse yourself in the captivating realms of \"The Star of India\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Ellis, Edward Sylvester, 1840-1916, effortlessly transports readers through the profound depths of India, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The Star of India.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "461bb23d-00ec-4379-8bfd-e7e91a4cd79d",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69699",
+      "issued": "2023-01-03",
+      "title": "Supplement to the catalogue of seals and whales in the British Museum",
+      "author": "Gray, John Edward, 1800-1875",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69699/pg69699.txt",
+      "subject": "Seals (Animals)",
+      "synopsis": "Immerse yourself in the captivating realms of \"Supplement to the catalogue of seals and whales in the British Museum\", an extraordinary work categorized under Animals. This diverse and multifaceted book, penned by the illustrious Gray, John Edward, 1800-1875, effortlessly transports readers through the profound depths of Seals (Animals), offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Supplement to the catalogue of seals and whales in the British Museum.\"",
+      "category": [
+        "b2df2c9f-bbee-498b-a253-78798db74b03"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "d82a4469-1f43-4f8e-b6d7-3dd19449fd83",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69700",
+      "issued": "2023-01-03",
+      "title": "The case-book of Sherlock Holmes",
+      "author": "Doyle, Arthur Conan, 1859-1930",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69700/pg69700.txt",
+      "subject": "Holmes, Sherlock (Fictitious character)",
+      "synopsis": "Immerse yourself in the captivating realms of \"The case-book of Sherlock Holmes\", an extraordinary work categorized under Detective. This diverse and multifaceted book, penned by the illustrious Doyle, Arthur Conan, 1859-1930, effortlessly transports readers through the profound depths of Holmes, Sherlock (Fictitious character), offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The case-book of Sherlock Holmes.\"",
+      "category": [
+        "cee28ac3-cc07-477a-8435-71317e56e10f"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "8f9a7ac6-3812-47ee-ba20-383b22e79894",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69701",
+      "issued": "2023-01-03",
+      "title": "Antennae",
+      "author": "Footner, Hulbert, 1879-1944",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69701/pg69701.txt",
+      "subject": "New York (N.Y.)",
+      "synopsis": "Immerse yourself in the captivating realms of \"Antennae\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Footner, Hulbert, 1879-1944, effortlessly transports readers through the profound depths of New York (N.Y.), offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Antennae.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "352baae3-2b17-406a-8677-59c65d19a24c",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69702",
+      "issued": "2023-01-03",
+      "title": "A backwoods princess",
+      "author": "Footner, Hulbert, 1879-1944",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69702/pg69702.txt",
+      "subject": "Inheritance and succession",
+      "synopsis": "Immerse yourself in the captivating realms of \"A backwoods princess\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Footner, Hulbert, 1879-1944, effortlessly transports readers through the profound depths of Inheritance and succession, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"A backwoods princess.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "189b93a8-1234-4de5-9d99-a0655b65d999",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69703",
+      "issued": "2023-01-04",
+      "title": "The master mind of Mars",
+      "author": "Burroughs, Edgar Rice, 1875-1950",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69703/pg69703.txt",
+      "subject": "Science fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"The master mind of Mars\", an extraordinary work categorized under Science Fiction. This diverse and multifaceted book, penned by the illustrious Burroughs, Edgar Rice, 1875-1950, effortlessly transports readers through the profound depths of Science fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The master mind of Mars.\"",
+      "category": [
+        "7b5901e5-c710-4b16-90f4-c40810305217"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "a02c384e-1a7a-42c0-a1dd-1ec23cf9b3b3",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69704",
+      "issued": "2023-01-04",
+      "title": "The case of Oscar Slater",
+      "author": "Doyle, Arthur Conan, 1859-1930",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69704/pg69704.txt",
+      "subject": "Trials (Murder)",
+      "synopsis": "Immerse yourself in the captivating realms of \"The case of Oscar Slater\", an extraordinary work categorized under Detective. This diverse and multifaceted book, penned by the illustrious Doyle, Arthur Conan, 1859-1930, effortlessly transports readers through the profound depths of Trials (Murder), offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The case of Oscar Slater.\"",
+      "category": [
+        "cee28ac3-cc07-477a-8435-71317e56e10f"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "23125228-8455-4727-8fea-017ffaf32245",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69705",
+      "issued": "2023-01-04",
+      "title": "Gardening for women",
+      "author": "Wolseley, Frances Garnet, Viscountess, 1872-1936",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69705/pg69705.txt",
+      "subject": "Gardening",
+      "synopsis": "Immerse yourself in the captivating realms of \"Gardening for women\", an extraordinary work categorized under Gardening. This diverse and multifaceted book, penned by the illustrious Wolseley, Frances Garnet, Viscountess, 1872-1936, effortlessly transports readers through the profound depths of Gardening, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Gardening for women.\"",
+      "category": [
+        "6ead39cc-0bc9-4d93-8f5c-48362b4b2aa9"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "e25bd2f2-185c-4a6a-a59a-7f8235148248",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69706",
+      "issued": "2023-01-04",
+      "title": "Proceedings [of the] fourth National Conservation Congress [at] Indianapolis, October 1-4, 1912",
+      "author": "United States. National Conservation Congress",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69706/pg69706.txt",
+      "subject": "Natural resources",
+      "synopsis": "Immerse yourself in the captivating realms of \"Proceedings [of the] fourth National Conservation Congress [at] Indianapolis, October 1-4, 1912\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious United States. National Conservation Congress, effortlessly transports readers through the profound depths of Natural resources, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Proceedings [of the] fourth National Conservation Congress [at] Indianapolis, October 1-4, 1912.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "63b858d8-82e7-45c5-ac5a-08fc1ed93864",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69707",
+      "issued": "2023-01-04",
+      "title": "Princess Sukey: The story of a pigeon and her human friends",
+      "author": "Saunders, Marshall, 1861-1947",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69707/pg69707.txt",
+      "subject": "Animals",
+      "synopsis": "Immerse yourself in the captivating realms of \"Princess Sukey: The story of a pigeon and her human friends\", an extraordinary work categorized under Animals. This diverse and multifaceted book, penned by the illustrious Saunders, Marshall, 1861-1947, effortlessly transports readers through the profound depths of Animals, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Princess Sukey: The story of a pigeon and her human friends.\"",
+      "category": [
+        "b2df2c9f-bbee-498b-a253-78798db74b03"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "708d72ac-4a60-4eb6-aae8-3f2a7242a4f2",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69708",
+      "issued": "2023-01-05",
+      "title": "The square pegs",
+      "author": "Bradbury, Ray, 1920-2012",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69708/pg69708.txt",
+      "subject": "Science fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"The square pegs\", an extraordinary work categorized under Science Fiction. This diverse and multifaceted book, penned by the illustrious Bradbury, Ray, 1920-2012, effortlessly transports readers through the profound depths of Science fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The square pegs.\"",
+      "category": [
+        "7b5901e5-c710-4b16-90f4-c40810305217"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "01e3401e-160c-4eac-af17-acdec615b5ef",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69710",
+      "issued": "2023-01-05",
+      "title": "The neutral merchant\r\nin relation to the law of contraband of war and blockade under the order in Council of 11th March, 1915",
+      "author": "Piggott, Francis Taylor, 1852-1925",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69710/pg69710.txt",
+      "subject": "World War, 1914-1918",
+      "synopsis": "Immerse yourself in the captivating realms of \"The neutral merchant\r\nin relation to the law of contraband of war and blockade under the order in Council of 11th March, 1915\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Piggott, Francis Taylor, 1852-1925, effortlessly transports readers through the profound depths of World War, 1914-1918, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The neutral merchant\r\nin relation to the law of contraband of war and blockade under the order in Council of 11th March, 1915.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "61ea099d-7915-4fba-9d9d-0b2094b95b8e",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69712",
+      "issued": "2023-01-05",
+      "title": "When Africa awakes\r\nThe \"inside story\" of the stirrings and strivings of the new Negro in the Western world",
+      "author": "Harrison, Hubert H., 1883-1927",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69712/pg69712.txt",
+      "subject": "African Americans",
+      "synopsis": "Immerse yourself in the captivating realms of \"When Africa awakes\r\nThe \"inside story\" of the stirrings and strivings of the new Negro in the Western world\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Harrison, Hubert H., 1883-1927, effortlessly transports readers through the profound depths of African Americans, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"When Africa awakes\r\nThe \"inside story\" of the stirrings and strivings of the new Negro in the Western world.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "2eccd653-b603-41c9-af73-10cf6c67826b",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69714",
+      "issued": "2023-01-05",
+      "title": "The discarded daughter; or, The children of the isle",
+      "author": "Southworth, Emma Dorothy Eliza Nevitte, 1819-1899",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69714/pg69714.txt",
+      "subject": "Inheritance and succession",
+      "synopsis": "Immerse yourself in the captivating realms of \"The discarded daughter; or, The children of the isle\", an extraordinary work categorized under Inheritance. This diverse and multifaceted book, penned by the illustrious Southworth, Emma Dorothy Eliza Nevitte, 1819-1899, effortlessly transports readers through the profound depths of Inheritance and succession, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The discarded daughter; or, The children of the isle.\"",
+      "category": [
+        "e6e46bb7-2bfc-487e-beff-51c45291eb9c"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "6651b3a4-31e6-49cb-9e94-ac9987277812",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69715",
+      "issued": "2023-01-05",
+      "title": "The scarlet car; The Princess Aline",
+      "author": "Davis, Richard Harding, 1864-1916",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69715/pg69715.txt",
+      "subject": "Humorous stories",
+      "synopsis": "Immerse yourself in the captivating realms of \"The scarlet car; The Princess Aline\", an extraordinary work categorized under Comedy. This diverse and multifaceted book, penned by the illustrious Davis, Richard Harding, 1864-1916, effortlessly transports readers through the profound depths of Humorous stories, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The scarlet car; The Princess Aline.\"",
+      "category": [
+        "5ca28a53-6214-4be5-8694-a6303abcf15a"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "802dce06-5ea9-4c50-8ef5-247c3e465145",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69716",
+      "issued": "2023-01-05",
+      "title": "Life and labor in the spirit world\r\nBeing a description of localities, employments, surroundings, and conditions in the spheres.",
+      "author": "Longley, Mary T. (Mary Theresa), 1853-1928",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69716/pg69716.txt",
+      "subject": "Spirits",
+      "synopsis": "Immerse yourself in the captivating realms of \"Life and labor in the spirit world\r\nBeing a description of localities, employments, surroundings, and conditions in the spheres.\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Longley, Mary T. (Mary Theresa), 1853-1928, effortlessly transports readers through the profound depths of Spirits, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Life and labor in the spirit world\r\nBeing a description of localities, employments, surroundings, and conditions in the spheres..\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "72b95b68-b083-4f30-8e4f-c544837b29e1",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69717",
+      "issued": "2023-01-06",
+      "title": "That Eurasian",
+      "author": "Bey, Aleph",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69717/pg69717.txt",
+      "subject": "India",
+      "synopsis": "Immerse yourself in the captivating realms of \"That Eurasian\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Bey, Aleph, effortlessly transports readers through the profound depths of India, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"That Eurasian.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "400acd5f-9ae8-4cb6-a5a9-339a550edac7",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69720",
+      "issued": "2023-01-06",
+      "title": "Moll Davis: a comedy",
+      "author": "Capes, Bernard, 1854-1918",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69720/pg69720.txt",
+      "subject": "Historical fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Moll Davis: a comedy\", an extraordinary work categorized under Comedy. This diverse and multifaceted book, penned by the illustrious Capes, Bernard, 1854-1918, effortlessly transports readers through the profound depths of Historical fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Moll Davis: a comedy.\"",
+      "category": [
+        "5ca28a53-6214-4be5-8694-a6303abcf15a"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "26b19ef1-6958-40a8-8cef-4708eceb8ebf",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69721",
+      "issued": "2023-01-06",
+      "title": "The flame-gatherers",
+      "author": "Potter, Margaret Horton, 1881-1911",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69721/pg69721.txt",
+      "subject": "Man-woman relationships",
+      "synopsis": "Immerse yourself in the captivating realms of \"The flame-gatherers\", an extraordinary work categorized under Romance. This diverse and multifaceted book, penned by the illustrious Potter, Margaret Horton, 1881-1911, effortlessly transports readers through the profound depths of Man-woman relationships, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The flame-gatherers.\"",
+      "category": [
+        "bb6994c8-6f53-4a60-abb1-11e825cb2d96"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "b0aca2f2-f236-4e4b-846b-610645a6a875",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69723",
+      "issued": "2023-01-06",
+      "title": "An embroidery book",
+      "author": "Arthur, Anne Knox",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69723/pg69723.txt",
+      "subject": "Embroidery",
+      "synopsis": "Immerse yourself in the captivating realms of \"An embroidery book\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Arthur, Anne Knox, effortlessly transports readers through the profound depths of Embroidery, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"An embroidery book.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "5b570edc-0cc3-4974-ab9f-036f85521a81",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69725",
+      "issued": "2023-01-06",
+      "title": "Elementary woodworking",
+      "author": "Foster, Edwin W.",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69725/pg69725.txt",
+      "subject": "Woodwork",
+      "synopsis": "Immerse yourself in the captivating realms of \"Elementary woodworking\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Foster, Edwin W., effortlessly transports readers through the profound depths of Woodwork, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Elementary woodworking.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "bee24d4c-a286-4fd3-b09d-7d938d0556a4",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69727",
+      "issued": "2023-01-07",
+      "title": "The land of gold; or, Three years in California",
+      "author": "Colton, Walter, 1797-1851",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69727/pg69727.txt",
+      "subject": "California",
+      "synopsis": "Immerse yourself in the captivating realms of \"The land of gold; or, Three years in California\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Colton, Walter, 1797-1851, effortlessly transports readers through the profound depths of California, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The land of gold; or, Three years in California.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "9eaf8a1f-817a-4511-be32-240e0130fa8b",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69730",
+      "issued": "2023-01-07",
+      "title": "Death comes for the archbishop",
+      "author": "Cather, Willa, 1873-1947",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69730/pg69730.txt",
+      "subject": "Historical fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Death comes for the archbishop\", an extraordinary work categorized under Fiction. This diverse and multifaceted book, penned by the illustrious Cather, Willa, 1873-1947, effortlessly transports readers through the profound depths of Historical fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Death comes for the archbishop.\"",
+      "category": [
+        "0ca7d3ff-5ff2-4375-9ac6-695a7fde7b19"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "c5d67279-96d0-4856-abb7-d1abcb0564dd",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69733",
+      "issued": "2023-01-07",
+      "title": "Memory",
+      "author": "Sturgeon, Theodore, 1918-1985",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69733/pg69733.txt",
+      "subject": "Science fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Memory\", an extraordinary work categorized under Science Fiction. This diverse and multifaceted book, penned by the illustrious Sturgeon, Theodore, 1918-1985, effortlessly transports readers through the profound depths of Science fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Memory.\"",
+      "category": [
+        "7b5901e5-c710-4b16-90f4-c40810305217"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "48cfe6a0-bed9-4ca0-925b-b901d1187286",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69735",
+      "issued": "2023-01-07",
+      "title": "New Nick Carter weekly no. 197: The little glass vial; or A beautiful blackmailer brought to bay",
+      "author": "Carter, Nicholas (House name)",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69735/pg69735.txt",
+      "subject": "Dime novels",
+      "synopsis": "Immerse yourself in the captivating realms of \"New Nick Carter weekly no. 197: The little glass vial; or A beautiful blackmailer brought to bay\", an extraordinary work categorized under Detective. This diverse and multifaceted book, penned by the illustrious Carter, Nicholas (House name), effortlessly transports readers through the profound depths of Dime novels, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"New Nick Carter weekly no. 197: The little glass vial; or A beautiful blackmailer brought to bay.\"",
+      "category": [
+        "cee28ac3-cc07-477a-8435-71317e56e10f"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "3c3e0d3c-138d-49b0-923f-4482bc1ebc6c",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69737",
+      "issued": "2023-01-07",
+      "title": "Papa's own girl: A novel",
+      "author": "Howland, Marie Stevens, 1836-1921",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69737/pg69737.txt",
+      "subject": "Fantasy fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Papa's own girl: A novel\", an extraordinary work categorized under Fiction. This diverse and multifaceted book, penned by the illustrious Howland, Marie Stevens, 1836-1921, effortlessly transports readers through the profound depths of Fantasy fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Papa's own girl: A novel.\"",
+      "category": [
+        "0ca7d3ff-5ff2-4375-9ac6-695a7fde7b19"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "a20ade26-ff2e-452e-83c3-9c998cff8021",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69741",
+      "issued": "2023-01-08",
+      "title": "The house of five gables",
+      "author": "Holmes, Mary Johnson",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69741/pg69741.txt",
+      "subject": "United States",
+      "synopsis": "Immerse yourself in the captivating realms of \"The house of five gables\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Holmes, Mary Johnson, effortlessly transports readers through the profound depths of United States, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The house of five gables.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "311cd0c2-4d47-448b-b3b8-21553a283d2e",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69745",
+      "issued": "2023-01-08",
+      "title": "The Grip cartoons: vols. I & II, May 1873 to May 1874",
+      "author": "Bengough, J. W. (John Wilson), 1851-1923",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69745/pg69745.txt",
+      "subject": "Canadian wit and humor, Pictorial",
+      "synopsis": "Immerse yourself in the captivating realms of \"The Grip cartoons: vols. I & II, May 1873 to May 1874\", an extraordinary work categorized under Comedy. This diverse and multifaceted book, penned by the illustrious Bengough, J. W. (John Wilson), 1851-1923, effortlessly transports readers through the profound depths of Canadian wit and humor, Pictorial, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The Grip cartoons: vols. I & II, May 1873 to May 1874.\"",
+      "category": [
+        "5ca28a53-6214-4be5-8694-a6303abcf15a"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "49e9f60a-b0d5-418f-8271-474b3bb0d278",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69750",
+      "issued": "2023-01-09",
+      "title": "Under the periscope",
+      "author": "Bennett, Mark Herbert Joseph, 1892-",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69750/pg69750.txt",
+      "subject": "World War, 1914-1918",
+      "synopsis": "Immerse yourself in the captivating realms of \"Under the periscope\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Bennett, Mark Herbert Joseph, 1892-, effortlessly transports readers through the profound depths of World War, 1914-1918, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Under the periscope.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "2e72c4d6-32c9-46c8-aff4-8e9da2eaa530",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69752",
+      "issued": "2023-01-09",
+      "title": "A year of prophesying",
+      "author": "Wells, H. G. (Herbert George), 1866-1946",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69752/pg69752.txt",
+      "subject": "Civilization, Modern",
+      "synopsis": "Immerse yourself in the captivating realms of \"A year of prophesying\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Wells, H. G. (Herbert George), 1866-1946, effortlessly transports readers through the profound depths of Civilization, Modern, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"A year of prophesying.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "80a7cca4-bfe7-422d-9632-a0efecf9da49",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69755",
+      "issued": "2023-01-09",
+      "title": "Women for votes",
+      "author": "Hughes, Elizabeth",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69755/pg69755.txt",
+      "subject": "Women",
+      "synopsis": "Immerse yourself in the captivating realms of \"Women for votes\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Hughes, Elizabeth, effortlessly transports readers through the profound depths of Women, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Women for votes.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "896800dd-9a4f-4d05-b775-29ee16be009d",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69758",
+      "issued": "2023-01-09",
+      "title": "Folly Corner",
+      "author": "Dudeney, Henry, Mrs., 1866-1945",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69758/pg69758.txt",
+      "subject": "England",
+      "synopsis": "Immerse yourself in the captivating realms of \"Folly Corner\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Dudeney, Henry, Mrs., 1866-1945, effortlessly transports readers through the profound depths of England, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Folly Corner.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "82bb9349-aebc-4b88-b9d6-db8acd5d2d8d",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69761",
+      "issued": "2023-01-10",
+      "title": "The sinking of the Titanic, and other poems",
+      "author": "Stahl, Clarence Victor, 1885-1973",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69761/pg69761.txt",
+      "subject": "American poetry",
+      "synopsis": "Immerse yourself in the captivating realms of \"The sinking of the Titanic, and other poems\", an extraordinary work categorized under Poetry. This diverse and multifaceted book, penned by the illustrious Stahl, Clarence Victor, 1885-1973, effortlessly transports readers through the profound depths of American poetry, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The sinking of the Titanic, and other poems.\"",
+      "category": [
+        "5c747be7-091b-4a85-93c7-629affaf4c38"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "b4a60679-7650-4eee-8d2b-06600a4e2c36",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69764",
+      "issued": "2023-01-10",
+      "title": "Novum organon renovatum\r\nBeing the second part of the philosophy of the inductive sciences",
+      "author": "Whewell, William, 1794-1866",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69764/pg69764.txt",
+      "subject": "Science",
+      "synopsis": "Immerse yourself in the captivating realms of \"Novum organon renovatum\r\nBeing the second part of the philosophy of the inductive sciences\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Whewell, William, 1794-1866, effortlessly transports readers through the profound depths of Science, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Novum organon renovatum\r\nBeing the second part of the philosophy of the inductive sciences.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "e9cb7f2e-635f-4f25-ad1f-7dd52c5241ab",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69765",
+      "issued": "2023-01-10",
+      "title": "The Minoans",
+      "author": "Glasgow, George, 1891-",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69765/pg69765.txt",
+      "subject": "Crete (Greece)",
+      "synopsis": "Immerse yourself in the captivating realms of \"The Minoans\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Glasgow, George, 1891-, effortlessly transports readers through the profound depths of Crete (Greece), offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The Minoans.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "9e1c1e6e-7bc4-4464-81ad-aacb9744dba5",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69772",
+      "issued": "2023-01-11",
+      "title": "A Christmas snowflake: a rhyme for children",
+      "author": "Granniss, Anna J. (Anna Jane), 1856-",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69772/pg69772.txt",
+      "subject": "American poetry",
+      "synopsis": "Immerse yourself in the captivating realms of \"A Christmas snowflake: a rhyme for children\", an extraordinary work categorized under Poetry. This diverse and multifaceted book, penned by the illustrious Granniss, Anna J. (Anna Jane), 1856-, effortlessly transports readers through the profound depths of American poetry, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"A Christmas snowflake: a rhyme for children.\"",
+      "category": [
+        "5c747be7-091b-4a85-93c7-629affaf4c38"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "b1148f6d-ce18-4be3-a28a-59e55bbe06f8",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69773",
+      "issued": "2023-01-11",
+      "title": "The long patrol",
+      "author": "Treynor, Albert M.",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69773/pg69773.txt",
+      "subject": "Canada",
+      "synopsis": "Immerse yourself in the captivating realms of \"The long patrol\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Treynor, Albert M., effortlessly transports readers through the profound depths of Canada, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The long patrol.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "fe89fbb1-880e-4b2e-8907-e3ac3e04d505",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69774",
+      "issued": "2023-01-12",
+      "title": "Nature's invitation: Notes of a bird-gazer, North and South",
+      "author": "Torrey, Bradford, 1843-1912",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69774/pg69774.txt",
+      "subject": "Natural history",
+      "synopsis": "Immerse yourself in the captivating realms of \"Nature's invitation: Notes of a bird-gazer, North and South\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Torrey, Bradford, 1843-1912, effortlessly transports readers through the profound depths of Natural history, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Nature's invitation: Notes of a bird-gazer, North and South.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "8d0081ed-c292-41f0-805f-d213a4d93714",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69777",
+      "issued": "2023-01-13",
+      "title": "The rat-trap",
+      "author": "Wyllarde, Dolf, 1871-1950",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69777/pg69777.txt",
+      "subject": "Islands",
+      "synopsis": "Immerse yourself in the captivating realms of \"The rat-trap\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Wyllarde, Dolf, 1871-1950, effortlessly transports readers through the profound depths of Islands, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The rat-trap.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "6c872c30-cbd2-4575-b2a9-24a111bcec23",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69779",
+      "issued": "2023-01-13",
+      "title": "Something about Eve: A comedy of fig-leaves",
+      "author": "Cabell, James Branch, 1879-1958",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69779/pg69779.txt",
+      "subject": "Historical fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Something about Eve: A comedy of fig-leaves\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Cabell, James Branch, 1879-1958, effortlessly transports readers through the profound depths of Historical fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Something about Eve: A comedy of fig-leaves.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "2f7119ca-8f53-4336-83e3-ff712ad87d78",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69780",
+      "issued": "2023-01-13",
+      "title": "Mrs. Hallam's companion; and The Spring Farm, and other tales",
+      "author": "Holmes, Mary Jane, 1825-1907",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69780/pg69780.txt",
+      "subject": "American fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Mrs. Hallam's companion; and The Spring Farm, and other tales\", an extraordinary work categorized under Fiction. This diverse and multifaceted book, penned by the illustrious Holmes, Mary Jane, 1825-1907, effortlessly transports readers through the profound depths of American fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Mrs. Hallam's companion; and The Spring Farm, and other tales.\"",
+      "category": [
+        "0ca7d3ff-5ff2-4375-9ac6-695a7fde7b19"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "d10834e0-6574-4876-b626-b0955029ee45",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69781",
+      "issued": "2023-01-13",
+      "title": "Frederick Warne & Co.'s list of juvenile literature, prize books, and gift books for young people",
+      "author": "Frederick Warne and Co.",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69781/pg69781.txt",
+      "subject": "Publishers' catalogs",
+      "synopsis": "Immerse yourself in the captivating realms of \"Frederick Warne & Co.'s list of juvenile literature, prize books, and gift books for young people\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Frederick Warne and Co., effortlessly transports readers through the profound depths of Publishers' catalogs, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Frederick Warne & Co.'s list of juvenile literature, prize books, and gift books for young people.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "e93dd94c-659a-451c-aa67-c826e185d2b1",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69783",
+      "issued": "2023-01-13",
+      "title": "A synopsis of the palms of Puerto Rico",
+      "author": "Cook, O. F. (Orator Fuller), 1867-1949",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69783/pg69783.txt",
+      "subject": "Palms",
+      "synopsis": "Immerse yourself in the captivating realms of \"A synopsis of the palms of Puerto Rico\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Cook, O. F. (Orator Fuller), 1867-1949, effortlessly transports readers through the profound depths of Palms, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"A synopsis of the palms of Puerto Rico.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "8eda26af-f5b9-4efc-8383-bb49a7a349b3",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69785",
+      "issued": "2023-01-14",
+      "title": "West Lawn, and The rector of St. Mark's",
+      "author": "Holmes, Mary Jane, 1825-1907",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69785/pg69785.txt",
+      "subject": "American fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"West Lawn, and The rector of St. Mark's\", an extraordinary work categorized under Fiction. This diverse and multifaceted book, penned by the illustrious Holmes, Mary Jane, 1825-1907, effortlessly transports readers through the profound depths of American fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"West Lawn, and The rector of St. Mark's.\"",
+      "category": [
+        "0ca7d3ff-5ff2-4375-9ac6-695a7fde7b19"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "0d6941d7-9381-4986-80af-4fb34703883f",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69786",
+      "issued": "2023-01-14",
+      "title": "Dreams and delights",
+      "author": "Beck, L. Adams (Lily Adams), 1862-1931",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69786/pg69786.txt",
+      "subject": "Short stories",
+      "synopsis": "Immerse yourself in the captivating realms of \"Dreams and delights\", an extraordinary work categorized under Short Stories. This diverse and multifaceted book, penned by the illustrious Beck, L. Adams (Lily Adams), 1862-1931, effortlessly transports readers through the profound depths of Short stories, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Dreams and delights.\"",
+      "category": [
+        "363b57c0-8ad9-410c-9053-3cd3262dc4cf"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "6df38a0d-5dc4-4c3c-8dbb-0f6bb65b3b3c",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69787",
+      "issued": "2023-01-14",
+      "title": "The splendour of Asia: The story and teaching of the Buddha",
+      "author": "Beck, L. Adams (Lily Adams), 1862-1931",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69787/pg69787.txt",
+      "subject": "Buddha (The concept)",
+      "synopsis": "Immerse yourself in the captivating realms of \"The splendour of Asia: The story and teaching of the Buddha\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Beck, L. Adams (Lily Adams), 1862-1931, effortlessly transports readers through the profound depths of Buddha (The concept), offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The splendour of Asia: The story and teaching of the Buddha.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "68b74390-8455-40c8-8d69-47b355cebc78",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69788",
+      "issued": "2023-01-14",
+      "title": "The avenger",
+      "author": "Wallace, Edgar, 1875-1932",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69788/pg69788.txt",
+      "subject": "Detective and mystery stories",
+      "synopsis": "Immerse yourself in the captivating realms of \"The avenger\", an extraordinary work categorized under Detective. This diverse and multifaceted book, penned by the illustrious Wallace, Edgar, 1875-1932, effortlessly transports readers through the profound depths of Detective and mystery stories, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The avenger.\"",
+      "category": [
+        "cee28ac3-cc07-477a-8435-71317e56e10f"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "fbc2dbc7-8207-475e-972b-bfe0b48d7d2f",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69789",
+      "issued": "2023-01-14",
+      "title": "The Fellowship of the Frog",
+      "author": "Wallace, Edgar, 1875-1932",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69789/pg69789.txt",
+      "subject": "Detective and mystery stories",
+      "synopsis": "Immerse yourself in the captivating realms of \"The Fellowship of the Frog\", an extraordinary work categorized under Detective. This diverse and multifaceted book, penned by the illustrious Wallace, Edgar, 1875-1932, effortlessly transports readers through the profound depths of Detective and mystery stories, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The Fellowship of the Frog.\"",
+      "category": [
+        "cee28ac3-cc07-477a-8435-71317e56e10f"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "bf7c5f0a-07e9-4980-b219-4d412131e6c8",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69790",
+      "issued": "2023-01-14",
+      "title": "The Three Just Men",
+      "author": "Wallace, Edgar, 1875-1932",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69790/pg69790.txt",
+      "subject": "Detective and mystery stories",
+      "synopsis": "Immerse yourself in the captivating realms of \"The Three Just Men\", an extraordinary work categorized under Detective. This diverse and multifaceted book, penned by the illustrious Wallace, Edgar, 1875-1932, effortlessly transports readers through the profound depths of Detective and mystery stories, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The Three Just Men.\"",
+      "category": [
+        "cee28ac3-cc07-477a-8435-71317e56e10f"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "328848b6-a1d8-417d-8dfc-63bb0f01af95",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69798",
+      "issued": "2023-01-14",
+      "title": "Smoky, the cow horse",
+      "author": "James, Will, 1892-1942",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69798/pg69798.txt",
+      "subject": "Horses",
+      "synopsis": "Immerse yourself in the captivating realms of \"Smoky, the cow horse\", an extraordinary work categorized under Animals. This diverse and multifaceted book, penned by the illustrious James, Will, 1892-1942, effortlessly transports readers through the profound depths of Horses, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Smoky, the cow horse.\"",
+      "category": [
+        "b2df2c9f-bbee-498b-a253-78798db74b03"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "8ffba147-5d70-4837-9560-13be8fbfd0ac",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69800",
+      "issued": "2023-01-14",
+      "title": "Christmas stories",
+      "author": "Holmes, Mary Jane, 1825-1907",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69800/pg69800.txt",
+      "subject": "American fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Christmas stories\", an extraordinary work categorized under Fiction. This diverse and multifaceted book, penned by the illustrious Holmes, Mary Jane, 1825-1907, effortlessly transports readers through the profound depths of American fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Christmas stories.\"",
+      "category": [
+        "0ca7d3ff-5ff2-4375-9ac6-695a7fde7b19"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "d6213f8e-355a-4fc2-9b62-8927fe1334b6",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69801",
+      "issued": "2023-01-14",
+      "title": "The dread Apache: That early-day scourge of the Southwest",
+      "author": "Freeman, Merrill Pingree, 1844-1915",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69801/pg69801.txt",
+      "subject": "Indians of North America",
+      "synopsis": "Immerse yourself in the captivating realms of \"The dread Apache: That early-day scourge of the Southwest\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Freeman, Merrill Pingree, 1844-1915, effortlessly transports readers through the profound depths of Indians of North America, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The dread Apache: That early-day scourge of the Southwest.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "a8a2111a-3815-41a1-b350-c986358d49bd",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69803",
+      "issued": "2023-01-15",
+      "title": "Australia—Fortune land",
+      "author": "O'Hargan, Roderick",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69803/pg69803.txt",
+      "subject": "Australia",
+      "synopsis": "Immerse yourself in the captivating realms of \"Australia—Fortune land\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious O'Hargan, Roderick, effortlessly transports readers through the profound depths of Australia, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Australia—Fortune land.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "f264af39-d289-4d9f-a815-9c0bdd133622",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69806",
+      "issued": "2023-01-15",
+      "title": "The Circe of the deserts",
+      "author": "Henry-Bordeaux, Paule, 1903-1999",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69806/pg69806.txt",
+      "subject": "Middle East",
+      "synopsis": "Immerse yourself in the captivating realms of \"The Circe of the deserts\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Henry-Bordeaux, Paule, 1903-1999, effortlessly transports readers through the profound depths of Middle East, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The Circe of the deserts.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "5d7569a6-66cb-44e0-af35-182794e99565",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69807",
+      "issued": "2023-01-15",
+      "title": "The mystery of Easter island: the story of an expedition",
+      "author": "Routledge, Katherine, 1866-1935",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69807/pg69807.txt",
+      "subject": "Voyages and travels",
+      "synopsis": "Immerse yourself in the captivating realms of \"The mystery of Easter island: the story of an expedition\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Routledge, Katherine, 1866-1935, effortlessly transports readers through the profound depths of Voyages and travels, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The mystery of Easter island: the story of an expedition.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "89d002e9-e17e-47e0-9201-b2b1e2bcb527",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69809",
+      "issued": "2023-01-15",
+      "title": "For whose sake?\r\nA sequel to \"Why did he wed her?\"",
+      "author": "Southworth, Emma Dorothy Eliza Nevitte, 1819-1899",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69809/pg69809.txt",
+      "subject": "England",
+      "synopsis": "Immerse yourself in the captivating realms of \"For whose sake?\r\nA sequel to \"Why did he wed her?\"\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Southworth, Emma Dorothy Eliza Nevitte, 1819-1899, effortlessly transports readers through the profound depths of England, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"For whose sake?\r\nA sequel to \"Why did he wed her?\".\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "5769c8c6-99ec-4ae1-bbe5-a85aa0dbdf70",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69810",
+      "issued": "2023-01-15",
+      "title": "The pronunciation of Greek; accent and quantity. A philological inquiry",
+      "author": "Blackie, John Stuart, 1809-1895",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69810/pg69810.txt",
+      "subject": "Greek language",
+      "synopsis": "Immerse yourself in the captivating realms of \"The pronunciation of Greek; accent and quantity. A philological inquiry\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Blackie, John Stuart, 1809-1895, effortlessly transports readers through the profound depths of Greek language, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The pronunciation of Greek; accent and quantity. A philological inquiry.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "2cd34da4-eba7-4269-9b15-f3a7fad534ef",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69813",
+      "issued": "2023-01-16",
+      "title": "Go she must!",
+      "author": "Garnett, David, 1892-1981",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69813/pg69813.txt",
+      "subject": "Villages",
+      "synopsis": "Immerse yourself in the captivating realms of \"Go she must!\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Garnett, David, 1892-1981, effortlessly transports readers through the profound depths of Villages, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Go she must!.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "a53ca71e-4b6c-4cad-b20f-0371cfc93166",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69814",
+      "issued": "2023-01-16",
+      "title": "Campaign and battle of Lynchburg, Va.",
+      "author": "Blackford, Charles Minor, 1833-1903",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69814/pg69814.txt",
+      "subject": "Lynchburg, Battle of, Lynchburg, Va., 1864",
+      "synopsis": "Immerse yourself in the captivating realms of \"Campaign and battle of Lynchburg, Va.\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Blackford, Charles Minor, 1833-1903, effortlessly transports readers through the profound depths of Lynchburg, Battle of, Lynchburg, Va., 1864, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Campaign and battle of Lynchburg, Va..\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "9d85e041-f656-4aac-bbea-4c66e05592f0",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69816",
+      "issued": "2023-01-16",
+      "title": "The works of Richard Hurd, volume 7 (of 8)",
+      "author": "Hurd, Richard, 1720-1808",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69816/pg69816.txt",
+      "subject": "Church of England",
+      "synopsis": "Immerse yourself in the captivating realms of \"The works of Richard Hurd, volume 7 (of 8)\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Hurd, Richard, 1720-1808, effortlessly transports readers through the profound depths of Church of England, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The works of Richard Hurd, volume 7 (of 8).\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "178c4be9-5865-4b22-a440-94b11f5c15d5",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69817",
+      "issued": "2023-01-16",
+      "title": "A kiss for Cinderella: A comedy",
+      "author": "Barrie, J. M. (James Matthew), 1860-1937",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69817/pg69817.txt",
+      "subject": "Comedies",
+      "synopsis": "Immerse yourself in the captivating realms of \"A kiss for Cinderella: A comedy\", an extraordinary work categorized under Comedy. This diverse and multifaceted book, penned by the illustrious Barrie, J. M. (James Matthew), 1860-1937, effortlessly transports readers through the profound depths of Comedies, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"A kiss for Cinderella: A comedy.\"",
+      "category": [
+        "5ca28a53-6214-4be5-8694-a6303abcf15a"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "1fb705f3-bb18-4027-b7b5-8a1bd76b789a",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69818",
+      "issued": "2023-01-16",
+      "title": "An essay towards a natural history of serpents",
+      "author": "Owen, Charles, -1746",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69818/pg69818.txt",
+      "subject": "Serpents",
+      "synopsis": "Immerse yourself in the captivating realms of \"An essay towards a natural history of serpents\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Owen, Charles, -1746, effortlessly transports readers through the profound depths of Serpents, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"An essay towards a natural history of serpents.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "152fbc5d-74d8-42c6-89e0-8c0ce1046e84",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69820",
+      "issued": "2023-01-17",
+      "title": "Climate—Incorporated",
+      "author": "Smith, George O. (George Oliver), 1911-1981",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69820/pg69820.txt",
+      "subject": "Science fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Climate—Incorporated\", an extraordinary work categorized under Science Fiction. This diverse and multifaceted book, penned by the illustrious Smith, George O. (George Oliver), 1911-1981, effortlessly transports readers through the profound depths of Science fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Climate—Incorporated.\"",
+      "category": [
+        "7b5901e5-c710-4b16-90f4-c40810305217"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "d2e66447-e1c5-4316-a962-d661cbc6bd7d",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69823",
+      "issued": "2023-01-17",
+      "title": "Public health and insurance: American addresses",
+      "author": "Newsholme, Arthur, Sir, 1857-1943",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69823/pg69823.txt",
+      "subject": "Public health",
+      "synopsis": "Immerse yourself in the captivating realms of \"Public health and insurance: American addresses\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Newsholme, Arthur, Sir, 1857-1943, effortlessly transports readers through the profound depths of Public health, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Public health and insurance: American addresses.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "b29502fa-6dcc-4ddb-a8fc-efff690083ce",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69824",
+      "issued": "2023-01-17",
+      "title": "The works of Richard Hurd, volume 8 (of 8)",
+      "author": "Hurd, Richard, 1720-1808",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69824/pg69824.txt",
+      "subject": "Church of England",
+      "synopsis": "Immerse yourself in the captivating realms of \"The works of Richard Hurd, volume 8 (of 8)\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Hurd, Richard, 1720-1808, effortlessly transports readers through the profound depths of Church of England, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The works of Richard Hurd, volume 8 (of 8).\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "123d92a7-554b-4df8-876e-90cccb5f99db",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69825",
+      "issued": "2023-01-18",
+      "title": "An apology for idlers, and other essays",
+      "author": "Stevenson, Robert Louis, 1850-1894",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69825/pg69825.txt",
+      "subject": "Essays",
+      "synopsis": "Immerse yourself in the captivating realms of \"An apology for idlers, and other essays\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Stevenson, Robert Louis, 1850-1894, effortlessly transports readers through the profound depths of Essays, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"An apology for idlers, and other essays.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "8ea881f1-6222-46a9-a88b-788f233c16d9",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69826",
+      "issued": "2023-01-18",
+      "title": "Monarchs of minstrelsy, from \"Daddy\" Rice to date",
+      "author": "Rice, Edw. Le Roy (Edward Le Roy), 1871-1938",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69826/pg69826.txt",
+      "subject": "Minstrel shows",
+      "synopsis": "Immerse yourself in the captivating realms of \"Monarchs of minstrelsy, from \"Daddy\" Rice to date\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Rice, Edw. Le Roy (Edward Le Roy), 1871-1938, effortlessly transports readers through the profound depths of Minstrel shows, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Monarchs of minstrelsy, from \"Daddy\" Rice to date.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "d561c75e-b948-42ec-8f0a-33c8e7951771",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69827",
+      "issued": "2023-01-18",
+      "title": "A manual on the origin and development of Washington",
+      "author": "Caemmerer, H. Paul (Hans Paul), 1884-1962",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69827/pg69827.txt",
+      "subject": "Washington (D.C.)",
+      "synopsis": "Immerse yourself in the captivating realms of \"A manual on the origin and development of Washington\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Caemmerer, H. Paul (Hans Paul), 1884-1962, effortlessly transports readers through the profound depths of Washington (D.C.), offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"A manual on the origin and development of Washington.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "3a7ab5b7-590a-4a00-a133-961c6d7b3cf1",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69828",
+      "issued": "2023-01-18",
+      "title": "The bride's fate\r\nThe sequel to \"The changed brides\"",
+      "author": "Southworth, Emma Dorothy Eliza Nevitte, 1819-1899",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69828/pg69828.txt",
+      "subject": "American fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"The bride's fate\r\nThe sequel to \"The changed brides\"\", an extraordinary work categorized under Fiction. This diverse and multifaceted book, penned by the illustrious Southworth, Emma Dorothy Eliza Nevitte, 1819-1899, effortlessly transports readers through the profound depths of American fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The bride's fate\r\nThe sequel to \"The changed brides\".\"",
+      "category": [
+        "0ca7d3ff-5ff2-4375-9ac6-695a7fde7b19"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "8e38e0db-4f1f-4a8a-aff1-04515cd00764",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69830",
+      "issued": "2023-01-18",
+      "title": "My experiments with volcanoes",
+      "author": "Jaggar, Thomas Augustus, 1871-1953",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69830/pg69830.txt",
+      "subject": "Volcanoes",
+      "synopsis": "Immerse yourself in the captivating realms of \"My experiments with volcanoes\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Jaggar, Thomas Augustus, 1871-1953, effortlessly transports readers through the profound depths of Volcanoes, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"My experiments with volcanoes.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "6717f4b6-46c9-4d89-b0b5-7d4aa1ce7e58",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69831",
+      "issued": "2023-01-21",
+      "title": "A history of the mathematical theories of attraction and the figure of the earth from the time of Newton to that of Laplace. Volume 1",
+      "author": "Todhunter, I. (Isaac), 1820-1884",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69831/pg69831.txt",
+      "subject": "Attractions of ellipsoids",
+      "synopsis": "Immerse yourself in the captivating realms of \"A history of the mathematical theories of attraction and the figure of the earth from the time of Newton to that of Laplace. Volume 1\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Todhunter, I. (Isaac), 1820-1884, effortlessly transports readers through the profound depths of Attractions of ellipsoids, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"A history of the mathematical theories of attraction and the figure of the earth from the time of Newton to that of Laplace. Volume 1.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "e3b1f901-0fbe-4870-b049-7cef0dc26106",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69832",
+      "issued": "2023-01-21",
+      "title": "A history of the mathematical theories of attraction and the figure of the earth from the time of Newton to that of Laplace. Volume 2",
+      "author": "Todhunter, I. (Isaac), 1820-1884",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69832/pg69832.txt",
+      "subject": "Attractions of ellipsoids",
+      "synopsis": "Immerse yourself in the captivating realms of \"A history of the mathematical theories of attraction and the figure of the earth from the time of Newton to that of Laplace. Volume 2\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Todhunter, I. (Isaac), 1820-1884, effortlessly transports readers through the profound depths of Attractions of ellipsoids, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"A history of the mathematical theories of attraction and the figure of the earth from the time of Newton to that of Laplace. Volume 2.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "b7c97551-6f8f-4706-abfd-076d02381889",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69833",
+      "issued": "2023-01-18",
+      "title": "Ahead of his time",
+      "author": "Cummings, Ray, 1887-1957",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69833/pg69833.txt",
+      "subject": "Science fiction",
+      "synopsis": "Immerse yourself in the captivating realms of \"Ahead of his time\", an extraordinary work categorized under Science Fiction. This diverse and multifaceted book, penned by the illustrious Cummings, Ray, 1887-1957, effortlessly transports readers through the profound depths of Science fiction, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Ahead of his time.\"",
+      "category": [
+        "7b5901e5-c710-4b16-90f4-c40810305217"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "4243c6a8-15b6-435e-8818-aaef63aea55f",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69835",
+      "issued": "2023-01-19",
+      "title": "The Negro and the nation",
+      "author": "Harrison, Hubert H., 1883-1927",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69835/pg69835.txt",
+      "subject": "African Americans",
+      "synopsis": "Immerse yourself in the captivating realms of \"The Negro and the nation\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Harrison, Hubert H., 1883-1927, effortlessly transports readers through the profound depths of African Americans, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The Negro and the nation.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "12f33936-8acb-4424-b0ab-ff71553652cf",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69837",
+      "issued": "2023-01-19",
+      "title": "An index finger",
+      "author": "Abrojal, Tulis",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69837/pg69837.txt",
+      "subject": "United States",
+      "synopsis": "Immerse yourself in the captivating realms of \"An index finger\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Abrojal, Tulis, effortlessly transports readers through the profound depths of United States, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"An index finger.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "c3c4880d-67e5-4055-ac88-6ffbf2db3b77",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69843",
+      "issued": "2023-01-20",
+      "title": "Gloriana; or, the revolution of 1900",
+      "author": "Dixie, Florence, Lady, 1855-1905",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69843/pg69843.txt",
+      "subject": "Utopias",
+      "synopsis": "Immerse yourself in the captivating realms of \"Gloriana; or, the revolution of 1900\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Dixie, Florence, Lady, 1855-1905, effortlessly transports readers through the profound depths of Utopias, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Gloriana; or, the revolution of 1900.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "92a3797d-c98d-4c9a-ab06-7a8ad6ef428d",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69844",
+      "issued": "2023-01-20",
+      "title": "A history of Italian painting",
+      "author": "Mather, Frank Jewett, 1868-1953",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69844/pg69844.txt",
+      "subject": "Painting",
+      "synopsis": "Immerse yourself in the captivating realms of \"A history of Italian painting\", an extraordinary work categorized under Art. This diverse and multifaceted book, penned by the illustrious Mather, Frank Jewett, 1868-1953, effortlessly transports readers through the profound depths of Painting, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"A history of Italian painting.\"",
+      "category": [
+        "73afd881-a8bb-4662-9149-672f950ce17e"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "6bdfa9ff-22ab-4f2f-89b9-1208d26d3e8b",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69845",
+      "issued": "2023-01-20",
+      "title": "The club of masks",
+      "author": "Upward, Allen, 1863-1926",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69845/pg69845.txt",
+      "subject": "Detective and mystery stories",
+      "synopsis": "Immerse yourself in the captivating realms of \"The club of masks\", an extraordinary work categorized under Detective. This diverse and multifaceted book, penned by the illustrious Upward, Allen, 1863-1926, effortlessly transports readers through the profound depths of Detective and mystery stories, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The club of masks.\"",
+      "category": [
+        "cee28ac3-cc07-477a-8435-71317e56e10f"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "c285320b-0985-4508-9da2-0840928f602d",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69847",
+      "issued": "2023-01-20",
+      "title": "Travels through Central Africa to Timbuctoo and across the Great Desert to Morocco performed in the year 1824-1828, in Two Volumes, Vol. I",
+      "author": "Caillié, René, 1799-1838",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69847/pg69847.txt",
+      "subject": "Sudan (Region)",
+      "synopsis": "Immerse yourself in the captivating realms of \"Travels through Central Africa to Timbuctoo and across the Great Desert to Morocco performed in the year 1824-1828, in Two Volumes, Vol. I\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Caillié, René, 1799-1838, effortlessly transports readers through the profound depths of Sudan (Region), offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Travels through Central Africa to Timbuctoo and across the Great Desert to Morocco performed in the year 1824-1828, in Two Volumes, Vol. I.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "a1e5acdc-a4cf-4161-afb3-3442be543985",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69851",
+      "issued": "2023-01-21",
+      "title": "The medieval Inquisition: A study in religious persecution",
+      "author": "Gorham, Charles T. (Charles Turner), 1856-1933",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69851/pg69851.txt",
+      "subject": "Inquisition",
+      "synopsis": "Immerse yourself in the captivating realms of \"The medieval Inquisition: A study in religious persecution\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Gorham, Charles T. (Charles Turner), 1856-1933, effortlessly transports readers through the profound depths of Inquisition, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The medieval Inquisition: A study in religious persecution.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "2d48bd17-0339-4dac-9fe7-35d72ec0bedf",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69852",
+      "issued": "2023-01-21",
+      "title": "Westminster Abbey: The last days of the monastery as shown by the life and times of Abbot John Islip, 1464-1532",
+      "author": "Westlake, H. F. (Herbert Francis), 1879-1925",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69852/pg69852.txt",
+      "subject": "Westminster Abbey",
+      "synopsis": "Immerse yourself in the captivating realms of \"Westminster Abbey: The last days of the monastery as shown by the life and times of Abbot John Islip, 1464-1532\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Westlake, H. F. (Herbert Francis), 1879-1925, effortlessly transports readers through the profound depths of Westminster Abbey, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Westminster Abbey: The last days of the monastery as shown by the life and times of Abbot John Islip, 1464-1532.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "07a42ea1-b1a8-463a-935c-05f81072547a",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69856",
+      "issued": "2023-01-22",
+      "title": "Orpheus; or, The music of the future",
+      "author": "Turner, W. J. (Walter James), 1884-1946",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69856/pg69856.txt",
+      "subject": "Music",
+      "synopsis": "Immerse yourself in the captivating realms of \"Orpheus; or, The music of the future\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Turner, W. J. (Walter James), 1884-1946, effortlessly transports readers through the profound depths of Music, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Orpheus; or, The music of the future.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "f62a4a66-7892-40cb-ac85-fb82c9306b12",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69857",
+      "issued": "2023-01-22",
+      "title": "Pride and Passion: Robert Burns, 1759-1796",
+      "author": "Ferguson, J. De Lancey (John De Lancey), 1888-1966",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69857/pg69857.txt",
+      "subject": "Burns, Robert, 1759-1796",
+      "synopsis": "Immerse yourself in the captivating realms of \"Pride and Passion: Robert Burns, 1759-1796\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Ferguson, J. De Lancey (John De Lancey), 1888-1966, effortlessly transports readers through the profound depths of Burns, Robert, 1759-1796, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Pride and Passion: Robert Burns, 1759-1796.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "f60e7fe0-24f8-4f4e-bd6d-6e440a7f4d9f",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69858",
+      "issued": "2023-01-22",
+      "title": "Motherly talks with young housekeepers\r\nembracing eighty-seven brief articles on topics of home interest, and about five hundred choice receipts for cooking, etc.",
+      "author": "Beecher, H. W., Mrs., 1813-1897",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69858/pg69858.txt",
+      "subject": "Cooking",
+      "synopsis": "Immerse yourself in the captivating realms of \"Motherly talks with young housekeepers\r\nembracing eighty-seven brief articles on topics of home interest, and about five hundred choice receipts for cooking, etc.\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Beecher, H. W., Mrs., 1813-1897, effortlessly transports readers through the profound depths of Cooking, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Motherly talks with young housekeepers\r\nembracing eighty-seven brief articles on topics of home interest, and about five hundred choice receipts for cooking, etc..\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "9e0b5fc2-fad3-4df3-9d01-0b34e212d72e",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69859",
+      "issued": "2023-01-22",
+      "title": "Table traits, with something on them",
+      "author": "Doran, Dr. (John), 1807-1878",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69859/pg69859.txt",
+      "subject": "Gastronomy",
+      "synopsis": "Immerse yourself in the captivating realms of \"Table traits, with something on them\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Doran, Dr. (John), 1807-1878, effortlessly transports readers through the profound depths of Gastronomy, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Table traits, with something on them.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "e2d505e0-615f-49a6-b724-d0c0023b4240",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69862",
+      "issued": "2023-01-23",
+      "title": "Days and hours in a garden",
+      "author": "E. V. B. (Eleanor Vere Boyle), 1825-1916",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69862/pg69862.txt",
+      "subject": "Gardens",
+      "synopsis": "Immerse yourself in the captivating realms of \"Days and hours in a garden\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious E. V. B. (Eleanor Vere Boyle), 1825-1916, effortlessly transports readers through the profound depths of Gardens, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Days and hours in a garden.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "a7fab4f4-c06f-4176-935e-b6a3e07331f8",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69865",
+      "issued": "2023-01-24",
+      "title": "North by night",
+      "author": "Burchard, Peter, 1921-2004",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69865/pg69865.txt",
+      "subject": "United States",
+      "synopsis": "Immerse yourself in the captivating realms of \"North by night\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Burchard, Peter, 1921-2004, effortlessly transports readers through the profound depths of United States, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"North by night.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "2e5fcb58-c5e4-4f12-9318-2e0d44a2d4b5",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69866",
+      "issued": "2023-01-24",
+      "title": "Dark of the Moon",
+      "author": "Teasdale, Sara, 1884-1933",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69866/pg69866.txt",
+      "subject": "American poetry",
+      "synopsis": "Immerse yourself in the captivating realms of \"Dark of the Moon\", an extraordinary work categorized under Poetry. This diverse and multifaceted book, penned by the illustrious Teasdale, Sara, 1884-1933, effortlessly transports readers through the profound depths of American poetry, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Dark of the Moon.\"",
+      "category": [
+        "5c747be7-091b-4a85-93c7-629affaf4c38"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "12d61a70-1346-449f-92f1-75df5d13d89a",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69869",
+      "issued": "2023-01-24",
+      "title": "Harriet Beecher Stowe: a biography for girls",
+      "author": "Crow, Martha Foote, 1854-1924",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69869/pg69869.txt",
+      "subject": "Stowe, Harriet Beecher, 1811-1896",
+      "synopsis": "Immerse yourself in the captivating realms of \"Harriet Beecher Stowe: a biography for girls\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Crow, Martha Foote, 1854-1924, effortlessly transports readers through the profound depths of Stowe, Harriet Beecher, 1811-1896, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Harriet Beecher Stowe: a biography for girls.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "da0d6df8-aa8e-44be-8bc0-845afe428de9",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69870",
+      "issued": "2023-01-24",
+      "title": "Rose Mather: A tale",
+      "author": "Holmes, Mary Jane, 1825-1907",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69870/pg69870.txt",
+      "subject": "United States",
+      "synopsis": "Immerse yourself in the captivating realms of \"Rose Mather: A tale\", an extraordinary work categorized under History. This diverse and multifaceted book, penned by the illustrious Holmes, Mary Jane, 1825-1907, effortlessly transports readers through the profound depths of United States, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Rose Mather: A tale.\"",
+      "category": [
+        "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "25ff8f8d-4566-4c7d-b16a-d5a55d1b84ed",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69876",
+      "issued": "2023-01-25",
+      "title": "The \"ideal\" cookery book: A reliable guide for home cooking\r\ncontaining 249 useful and dainty recipes (third edition)",
+      "author": "Clarke, Lilian",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69876/pg69876.txt",
+      "subject": "Cooking",
+      "synopsis": "Immerse yourself in the captivating realms of \"The \"ideal\" cookery book: A reliable guide for home cooking\r\ncontaining 249 useful and dainty recipes (third edition)\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Clarke, Lilian, effortlessly transports readers through the profound depths of Cooking, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The \"ideal\" cookery book: A reliable guide for home cooking\r\ncontaining 249 useful and dainty recipes (third edition).\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "621eab01-84bb-451b-a28c-a77de8c69efc",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69877",
+      "issued": "2023-01-25",
+      "title": "The fire in the flint",
+      "author": "White, Walter, 1893-1955",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69877/pg69877.txt",
+      "subject": "Bildungsromans",
+      "synopsis": "Immerse yourself in the captivating realms of \"The fire in the flint\", an extraordinary work categorized under Fiction. This diverse and multifaceted book, penned by the illustrious White, Walter, 1893-1955, effortlessly transports readers through the profound depths of Bildungsromans, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The fire in the flint.\"",
+      "category": [
+        "0ca7d3ff-5ff2-4375-9ac6-695a7fde7b19"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "58d48ceb-cc49-4135-af1e-07d84c8e0751",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69879",
+      "issued": "2023-01-25",
+      "title": "Newer ideals of peace",
+      "author": "Addams, Jane, 1860-1935",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69879/pg69879.txt",
+      "subject": "Peace",
+      "synopsis": "Immerse yourself in the captivating realms of \"Newer ideals of peace\", an extraordinary work categorized under Non Fiction. This diverse and multifaceted book, penned by the illustrious Addams, Jane, 1860-1935, effortlessly transports readers through the profound depths of Peace, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"Newer ideals of peace.\"",
+      "category": [
+        "37944a93-e194-4ce5-bba4-ab042ffc56be"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  },
+  {
+    "pk": "576dbabf-ed8e-4e16-9c32-1528a648e309",
+    "model": "KatalogBuku.Book",
+    "fields": {
+      "book_code": "69880",
+      "issued": "2023-01-26",
+      "title": "The valley of Arcana",
+      "author": "Hankins, Arthur Preston, 1880-1932",
+      "book_read_url": "https://www.gutenberg.org/cache/epub/69880/pg69880.txt",
+      "subject": "Young women",
+      "synopsis": "Immerse yourself in the captivating realms of \"The valley of Arcana\", an extraordinary work categorized under Fiction. This diverse and multifaceted book, penned by the illustrious Hankins, Arthur Preston, 1880-1932, effortlessly transports readers through the profound depths of Young women, offering a rich tapestry of insights and narratives. With each genre, whether it be biography, fiction, non-fiction, comedy, or beyond, the book unveils a unique panorama of life’s stories and experiences, weaving words into a symphony of knowledge, emotion, and creativity. Surrender to the allure of its persuasive prose, inviting you on an unforgettable journey that resonates with universal appeal. Embrace the opportunity to explore, learn, and delight in the remarkable universe curated within the pages of \"The valley of Arcana.\"",
+      "category": [
+        "0ca7d3ff-5ff2-4375-9ac6-695a7fde7b19"
+      ],
+      "created_at": "2023-10-27T14:21:55.741Z",
+      "updated_at": "2023-10-27T14:21:55.741Z"
+    }
+  }
+]
