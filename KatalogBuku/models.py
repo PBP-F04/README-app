@@ -28,6 +28,6 @@ class Category(models.Model):
 class BookLike(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='book_likes')
-    user = models.ForeignKey('authentication.User', on_delete=models.CASCADE, related_name='book_likes')
+    user = models.ForeignKey('UserProfile.Profile', on_delete=models.CASCADE, related_name='book_likes')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
