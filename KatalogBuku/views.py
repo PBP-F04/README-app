@@ -14,11 +14,14 @@ from django.views.decorators.csrf import csrf_exempt
 
 @require_http_methods(['GET'])
 def index(request):
-    return render(request, 'katalog.html')
+    user = request.user
+    response = {
+        "user": user
+    }
+    return render(request, 'katalog.html', response)
 
 
 @require_http_methods(['GET'])
-@login_required(login_url='authentication:login')
 def get_books(request):
     category = request.GET.get('category', None)
     sort = request.GET.get('sort', None)

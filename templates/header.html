@@ -35,7 +35,7 @@
         border-radius: 8px;
         padding: 8px 16px;
         font-size: 16px;
-        font-family: "Inter", serif;
+        font-family: "InterBold", serif;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
     }
@@ -91,7 +91,7 @@
     </div>
 
     <div>
-        <a href="{% url 'authentication:login' %}">
+        <a href="{% url 'authentication:login' %}" id="a-login-button">
             <button class="login-button" id="login-button">Login</button>
         </a>
     </div>
@@ -112,8 +112,8 @@
 <div class="dropdown-content" id="dropdown">
     <a href="{% url 'KatalogBuku:index' %}">Home</a>
     <div style="text-align: center">
-        <a href="{% url 'authentication:login' %}">
-            <button class="login-button" id="login-button" style="width: 75%">Login</button>
+        <a href="{% url 'authentication:login' %}" id="a-login-button-mobile">
+            <button class="login-button" id="login-button-mobile" style="width: 75%">Login</button>
         </a></div>
 
 </div>
