@@ -1,0 +1,217 @@
+{% extends 'base-tailwind.html' %}
+
+{% load static %}
+{% block content %}
+    {% include 'header.html' %}
+    <div class="relative py-4 px-10 lg:px-24 w-full overflow-hidden">
+        <div class="relative flex flex-col">
+            <div class="w-full">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
+                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                        </svg>
+                    </div>
+                    <input type="search" id="search-book"
+                           class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                           placeholder="Search Book..." required>
+                    <button type="submit"
+                            id="search-button"
+                            class="text-white absolute right-2.5 bottom-2.5  bg-[#5068A9] hover:bg-[#738AB1] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="relative grid grid-flow-row grid-cols-1 md:grid-cols-4 lg:grid-cols-5 md:gap-8 gap-6 mt-4"
+             id="book-list">
+        </div>
+
+        <div class="flex justify-center mt-8">
+            <div class="flex rounded-md mt-4">
+                <p
+                        id='prev-page'
+                        class="py-2 px-4 leading-tight bg-white border-2 border-gray-400 text-gray-800 border-r-0 ml-0 rounded-l hover:bg-gray-300 cursor-pointer">
+                </p>
+                <div>
+                    <input
+                            id='current-page'
+                            type="text"
+                            class=" py-2 px-4 leading-tight bg-white border-2 border-gray-400 text-gray-800 border-r-0
+                   hover:bg-gray-300 text-center"/>
+                </div>
+
+                <p id='next-page'
+                   class="py-2 px-4 leading-tight bg-white border-2 border-gray-400 text-gray-800 rounded-r
+                hover:bg-gray-300 cursor-pointer">
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    {% if user.is_authenticated %}
+        <script>
+            const loginButton = document.getElementById("login-button");
+            const aLoginButton = document.getElementById("a-login-button");
+            aLoginButton.href = "{% url 'authentication:logout' %}";
+            loginButton.innerHTML = "Logout";
+            const loginButtonMobile = document.getElementById("login-button-mobile");
+            const aLoginButtonMobile = document.getElementById("a-login-button-mobile");
+            aLoginButtonMobile.href = "{% url 'authentication:logout' %}";
+            loginButtonMobile.innerHTML = "Logout";
+        </script>
+    {% endif %}
+
+    <script>
+        async function getBook(page = 1, search = "") {
+            const url = "{% url 'KatalogBuku:get_books' %}?page=" + page + "&&search=" + search
+
+            const response = await fetch(url, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                }
+            })
+            const data = await response.json()
+            return data
+        }
+
+        async function refreshBook(page = 1, search = "") {
+            const book_fetch = await getBook(page, search)
+            const books = book_fetch.data
+            await pagination(book_fetch.pagination)
+            const bookList = document.getElementById("book-list")
+            let bookHTML = ""
+            for (const book of books) {
+                const src = "{% static 'images/books/' %}" + book.book_code + ".webp"
+                bookHTML += `
+                     <div class="flex flex-col border-2 shadow-sm hover:shadow-2xl transition-all rounded-[12px] bg-[#F5F7FA]">
+                        <div class="w-full h-[250px] overflow-hidden rounded-t-[10px]">
+                            <img
+                                    src="${src}"
+                                    alt="book"
+                                    class="object-fill w-full h-full"/>
+                        </div>
+
+                        <div class="flex flex-col px-[10px] py-[10px] gap-1">
+                            <div class="h-[50px]">
+                                <h1 class="font-InterBold line-clamp-2">${book.title}</h1>
+                            </div>
+                            <p class="text-sm text-gray-500 line-clamp-1">${book.author}</p>
+                            <p class="text-sm text-gray-500 line-clamp-1">${book.category} | ${book.subject}</p>
+                            <button
+                                    class="p-2 rounded-[10px] text-[16px] text-white bg-[#5068A9] hover:bg-[#738AB1] transition-all text-center font-Inter mt-4"
+                                    id="button-details-${book.book_code}"
+                            >
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    `
+            }
+
+            bookList.innerHTML = bookHTML
+
+            for (const book of books) {
+                const buttonDetails = document.getElementById(`button-details-${book.book_code}`)
+                buttonDetails.addEventListener("click", () => {
+                    window.location.href = `
+                    {% url 'KatalogBuku:book_detail' book_id="insert_id" %}`.replace("insert_id", book.id)
+                })
+            }
+        }
+
+        let isFetching = false;
+
+        async function pagination(books) {
+            const currentPage = books.current_page;
+            const totalPages = books.total_page;
+            const hasNextPage = books.has_next;
+            const hasPrevPage = books.has_previous;
+
+            const prevPage = document.getElementById("prev-page");
+            const nextPage = document.getElementById("next-page");
+            const currentPageElement = document.getElementById("current-page");
+
+            currentPageElement.value = currentPage;
+
+            const loadPrevPage = async () => {
+                const currentPage = parseInt(currentPageElement.value);
+
+                if (hasPrevPage && !isFetching && currentPage > 1) {
+                    isFetching = true;
+                    await refreshBook(currentPage - 1)
+                    isFetching = false;
+                }
+            }
+
+            const loadNextPage = async () => {
+                const currentPage = parseInt(currentPageElement.value);
+                if (hasNextPage && !isFetching && currentPage < totalPages) {
+                    isFetching = true;
+                    await refreshBook(currentPage + 1)
+                    isFetching = false;
+                }
+            };
+            const handlePageInput = async (event) => {
+                if (event.key === "Enter") {
+                    const page = parseInt(currentPageElement.value, 10);
+                    if (isNaN(page) || page > totalPages || page < 1) {
+                        currentPageElement.value = currentPage;
+                        alert(`Page must be between 1 and ${totalPages}`);
+                        return;
+                    }
+                    if (!isFetching) {
+                        isFetching = true;
+                        await refreshBook(page)
+                        isFetching = false;
+                    }
+                }
+            };
+
+            prevPage.removeEventListener("click", loadPrevPage);
+            nextPage.removeEventListener("click", loadNextPage);
+            currentPageElement.removeEventListener("keyup", handlePageInput);
+
+            if (hasPrevPage) prevPage.addEventListener("click", loadPrevPage)
+            if (hasNextPage) nextPage.addEventListener("click", loadNextPage)
+            currentPageElement.addEventListener("keyup", handlePageInput);
+
+            prevPage.innerHTML = hasPrevPage ? "Prev" : "First";
+            nextPage.innerHTML = hasNextPage ? "Next" : "Last";
+        }
+
+        async function handleSearch() {
+            isFetching = false;
+            const searchValue = document.getElementById("search-book").value
+            if ((searchValue === "" || searchValue === null) && !isFetching) {
+                isFetching = true;
+                await refreshBook()
+                isFetching = false;
+                return
+            }
+            if (!isFetching) {
+                console.log(searchValue)
+                isFetching = true;
+                await refreshBook(1, searchValue)
+                isFetching = false;
+            }
+        }
+
+        const searchButton = document.getElementById("search-button")
+        searchButton.addEventListener("click", handleSearch)
+        const searchBook = document.getElementById("search-book")
+        searchBook.addEventListener("keyup", (event) => {
+            if (event.key === "Enter") {
+                handleSearch()
+            }
+        })
+        refreshBook()
+    </script>
+{% endblock content %}
