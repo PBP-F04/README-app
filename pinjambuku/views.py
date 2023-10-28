@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, redirect, render
-from .models import BookLoan, Book
+from .models import BookLoan
+from KatalogBuku.models import Book
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.http import Http404
