@@ -16,7 +16,6 @@ def show_profile(request):
         'description': request.user.description,
         'favorite_category': request.user.favorite_category
     }
-
     return render(request, "user_profile.html", context)
 
 def create_profile(request):
