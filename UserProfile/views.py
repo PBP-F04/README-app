@@ -18,7 +18,7 @@ def show_profile(request):
             'username': profile.username,
             'name': profile.name,
             'description': profile.description,
-            'favorite_category': profile.favorite_category
+            'favorite_category': profile.favorite_category,
         }
     except Profile.DoesNotExist:
         return HttpResponseRedirect(reverse('profile:create_profile'))
@@ -50,7 +50,7 @@ def edit_profile(request):
         try:
             profile = Profile.objects.get(user=request.user)
         except Profile.DoesNotExist:
-            return HttpResponseNotFound(b"Profile not found", status=404)
+            profile = Profile(user=request.user)
 
         profile_image = request.POST.get("profile_image")
         username = request.POST.get("username")
