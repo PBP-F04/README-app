@@ -3,11 +3,21 @@
 {% load static %}
 
 {% block meta %}
-    <title>Review Buku</title>>
+    <title>Review Buku</title>
 {% endblock meta %}
 
 {% block content %}
-<body>
-    
-</body>
+<div class="container">
+    <h1>Review Buku</h1>
+    <form method="post" action="{% url 'review_buku' book_id %}">
+        {% csrf_token %}
+        <label for="review_score">Review Score:</label>
+        <input type="number" name="review_score" step="0.1" min="0" max="10" required>
+        
+        <label for="review_content">Review Content:</label>
+        <textarea name="review_content" rows="4" required></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+</div>
 {% endblock %}

@@ -3,11 +3,22 @@
 {% load static %}
 
 {% block meta %}
-    <title>Read Books</title>>
+    <title>Read Books</title>
 {% endblock meta %}
 
 {% block content %}
-<body>
-    
-</body>
+<div class="container">
+    <h1>Read Books</h1>
+    <ul>
+        {% for book in read_books %}
+            <li>
+                <h3>{{ book.title }}</h3>
+                <p>Author: {{ book.author }}</p>
+                <p>Genre: {{ book.genre }}</p>
+            </li>
+        {% empty %}
+            <p>No read books yet.</p>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
