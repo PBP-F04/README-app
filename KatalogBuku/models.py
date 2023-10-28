@@ -24,6 +24,9 @@ class Category(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f'{self.category_name}'
+
 
 class BookLike(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
