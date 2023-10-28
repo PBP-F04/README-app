@@ -1,0 +1,176 @@
+{% load static %}
+<style>
+    .nav-container {
+        width: 100%;
+        background-color: #5068A9;
+        display: flex;
+        padding: 8px 16px;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    .navbar-text {
+        color: white;
+        font-size: 16px;
+        font-family: "Inter", serif;
+        display: flex;
+        gap: 80px;
+    }
+
+    .nav-text {
+        text-decoration-line: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-text:hover {
+        text-decoration-line: underline;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .login-button {
+        background-color: #F5F7FA;
+        color: black;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-family: "Inter", serif;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .login-button:hover {
+        background-color: #A9B7D1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        .navbar-text {
+            display: none;
+        }
+
+        .dropdown-content {
+            display: none;
+        }
+
+        #menu-dropdown:active + .dropdown-content {
+            display: block;
+        }
+    }
+
+    .dropdown-content {
+        display: none;
+        flex-direction: column;
+        background-color: #5068A9;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        color: black;
+    }
+
+</style>
+
+<div class="nav-container">
+    <a href="{% url 'KatalogBuku:index' %}">
+        <img src="{% static 'images/logo.png' %}" alt="logo" width="45px" height="45px" style="object-fit: contain">
+    </a>
+
+    <div class="navbar-text" id="nav-body">
+        <a class="nav-text" href="{% url 'KatalogBuku:index' %}">Home</a>
+    </div>
+
+    <div>
+        <a href="{% url 'authentication:login' %}">
+            <button class="login-button" id="login-button">Login</button>
+        </a>
+    </div>
+
+    <div id="menu-dropdown">
+        <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                style="fill: white; width: 30px; height: 30px; cursor: pointer;"
+        >
+            <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+        </svg>
+    </div>
+
+</div>
+<div class="dropdown-content" id="dropdown">
+    <a href="{% url 'KatalogBuku:index' %}">Home</a>
+    <div style="text-align: center">
+        <a href="{% url 'authentication:login' %}">
+            <button class="login-button" id="login-button" style="width: 75%">Login</button>
+        </a></div>
+
+</div>
+
+
+<script>
+    function removeLoginButtonMobile() {
+        if (window.innerWidth < 1023) {
+            let loginButton = document.getElementById("login-button");
+            loginButton.remove();
+        }
+    }
+
+    function addLoginButtonMobile() {
+        const loginButtonHtml = `  <div>
+        <a href="{% url 'authentication:login' %}">
+            <button class="login-button" id="login-button">Login</button>
+        </a>`
+        if (window.innerWidth < 1023) {
+            let navBody = document.getElementById("nav-body");
+            navBody.innerHTML += loginButtonHtml;
+            const loginButton = document.getElementById("login-button");
+            loginButton.style.width = "100%";
+        }
+    }
+
+    function removeMenuDropdown() {
+        if (window.innerWidth > 1023) {
+            let menuDropdown = document.getElementById("menu-dropdown");
+            menuDropdown.remove();
+        }
+    }
+
+    function expandDropdown() {
+        document.getElementById("menu-dropdown").onclick = function () {
+            const dropdown = document.getElementById("dropdown");
+            const mainContainer = document.getElementsByClassName("nav-container");
+
+
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block";
+                dropdown.style.position = "absolute";
+
+            } else {
+                dropdown.style.display = "none";
+
+
+            }
+
+        }
+    }
+
+    expandDropdown();
+    removeLoginButtonMobile();
+    removeMenuDropdown();
+    addLoginButtonMobile()
+
+</script>
+
+
