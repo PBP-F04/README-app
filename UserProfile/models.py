@@ -2,13 +2,12 @@ import uuid
 from django.db import models
 from authentication.models import User
 
-app_name = 'UserProfile'
-
+app_name = 'profile'
 
 # Create your models here.
 class Profile(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    profile_img = models.URLField()
+    profile_image = models.URLField()
     username = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
     description = models.TextField()

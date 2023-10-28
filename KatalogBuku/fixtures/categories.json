@@ -1,0 +1,128 @@
+[
+  {
+    "pk": "8dfd4592-03ed-4ba8-a5a8-56dd0e6396ff",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "History",
+      "created_at": "2023-10-27T13:10:41.803Z",
+      "updated_at": "2023-10-27T13:10:41.803Z"
+    }
+  },
+  {
+    "pk": "7b5901e5-c710-4b16-90f4-c40810305217",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Science Fiction",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "363b57c0-8ad9-410c-9053-3cd3262dc4cf",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Short Stories",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "5ca28a53-6214-4be5-8694-a6303abcf15a",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Comedy",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "93415a97-12b2-484e-bddd-f75a73cb40b9",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Biography",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "b2df2c9f-bbee-498b-a253-78798db74b03",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Animals",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "cee28ac3-cc07-477a-8435-71317e56e10f",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Detective",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "6ead39cc-0bc9-4d93-8f5c-48362b4b2aa9",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Gardening",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "e6e46bb7-2bfc-487e-beff-51c45291eb9c",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Inheritance",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "37944a93-e194-4ce5-bba4-ab042ffc56be",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Non Fiction",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "bb6994c8-6f53-4a60-abb1-11e825cb2d96",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Romance",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "0ca7d3ff-5ff2-4375-9ac6-695a7fde7b19",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Fiction",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "5c747be7-091b-4a85-93c7-629affaf4c38",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Poetry",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  },
+  {
+    "pk": "73afd881-a8bb-4662-9149-672f950ce17e",
+    "model": "KatalogBuku.Category",
+    "fields": {
+      "category_name": "Art",
+      "created_at": "2023-10-27T13:10:41.804Z",
+      "updated_at": "2023-10-27T13:10:41.804Z"
+    }
+  }
+]
