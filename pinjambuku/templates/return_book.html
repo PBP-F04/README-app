@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Book</title>
+</head>
+<body>
+    <h1>Return Book</h1>
+    <p>Borrowed Book Information:</p>
+    <ul>
+        <li><strong>Title:</strong> {{ loan.book.title }}</li>
+        <li><strong>Borrowed Date:</strong> {{ loan.borrow_date }}</li>
+        <li><strong>Due Date:</strong> {{ loan.due_date }}</li>
+    </ul>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Return Book</button>
+    </form>
+</body>
+</html>
