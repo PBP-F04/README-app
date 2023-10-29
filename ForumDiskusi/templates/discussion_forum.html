@@ -24,9 +24,10 @@
             <div class="col-md-4 mb-3">
                 <div class="card custom-card">
                     <div class="card-body">
-                        <p>{{ discussion.user.name }}</p>
+                        <p>by: {{ discussion.user.name }}</p>
                         <h2 class="card-title">{{ discussion.title }}</h2>
                         <p class="card-text">{{ discussion.content }}</p>
+                        <p class="card-text">Created at: {{ discussion.created_at }}</p>
                         <td>
                             <a href="{% url 'ForumDiskusi:show_discussion_comment' discussion_id=discussion.id %}" class="btn btn-success btn-sm" style="background-color: #5068A9;">
                                     Comments
