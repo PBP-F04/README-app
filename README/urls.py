@@ -25,5 +25,5 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),  # new
     path('profile/', include('UserProfile.urls')),
     path('review/', include('ReviewBuku.urls')),
-
+    path('', include('ForumDiskusi.urls')),
 ]
