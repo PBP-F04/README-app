@@ -9,15 +9,20 @@ from .models import BookReview, UpvotedReview
 from pinjambuku.models import BookLoan
 
 @login_required(login_url='/login/')
-def show_read_books(request):
-    # Get the user's read books (imported from bookloans)
-    read_books = BookLoan.objects.filter(user=request.user, returned=True)  
+def show_page_review(request, book_id):
+    book = Book.objects.get(id=book_id)
+
+    book_reviews = BookReview.objects.filter(book=book)
+
+    # upvoted_reviews = UpvotedReview.objects.filter(book=book)
 
     context = {
-        'read_books': read_books,
+        'book': book,
+        'book_reviews': book_reviews,
+        # 'upvoted_reviews' if needed
     }
 
-    return render(request, 'read_books.html', context)
+    return render(request, 'show_page_review.html', context)
 
 @login_required(login_url='/login/')
 def review_buku(request, book_id):
@@ -44,22 +49,23 @@ def review_buku(request, book_id):
 
     return render(request, 'review_buku.html', context)
 
-
+@login_required(login_url='/login/')
 @csrf_exempt
-def show_read_books_ajax(request):
-    if request.method == 'POST':
-        read_reviews = BookReview.objects.filter(user=request.user)
+def show_page_review_ajax(request, book_id):
+    #TODO: method untuk menunjukkan hasil review yang sudah dilakukan per-buku menggunakan ajax
+    book = Book.objects.get(id=book_id)
+    book_reviews = BookReview.objects.filter(book=book)
 
-        reviews_data = []
-        for review in read_reviews:
-            reviews_data.append({
-                'book_title': review.book.title,
-                'review_score': review.review_score,
-                'review_content': review.review_content,
-            })
+    review_data = []
+    for review in book_reviews:
+        review_data.append({
+            'id': str(review.id),
+            'user': review.user.username,
+            'review_score': review.review_score,
+            'review_content': review.review_content,
+            'created_at': review.created_at.strftime('%Y-%m-%d %H:%M:%S'),
+        })
 
-        return JsonResponse({'reviews': reviews_data})
-    else:
-        return JsonResponse({'error': 'Invalid request method'})
+    return JsonResponse({'reviews': review_data})
 
 
