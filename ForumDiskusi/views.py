@@ -95,7 +95,6 @@ def add_comment_ajax(request, discussion_id):
         created_at_iso8601 = datetime.datetime.now().isoformat()
         created_at = created_at_iso8601.replace("T", " ")[:-7]
         # print(created_at)
-        print(user_name)
 
         comment = DiscussionComment.objects.create(
             user=user,
@@ -107,10 +106,13 @@ def add_comment_ajax(request, discussion_id):
         )
         comment.save()
 
-        context = {
+        response_data = {
+            'status': 'CREATED',
             'user_name': user_name,
         }
-        return HttpResponse(b"CREATED", status=201)
+
+        
+        return HttpResponse(response_data, status=201)
     return HttpResponseNotFound()
 
 
