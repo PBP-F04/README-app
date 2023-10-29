@@ -7,10 +7,11 @@
 {% endblock meta %}
 
 {% block content %}
+
     {% include 'header.html' %}
-    <body>
+    <div class="container-profile">
         <div class="profilebox">
-            <img class="imageprofile" src="{{profile_image}}" alt="{{username}}"/>
+            <img class="imageprofile" src="{{ profile_image }}" alt="{{ username }}"/>
             <div class="name_attributes">
                 <p style="font-size: 18px;">{{ username }}</p>
                 <h1 style="margin-top: -15px; margin-bottom: 20px; font-weight: 600;">{{ name }}</h1>
@@ -29,7 +30,8 @@
                     {% csrf_token %}
                     <div class="mb-3">
                         <label for="username" class="col-form-label">Profile Image</label>
-                        <input type="url" class="form-control" id="profile_image" name="profile_image" value="{{ profile_image }}">
+                        <input type="url" class="form-control" id="profile_image" name="profile_image"
+                               value="{{ profile_image }}">
                     </div>
                     <div class="mb-3">
                         <label for="username" class="col-form-label">Username</label>
@@ -53,12 +55,13 @@
                 </form>
             </div>
         </div>
-    <hr>
+        <hr>
 
-    <button class="editprofile">
-        <a href="{% url 'ReviewBuku:show_page_review_user_ajax' %}">See My Reviews</a>
-    </button>
-    </body>
+        <button class="editprofile">
+            <a href="{% url 'ReviewBuku:show_page_review_user_ajax' %}">See My Reviews</a>
+        </button>
+    </div>
+
     {% include 'footer.html' %}
 
     <script>
@@ -91,21 +94,21 @@
                     'X-CSRFToken': getCookie('csrftoken')
                 }
             })
-            .then(response => {
-                if (response.status === 200) {
-                    alert('Profile updated successfully');
-                    editForm.style.display = 'block';
-                    editButton.innerText = 'Cancel';
-                    window.location.reload()
-                } else if (response.status === 404) {
-                    alert('Profile not found');
-                } else {
-                    alert('Profile update failed');
-                }
-            })
-            .catch(error => {
-                console.error('An error occurred:', error);
-            });
+                .then(response => {
+                    if (response.status === 200) {
+                        alert('Profile updated successfully');
+                        editForm.style.display = 'block';
+                        editButton.innerText = 'Cancel';
+                        window.location.reload()
+                    } else if (response.status === 404) {
+                        alert('Profile not found');
+                    } else {
+                        alert('Profile update failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('An error occurred:', error);
+                });
         });
 
         function getCookie(name) {
@@ -134,7 +137,7 @@
                         const option = document.createElement('option');
                         option.value = category.id;
                         option.text = category.category_name;
-                        if(category.category_name === "{{favorite_category}}"){
+                        if (category.category_name === "{{favorite_category}}") {
                             option.selected = true
                         }
                         selectCategory.appendChild(option);

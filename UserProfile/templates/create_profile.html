@@ -7,23 +7,23 @@
 {% endblock meta %}
 
 {% block content %}
-    {% include 'header.html' %}
     <div class="createbox">
-        <h1 style="margin-bottom: 30px;">Create Profile</h1>
-            <div class="createform">
-                <form method="POST">
-                    {% csrf_token %}
-                    <table>
-                        {{ form.as_table }}
-                        <tr>
-                            <td></td>
-                            <td>
-                                <input class="createbutton" type="submit" value="Create Profile"/>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
+        {% include 'header.html' %}
+        <h1 style="margin-bottom: 20px;margin-top: 20px">Create Profile</h1>
+        <div class="createform" style="margin-bottom: 20px">
+            <form method="POST">
+                {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input class="createbutton" type="submit" value="Create Profile"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        {% include 'footer.html' %}
     </div>
-    {% include 'footer.html' %}
 {% endblock %}

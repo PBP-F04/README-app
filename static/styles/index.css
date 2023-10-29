@@ -29,9 +29,15 @@ body {
     scrollbar-width: none;
 }
 
+.container-profile {
+    position: relative;
+    min-height: 100vh;
+}
+
 .profilebox {
+    position: relative;
     display: flex;
-    gap:60px;
+    gap: 60px;
     flex-direction: row;
     align-items: center;
     max-width: 100%;
@@ -118,7 +124,6 @@ body {
 
 .createbox {
     background-color: #F5F7FA;
-    padding: 30px;
     position: absolute;
     text-align: center;
     width: 100%;
