@@ -7,9 +7,10 @@
 {% endblock meta %}
 
 {% block content %}
+    {% include 'header.html'%}
 <style>
     body {
-        background-color: #f5f5f5; 
+        background-color: #F5F7FA; 
     }
 
     .container {
@@ -21,7 +22,7 @@
     }
 
     h1 {
-        color: #007BFF; 
+        color: #738AB1; 
     }
 
     ul#review-list {
@@ -30,7 +31,7 @@
     }
 
     li {
-        background-color: #fff;
+        background-color: #F5F7FA;
         border: 1px solid #e6e6e6;
         border-radius: 5px;
         padding: 10px;
@@ -45,40 +46,49 @@
     </ul>
 </div>
 
-<script src="{% static 'js/jquery.min.js' %}"></script>
 <script>
-    $(document).ready(function() {
+    document.addEventListener("DOMContentLoaded", function() {
         function loadReviews() {
-            $.ajax({
-                url: "{% url 'show_page_review_ajax' book.id %}", 
-                type: "GET",
-                dataType: "json",
-                success: function(data) {
-                    if (data.reviews.length > 0) {
-                        var reviewList = $("#review-list");
-                        reviewList.empty();  
+            const id = "{{book.id}}"
+            console.log(id)
+            const url = `{% url 'ReviewBuku:show_page_review_ajax' book_id="insert_id" %}`.replace("insert_id", id)
+            console.log(url)
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}"
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const reviewList = document.getElementById("review-list");
+                    reviewList.innerHTML = "";
 
-                        data.reviews.forEach(function(review) {
-                            reviewList.append(
-                                '<li>' +
-                                '<strong>User: ' + review.user + '</strong><br>' +
-                                'Rating: ' + review.review_score + '<br>' +
-                                'Review: ' + review.review_content + '<br>' +
-                                'Created at: ' + review.created_at +
-                                '</li>'
-                            );
+                    if (data.reviews.length > 0) {
+                        data.reviews.forEach(review => {
+                            const reviewItem = document.createElement("li");
+                            reviewItem.innerHTML = `
+                                <strong>User: ${review.user}</strong><br>
+                                Rating: ${review.review_score}<br>
+                                Review: ${review.review_content}<br>
+                                Created at: ${review.created_at}
+                            `;
+                            reviewList.appendChild(reviewItem);
                         });
                     } else {
-                        $("#review-list").html("<li>No reviews available.</li>");
+                        const noReviewsItem = document.createElement("li");
+                        noReviewsItem.textContent = "No reviews available.";
+                        reviewList.appendChild(noReviewsItem);
                     }
-                },
-                error: function() {
-                    $("#review-list").html("<li>Error loading reviews.</li>");
-                }
-            });
+                })
+                .catch(error => {
+                    const reviewList = document.getElementById("review-list");
+                    reviewList.innerHTML = "<li>Error loading reviews.</li>";
+                });
         }
-
         loadReviews();
     });
 </script>
+    
+    {% include 'footer.html'%}
 {% endblock content %}
