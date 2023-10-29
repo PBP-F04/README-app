@@ -3,11 +3,121 @@
 {% load static %}
 
 {% block meta %}
-    <title>Review Buku</title>>
+    <title>Review Buku</title>
 {% endblock meta %}
 
 {% block content %}
+<style>
+    body {
+        background-color: #e6f7ff; 
+        color: #000; 
+        text-align: center; 
+        padding: 20px;
+    }
+
+    h1 {
+        color: #333; 
+    }
+
+    form {
+        background-color: #fff; 
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="number"], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .stars {
+        font-size: 50px; 
+        cursor: pointer;
+        color: #ccc; 
+    }
+
+    .stars:hover {
+        color: #007BFF; 
+    }
+
+    .star-filled {
+        color: #fff700; 
+    }
+
+    input[type="submit"] {
+        background-color: #007BFF; 
+        color: #fff; 
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3; /* Warna biru saat tombol digeser */
+    }
+
+    label {
+        color: #007BFF; /* Warna teks biru untuk label */
+    }
+</style>
+
 <body>
-    
+    <h1>Berikan penilaian terhadap buku yang telah kamu baca!</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><label for="review_score">Review Score:</label></td>
+                <td>
+                    <span class="stars" id="star-1">&#9733;</span>
+                    <span class="stars" id="star-2">&#9733;</span>
+                    <span class="stars" id="star-3">&#9733;</span>
+                    <span class="stars" id="star-4">&#9733;</span>
+                    <span class="stars" id="star-5">&#9733;</span>
+                    <input type="hidden" name="review_score" id="review_score" value="0">
+                </td>
+            </tr>
+            {{ form.as_table }}
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Review"/>
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
+
+<script>
+    var stars = document.querySelectorAll('.stars');
+    var reviewScore = document.getElementById('review_score');
+
+    stars.forEach(function(star) {
+        star.addEventListener('click', function() {
+            var rating = parseInt(star.id.split('-')[1]);
+            reviewScore.value = rating;
+
+            stars.forEach(function(s) {
+                if (parseInt(s.id.split('-')[1]) <= rating) {
+                    s.classList.add('star-filled');
+                } else {
+                    s.classList.remove('star-filled');
+                }
+            });
+        });
+    });
+</script>
 {% endblock %}
