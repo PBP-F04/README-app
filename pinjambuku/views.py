@@ -31,7 +31,7 @@ def borrow_book(request):
         # Create a book loan record
         loan = BookLoan(user=request.user, book=book, borrow_date=timezone.now(), due_date=timezone.now() + timezone.timedelta(days=14))
         loan.save()
-        return redirect('my_borrowed_books')  # Redirect to a page showing the user's borrowed books
+        return redirect('my_borrowed_books')
 
     return render(request, 'borrow_book.html', {'book': book})
 
@@ -40,9 +40,8 @@ def return_book(request, loan_id):
     loan = get_object_or_404(BookLoan, id=loan_id, user=request.user)
 
     if request.method == "POST":
-        # Update the finished_date field to mark the book as returned
         loan.finished_date = timezone.now()
         loan.save()
-        return redirect('my_borrowed_books')  # Redirect to a page showing the user's borrowed books
+        return redirect('my_borrowed_books')
 
     return render(request, 'return_book.html', {'loan': loan})
