@@ -11,6 +11,7 @@ from django.urls import reverse
 from UserProfile.models import Profile
 from .models import BookDiscussion, DiscussionComment
 from KatalogBuku.models import Book
+from django.utils import timezone
 
 
 
@@ -19,6 +20,12 @@ def show_book_discussion(request, book_id):
     # print(BookDiscussion.objects.all())
     # print(book_id)
     discussions = BookDiscussion.objects.filter(book_id=book_id) # nanti difilter berdasarkan book_id
+
+    search_query = request.GET.get('search')  # Get the search query from the request
+
+    if search_query:
+        discussions = discussions.filter(Q(title__icontains=search_query))
+
     context = {
         'discussions': discussions,
         'user': request.user,
@@ -30,9 +37,18 @@ def show_book_discussion(request, book_id):
 
 from django.views.decorators.csrf import csrf_exempt
 
+from django.db.models import Q
+
+
+
 @login_required(login_url='/login/')
 def show_discussion_comment(request, discussion_id):
     comments = DiscussionComment.objects.filter(discussion_id = discussion_id)
+    search_query = request.GET.get('search')
+
+    if search_query:
+        comments = comments.filter(Q(title__icontains=search_query))
+    
     context = {
         'comments': comments,
         'user': request.user,
@@ -80,7 +96,9 @@ def add_comment_ajax(request, discussion_id):
         title = request.POST['title']
         content = request.POST['content']
         upvotes = 0
-        created_at = datetime.datetime.now()
+        created_at_iso8601 = datetime.datetime.now().isoformat()
+        created_at = created_at_iso8601.replace("T", " ")[:-7]
+        print(created_at)
 
         comment = DiscussionComment.objects.create(
             user=user,
