@@ -54,6 +54,10 @@
                                 id="review-button"
                         >Read Review for this Book
                         </button>
+                        <button class="px-10 py-2 rounded-[10px] text-[16px] text-white bg-[#5068A9] hover:bg-[#738AB1] transition-all text-center font-Inter mt-4"
+                                id="discussion-button"
+                        >Discussion for this Book
+                        </button>
                     </div>
                 </div>
             </div>
@@ -100,10 +104,20 @@
             window.location.href = `{% url 'ReviewBuku:show_page_review_ajax' book_id="insert_id" %}`.replace("insert_id", id);
         }
 
+        async function handleDiscussion() {
+            const id = "{{ data.id }}"
+            window.location.href = `{% url 'ForumDiskusi:show_book_discussion' book_id="insert_id" %}`.replace("insert_id", id);
+
+
+        }
+
         const likeButton = document.getElementById('like-button');
         likeButton.addEventListener('click', handleLike);
 
         const reviewButton = document.getElementById('review-button');
         reviewButton.addEventListener('click', handleReview);
+
+        const discussionButton = document.getElementById('discussion-button');
+        discussionButton.addEventListener('click', handleDiscussion);
     </script>
 {% endblock content %}

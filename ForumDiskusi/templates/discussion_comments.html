@@ -4,10 +4,18 @@
 {% block content %}
 {% include 'header.html' %}
 
-<h1>Discussion Comments</h1>
+<h1 style="margin-top: 20px; margin-bottom: 20px; margin-left: 20px; margin-right: 20px;">Discussion Comments</h1>
 
-<p>test</p>
-<p>{{ discussion.title }}</p>
+<h2 style="margin-top: 20px; margin-bottom: 20px; margin-left: 20px; margin-right: 20px;">{{ discussion.title }}</h2>
+
+<form style="margin-top: 20px; margin-bottom: 20px; margin-left: 20px; margin-right: 20px;" method="GET" action="{% url 'ForumDiskusi:show_discussion_comment' discussion_id=discussion.id %}" class="form-inline">
+    <div class="form-group">
+        <input type="text" name="search" class="form-control" placeholder="Search Comments by Title">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<button style="margin-top: 20px; margin-bottom: 20px; margin-left: 20px; margin-right: 20px;" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 10px;">Add Comment</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -38,10 +46,10 @@
 </div>
 
 <div class="container">
-    <div class="row" id="comment_cards"></div>
+    <div class="row" class="d-flex flex-wrap" id="comment_cards"></div>
 </div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 10px;">Add Comment</button>
+
 
 
 <script>
@@ -64,15 +72,27 @@
                 <div class="card-body">
                 <h5 class="card-title">${comment.fields.title}</h5>
                 <p class="card-text">${comment.fields.content}</p>
-                <p class="card-text">Date Added: ${comment.fields.date_added}</p>
-                <a><button id="edit-${comment.pk}" class="btn btn-primary" type="submit">Edit</button></a>
-                <a><button onclick="deleteComment(${comment.pk})" class="btn btn-danger" type="submit">Delete</button></a>
+                <p class="card-text">Date Added: <span class="formatted-date">${comment.fields.created_at}</span></p>
+             
                 </div>
             </div>
             `;
             commentCardsContainer.appendChild(card);
+            
         });
 
+                // Select all elements with class 'formatted-date' and update their content
+        const dateElements = document.querySelectorAll('.formatted-date');
+        dateElements.forEach((element) => {
+            // Get the original date value
+            const originalDate = element.textContent;
+            
+            // Replace 'T' with a space
+            const formattedDate = originalDate.replace('T', ' ').split('.')[0];
+
+            // Update the content with the formatted date
+            element.textContent = formattedDate;
+        });
     }
 
     refreshComments();
