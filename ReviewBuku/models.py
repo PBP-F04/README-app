@@ -19,5 +19,3 @@ class UpvotedReview(models.Model):
     user = models.ForeignKey('UserProfile.Profile', on_delete=models.CASCADE, related_name='upvoted_reviews')
     book = models.ForeignKey('KatalogBuku.Book', on_delete=models.CASCADE, related_name='upvoted_reviews')
     created_at = models.DateTimeField(auto_now_add=True)
-    
-

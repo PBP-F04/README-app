@@ -15,7 +15,7 @@
         font-size: 16px;
         font-family: "Inter", serif;
         display: flex;
-        gap: 80px;
+        gap: 20px;
     }
 
     .nav-text {
@@ -88,6 +88,9 @@
 
     <div class="navbar-text" id="nav-body">
         <a class="nav-text" href="{% url 'KatalogBuku:index' %}">Home</a>
+        <a class="nav-text" href="{% url 'KatalogBuku:show_request_book' %}">Request Book</a>
+
+
     </div>
 
     <div>
@@ -111,6 +114,8 @@
 </div>
 <div class="dropdown-content" id="dropdown">
     <a href="{% url 'KatalogBuku:index' %}">Home</a>
+    <a href="{% url 'KatalogBuku:show_request_book' %}">Request Book</a>
+
     <div style="text-align: center">
         <a href="{% url 'authentication:login' %}" id="a-login-button-mobile">
             <button class="login-button" id="login-button-mobile" style="width: 75%">Login</button>
@@ -172,5 +177,18 @@
     addLoginButtonMobile()
 
 </script>
+
+{% if user.is_authenticated %}
+    <script>
+        const loginButton = document.getElementById("login-button");
+        const aLoginButton = document.getElementById("a-login-button");
+        aLoginButton.href = "{% url 'authentication:logout' %}";
+        loginButton.innerHTML = "Logout";
+        const loginButtonMobile = document.getElementById("login-button-mobile");
+        const aLoginButtonMobile = document.getElementById("a-login-button-mobile");
+        aLoginButtonMobile.href = "{% url 'authentication:logout' %}";
+        loginButtonMobile.innerHTML = "Logout";
+    </script>
+{% endif %}
 
 
