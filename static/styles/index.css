@@ -10,6 +10,7 @@
 
 body {
     font-family: "Inter", serif;
+    background-color: #F5F7FA;
 }
 
 ::placeholder {
@@ -60,8 +61,18 @@ body {
     font-weight: 700;
 }
 
-#editButton:hover {
+.editprofile a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.editprofile:hover {
     background-color: #213467;
+}
+
+.editprofile a:hover {
+    background-color: #213467;
+    color: #fff;
 }
 
 .edit-form-container {
@@ -96,22 +107,18 @@ body {
 }
 
 .createbox {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    box-shadow: 2px 3px 8px 10px #a5a5a5;
+    background-color: #F5F7FA;
     padding: 30px;
     position: absolute;
-    top: 100px;
-    left: 350px;
     text-align: center;
-    width: 700px;
-    max-width: 90%;
-    height: 600px;
+    width: 100%;
     margin-bottom: 20px;
+    min-height: 100vh;
 }
 
 .createform {
+    display: flex;
+    justify-content: center;
     text-align: left;
 }
 
@@ -123,14 +130,22 @@ body {
     padding: 5px;
 }
 
+.createform input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
 .createbutton {
     background-color: #5068A9;
     color: #fff;
     border: 1px solid #fff;
     padding: 10px 20px;
     cursor: pointer;
+    width: 100%;
     border-radius: 20px;
-    margin-left: 120px;
 }
 
 .createbutton:hover {

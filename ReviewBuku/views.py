@@ -103,7 +103,7 @@ def show_page_review_user_ajax(request):
         "profile" : profile
     }
     print(response)
-    return render(request, 'page_review.html', response)
+    return render(request, 'page_review_user.html', response)
 
     
    
