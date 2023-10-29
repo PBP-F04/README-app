@@ -17,38 +17,15 @@ stok yang dapat dipinjam habis maka pengguna tidak dapat meminjam buku jenis ter
 Tentunya selain pengguna dapat meminjam buku, mereka juga bisa mengembalikan buku.
 """
 
-def find_book(request):
-    query = request.GET.get('q')  # Get the search query from the request's GET parameters
-
-    if query:
-        # Search for books that match the query in the title or author fields
-        books = Book.objects.filter(Q(title__icontains=query) | Q(author__icontains=query))
-    else:
-        # If no query is provided, display all books
-        books = Book.objects.all()
-
-    return render(request, 'find_book.html', {'books': books, 'query': query})
-
 @login_required
 def track_return_date(request, loan_id):
     loan = get_object_or_404(BookLoan, id=loan_id, user=request.user)
 
     return render(request, 'track_return_date.html', {'loan': loan})
 
-def check_book_stock(request, book_id):
-    try:
-        book = get_object_or_404(Book, id=book_id)
-    except Http404:
-        return render(request, 'book_not_found.html')
-
-    # Determine the stock status based on your model's attributes
-    stock_status = "In Stock" if book.quantity > 0 else "Out of Stock"
-
-    return render(request, 'check_book_stock.html', {'book': book, 'stock_status': stock_status})
-
 @login_required
-def borrow_book(request, book_id):
-    book = get_object_or_404(Book, id=book_id)
+def borrow_book(request):
+    book = get_object_or_404(Book)
 
     if request.method == "POST":
         # Create a book loan record
