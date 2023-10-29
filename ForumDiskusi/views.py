@@ -17,8 +17,6 @@ from django.utils import timezone
 
 @login_required(login_url='/login/')
 def show_book_discussion(request, book_id):
-    # print(BookDiscussion.objects.all())
-    # print(book_id)
     discussions = BookDiscussion.objects.filter(book_id=book_id) # nanti difilter berdasarkan book_id
 
     search_query = request.GET.get('search')  # Get the search query from the request
@@ -68,8 +66,6 @@ def create_discussion(request, book_id):
             discussion.book = book
             discussion.user = Profile.objects.filter(user=request.user).first()
             discussion.save()
-            # print("DISCUSSION CREATED")
-            # print(discussion)
             return redirect('ForumDiskusi:show_book_discussion', book_id=book_id)
     else:
         form = BookDiscussionForm()
@@ -91,14 +87,14 @@ def get_comment_json(request, discussion_id):
 def add_comment_ajax(request, discussion_id):
     if request.method == 'POST':
         discussion = BookDiscussion.objects.filter(id = discussion_id).first()
-        profile = Profile.objects.filter(user=request.user).first()
-        user = profile
+        user = Profile.objects.filter(user=request.user).first()
+        user_name = user.name
         title = request.POST['title']
         content = request.POST['content']
         upvotes = 0
         created_at_iso8601 = datetime.datetime.now().isoformat()
         created_at = created_at_iso8601.replace("T", " ")[:-7]
-        print(created_at)
+        # print(created_at)
 
         comment = DiscussionComment.objects.create(
             user=user,
@@ -109,7 +105,14 @@ def add_comment_ajax(request, discussion_id):
             created_at=created_at,
         )
         comment.save()
-        return HttpResponse(b"CREATED", status=201)
+
+        response_data = {
+            'status': 'CREATED',
+            'user_name': user_name,
+        }
+
+        
+        return HttpResponse(response_data, status=201)
     return HttpResponseNotFound()
 
 
