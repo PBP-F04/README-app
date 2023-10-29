@@ -30,7 +30,7 @@ def show_profile(request):
 def create_profile(request):
     existing_profile = Profile.objects.filter(user=request.user).first()
     if existing_profile:
-        return HttpResponseRedirect(reverse('UserProfile:show_profile'))
+        return HttpResponseRedirect(reverse('KatalogBuku:index'))
 
     if request.method == "POST":
         form = ProfileForm(request.POST)
@@ -38,7 +38,7 @@ def create_profile(request):
             profile = form.save(commit=False)
             profile.user = request.user
             profile.save()
-            return HttpResponseRedirect(reverse('UserProfile:show_profile'))
+            return HttpResponseRedirect(reverse('KatalogBuku:index'))
     else:
         form = ProfileForm()
 
