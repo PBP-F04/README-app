@@ -7,8 +7,9 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 
+
 # Create your views here.
-@login_required(login_url='/login/')
+@login_required(login_url='authentication:login')
 def show_profile(request):
     context = {}
 
@@ -26,7 +27,8 @@ def show_profile(request):
 
     return render(request, "user_profile.html", context)
 
-@login_required(login_url='/login/')
+
+@login_required(login_url='authentication:login')
 def create_profile(request):
     existing_profile = Profile.objects.filter(user=request.user).first()
     if existing_profile:
@@ -45,7 +47,9 @@ def create_profile(request):
     context = {'form': form}
     return render(request, "create_profile.html", context)
 
+
 @csrf_exempt
+@login_required(login_url='authentication:login')
 def edit_profile(request):
     if request.method == 'POST':
         try:
@@ -56,7 +60,6 @@ def edit_profile(request):
         profile_image = request.POST.get("profile_image")
         username = request.POST.get("username")
         name = request.POST.get("name")
-        print(name)
         description = request.POST.get("description")
         profile.profile_image = profile_image
         profile.username = username
@@ -70,6 +73,7 @@ def edit_profile(request):
 
     return HttpResponseNotFound(b"Invalid request method", status=400)
 
+
 def get_categories(request):
-    categories = Category.objects.all().values('id','category_name')
+    categories = Category.objects.all().values('id', 'category_name')
     return JsonResponse(list(categories), safe=False)
