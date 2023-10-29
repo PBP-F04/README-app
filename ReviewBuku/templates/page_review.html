@@ -1,0 +1,84 @@
+{% extends 'base-bootstrap.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Page Review</title>
+{% endblock meta %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #f5f5f5; 
+    }
+
+    .container {
+        background-color: #fff; 
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        color: #007BFF; 
+    }
+
+    ul#review-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="container">
+    <h1>Reviews for {{ book.title }}</h1>
+    <ul id="review-list">
+    </ul>
+</div>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script>
+    $(document).ready(function() {
+        function loadReviews() {
+            $.ajax({
+                url: "{% url 'show_page_review_ajax' book.id %}", 
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    if (data.reviews.length > 0) {
+                        var reviewList = $("#review-list");
+                        reviewList.empty();  
+
+                        data.reviews.forEach(function(review) {
+                            reviewList.append(
+                                '<li>' +
+                                '<strong>User: ' + review.user + '</strong><br>' +
+                                'Rating: ' + review.review_score + '<br>' +
+                                'Review: ' + review.review_content + '<br>' +
+                                'Created at: ' + review.created_at +
+                                '</li>'
+                            );
+                        });
+                    } else {
+                        $("#review-list").html("<li>No reviews available.</li>");
+                    }
+                },
+                error: function() {
+                    $("#review-list").html("<li>Error loading reviews.</li>");
+                }
+            });
+        }
+
+        loadReviews();
+    });
+</script>
+{% endblock content %}

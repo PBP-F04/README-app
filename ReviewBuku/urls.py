@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import show_read_books, review_buku, show_read_books_ajax
+from .views import show_page_review, review_buku, show_page_review_ajax
 
 app_name = 'ReviewBuku'
 
 urlpatterns = [
-    path('', show_read_books, name='show_read_books'),
+    path('', show_page_review, name='show_read_books'),
     path('add-review/<str:book_id>', review_buku, name='review_buku'),
-    path('show-read-books-ajax/', show_read_books_ajax, name='show_read_books_ajax'),
+    path('show-page-review-ajax/<str:book_id>', show_page_review_ajax, name='show_page_review_ajax'),
 ]
