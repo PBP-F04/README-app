@@ -98,7 +98,7 @@
             const data = await response.json();
 
             if (data.status === 200) {
-                window.location.href = "{% url 'KatalogBuku:index' %}";
+                window.location.href = "{% url 'UserProfile:create_profile' %}";
 
             } else {
                 document.getElementById("messages").innerHTML = `
