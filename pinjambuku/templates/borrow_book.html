@@ -1,15 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends "base-bootstrap.html" %}
+
+{% load static %}
+{% block content %}
+
     <title>Borrow Book</title>
-</head>
-<body>
     <h1>{{ book.title }}</h1>
     <p>{{ book.description }}</p>
 
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Borrow</button>
-    </form>
-</body>
-</html>
+    <title>Borrow and Return Book</title>
+
+    <button id="borrowButton">Borrow Book</button>
+    <button id="returnButton">Return Book</button>
+
+    <script>
+        const borrowButton = document.getElementById("borrowButton");
+        const returnButton = document.getElementById("returnButton");
+
+        returnButton.disabled = true;
+
+        let isBookBorrowed = false;
+
+        function updateButtonState() {
+            if (isBookBorrowed) {
+                borrowButton.disabled = true;
+                returnButton.disabled = false;
+            } else {
+                borrowButton.disabled = false;
+                returnButton.disabled = true;
+            }
+        }
+
+        borrowButton.addEventListener("click", function() {
+            isBookBorrowed = true;
+            updateButtonState();
+        });
+
+        returnButton.addEventListener("click", function() {
+            isBookBorrowed = false;
+            updateButtonState();
+        });
+
+        updateButtonState();
+    </script>
+{% endblock content %}
