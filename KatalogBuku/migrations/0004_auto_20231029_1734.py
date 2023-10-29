@@ -13,7 +13,7 @@ def read_books(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('KatalogBuku', '0001_initial'),
+        ('KatalogBuku', '0003_alter_book_author_alter_book_subject_and_more'),
     ]
 
     operations = [
