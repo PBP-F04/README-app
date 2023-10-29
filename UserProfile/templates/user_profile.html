@@ -3,75 +3,64 @@
 {% load static %}
 
 {% block meta %}
-    <title>Profile</title>
+    <title>{{ username }}</title>
 {% endblock meta %}
 
 {% block content %}
     {% include 'header.html' %}
     <body>
-        <h1>Profile</h1>
-        <p>img: {{ profile_image }}</p>
-        <p>username: {{ username }}</p>
-        <p>name: {{ name }}</p>
-        <p>description: {{ description }}</p>
-        <p>favorite category: {{ favorite_category }}</p>
-        <button type="button" id="editButton">Edit Profile</button>
-
-        <div class="col-md-6">
-            <form id="editProfileForm" style="display: none;">
-                {% csrf_token %}
-                <div class="mb-3">
-                    <label for="profile_image" class="col-form-label">Profile Image:</label>
-                    <div class="input-group">
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#imageModal">
-                            Select Image
-                        </button>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="username" class="col-form-label">Username:</label>
-                    <input type="text" class="form-control" id="username" name="username" value="{{ username }}">
-                </div>
-                <div class="mb-3">
-                    <label for="name" class="col-form-label">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ name }}">
-                </div>
-                <div class="mb-3">
-                    <label for="description" class="col-form-label">Description:</label>
-                    <textarea class="form-control" id="description" name="description">{{ description }}</textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="favorite_category" class="col-form-label">Favorite Category:</label>
-                    <select class="form-control" id="favorite_category" name="favorite_category">
-                        <option value="" disabled selected>Choose a category...</option>
-                    </select>
-                </div>
-                <button type="button" id="button_save_profile">Save</button>
-            </form>
-        </div>
-
-        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="imageModalLabel">Insert Image URL</h5>
-                    </div>
-                    <div class="modal-body">
-                        <input type="text" class="form-control" id="insertImageUrl" placeholder="Enter Image URL">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" data-bs-dismiss="modal">Close</button>
-                        <button type="button" id="insertImageBtn" data-bs-dismiss="modal">Insert</button>
-                    </div>
-                </div>
+        <div class="profilebox">
+            <img class="imageprofile" src="{{profile_image}}" alt="{{username}}"/>
+            <div class="name_attributes">
+                <p>{{ username }}</p>
+                <h1>{{ name }}</h1>
+                <p>{{ description }}</p>
+            </div>
+            <div class="descfav_attributes">
+                <p>Favorite Category</p>
+                <h2>{{ favorite_category }}</h2>
             </div>
         </div>
+        <button class="editprofile" type="button" id="editButton">Edit Profile</button>
+
+        <div class="edit-form-container">
+            <div class="col-md-6">
+                <form id="editProfileForm" style="display: none;">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="username" class="col-form-label">Profile Image:</label>
+                        <input type="text" class="form-control" id="profile_image" name="profile_image" value="{{ profile_image }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="col-form-label">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username" value="{{ username }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" value="{{ name }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="col-form-label">Description:</label>
+                        <textarea class="form-control" id="description" name="description">{{ description }}</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="favorite_category" class="col-form-label">Favorite Category:</label>
+                        <select class="form-control" id="favorite_category" name="favorite_category">
+                            <option value="" disabled selected>Choose a category...</option>
+                        </select>
+                    </div>
+                    <button type="button" id="button_save_profile">Save</button>
+                </form>
+            </div>
+        </div>
+    <hr>
+
+    {% include 'footer.html' %}
     </body>
 
     <script>
         const editButton = document.getElementById('editButton');
         const editForm = document.getElementById('editProfileForm');
-        const profileImage = document.getElementById('profile_image');
 
         editButton.addEventListener('click', function () {
             if (editForm.style.display === 'none') {
@@ -84,14 +73,9 @@
             }
         });
 
-        document.getElementById('insertImageBtn').addEventListener('click', function () {
-            const imageUrl = document.getElementById('insertImageUrl').value;
-            profileImage.value = imageUrl;
-        });
-
         document.getElementById('button_save_profile').addEventListener('click', function () {
             const formData = new FormData();
-            formData.append('profile_image', profileImage.value);
+            formData.append('profile_image', document.getElementById('profile_image').value);
             formData.append('username', document.getElementById('username').value);
             formData.append('name', document.getElementById('name').value);
             formData.append('description', document.getElementById('description').value);
@@ -136,7 +120,7 @@
         }
 
         function loadCategories() {
-            fetch('/get-categories/')
+            fetch('{% url "UserProfile:get_categories" %}')
                 .then(response => response.json())
                 .then(data => {
                     const selectCategory = document.getElementById('favorite_category');
@@ -146,6 +130,9 @@
                         const option = document.createElement('option');
                         option.value = category.category_name;
                         option.text = category.category_name;
+                        if(category.category_name === "{{favorite_category}}"){
+                            option.selected = true
+                        }
                         selectCategory.appendChild(option);
                     });
                 })
