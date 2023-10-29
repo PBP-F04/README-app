@@ -10,19 +10,19 @@ console_command = "/code/manage.py shell"
 [build]
 
 [deploy]
-  release_command = "python manage.py migrate"
+release_command = "python manage.py reset_db --noinput&&python manage.py migrate"
 
 [env]
-  PORT = "8000"
+PORT = "8000"
 
 [http_service]
-  internal_port = 8000
-  force_https = true
-  auto_stop_machines = true
-  auto_start_machines = true
-  min_machines_running = 0
-  processes = ["app"]
+internal_port = 8000
+force_https = true
+auto_stop_machines = true
+auto_start_machines = true
+min_machines_running = 0
+processes = ["app"]
 
 [[statics]]
-  guest_path = "/code/static"
-  url_prefix = "/static/"
+guest_path = "/code/static"
+url_prefix = "/static/"
