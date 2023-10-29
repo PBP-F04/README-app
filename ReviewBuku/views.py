@@ -78,4 +78,32 @@ def show_page_review_ajax(request, book_id):
     print(response)
     return render(request, 'page_review.html', response)
 
+@login_required(login_url='/login/')
+@csrf_exempt
+def show_page_review_user_ajax(request):
+    user = request.user
+    profile = Profile.objects.filter(user=user.id).first()
+    book_reviews = BookReview.objects.filter(user=profile).all()
+    review_data = []
 
+
+    for review in book_reviews:
+            review_data.append({
+                'id': str(review.id),
+                'user': review.user.username,
+                'review_score': review.review_score,
+                'review_content': review.review_content,
+                'created_at': review.created_at.strftime('%Y-%m-%d %H:%M:%S'),
+            })
+    
+    if request.method == 'POST':
+        return JsonResponse({'reviews': review_data})
+    
+    response = {
+        "profile" : profile
+    }
+    print(response)
+    return render(request, 'page_review.html', response)
+
+    
+   
