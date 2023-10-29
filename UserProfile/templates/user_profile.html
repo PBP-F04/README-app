@@ -13,12 +13,12 @@
             <img class="imageprofile" src="{{profile_image}}" alt="{{username}}"/>
             <div class="name_attributes">
                 <p>{{ username }}</p>
-                <h1>{{ name }}</h1>
+                <h1 style="margin-top: -15px; margin-bottom: 20px; font-weight: 600;">{{ name }}</h1>
                 <p>{{ description }}</p>
             </div>
             <div class="descfav_attributes">
                 <p>Favorite Category</p>
-                <h2>{{ favorite_category }}</h2>
+                <h2 style="font-weight: 700;">{{ favorite_category }}</h2>
             </div>
         </div>
         <button class="editprofile" type="button" id="editButton">Edit Profile</button>
@@ -28,23 +28,23 @@
                 <form id="editProfileForm" style="display: none;">
                     {% csrf_token %}
                     <div class="mb-3">
-                        <label for="username" class="col-form-label">Profile Image:</label>
+                        <label for="username" class="col-form-label">Profile Image</label>
                         <input type="text" class="form-control" id="profile_image" name="profile_image" value="{{ profile_image }}">
                     </div>
                     <div class="mb-3">
-                        <label for="username" class="col-form-label">Username:</label>
+                        <label for="username" class="col-form-label">Username</label>
                         <input type="text" class="form-control" id="username" name="username" value="{{ username }}">
                     </div>
                     <div class="mb-3">
-                        <label for="name" class="col-form-label">Name:</label>
+                        <label for="name" class="col-form-label">Name</label>
                         <input type="text" class="form-control" id="name" name="name" value="{{ name }}">
                     </div>
                     <div class="mb-3">
-                        <label for="description" class="col-form-label">Description:</label>
+                        <label for="description" class="col-form-label">Description</label>
                         <textarea class="form-control" id="description" name="description">{{ description }}</textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="favorite_category" class="col-form-label">Favorite Category:</label>
+                        <label for="favorite_category" class="col-form-label">Favorite Category</label>
                         <select class="form-control" id="favorite_category" name="favorite_category">
                             <option value="" disabled selected>Choose a category...</option>
                         </select>
@@ -55,8 +55,9 @@
         </div>
     <hr>
 
-    {% include 'footer.html' %}
+    <button class="editprofile" type="button" id="review_button" href="{% url 'ReviewBuku:show_page_review_user_ajax' %}">See my reviews</button>
     </body>
+    {% include 'footer.html' %}
 
     <script>
         const editButton = document.getElementById('editButton');
