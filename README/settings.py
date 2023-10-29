@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'UserProfile',
     'ForumDiskusi',
+    'ReviewBuku',
+    'pinjambuku'
 ]
 
 MIDDLEWARE = [

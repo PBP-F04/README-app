@@ -1,14 +1,17 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
 
 from KatalogBuku.models import Book
+from ReviewBuku.forms import ReviewForm
 from .models import BookReview, UpvotedReview
-from pinjambuku.models import bookloans
+from pinjambuku.models import BookLoan
 
 @login_required(login_url='/login/')
 def show_read_books(request):
     # Get the user's read books (imported from bookloans)
-    read_books = bookloans.objects.filter(user=request.user, returned=True)  # Assuming "returned" is a field that indicates if a book has been returned
+    read_books = BookLoan.objects.filter(user=request.user, returned=True)  
 
     context = {
         'read_books': read_books,
@@ -18,22 +21,45 @@ def show_read_books(request):
 
 @login_required(login_url='/login/')
 def review_buku(request, book_id):
-    # Handle book review submission
+    book = Book.objects.get(id=book_id)
+
     if request.method == 'POST':
-        user = request.user
-        book = Book.objects.get(id=book_id)  # Assuming you pass the book_id when the user wants to review a specific book
-        review_score = float(request.POST.get('review_score'))
-        review_content = request.POST.get('review_content')
+        form = ReviewForm(request.POST)
 
-        # Create a new BookReview instance
-        BookReview.objects.create(user=user, book=book, review_score=review_score, review_content=review_content)
+        if form.is_valid():  
+            book_review = form.save(commit=False)
+            book_review.user = request.user
+            book_review.book = book
+            book_review.save()
 
-        return redirect('show_read_books')  # Redirect to the read books page after submitting the review
+            return redirect('show_read_books')
 
-    # This is a GET request; show the review form
+    else:
+        form = ReviewForm() 
+
     context = {
         'book_id': book_id,
+        'form': form, 
     }
 
     return render(request, 'review_buku.html', context)
+
+
+@csrf_exempt
+def show_read_books_ajax(request):
+    if request.method == 'POST':
+        read_reviews = BookReview.objects.filter(user=request.user)
+
+        reviews_data = []
+        for review in read_reviews:
+            reviews_data.append({
+                'book_title': review.book.title,
+                'review_score': review.review_score,
+                'review_content': review.review_content,
+            })
+
+        return JsonResponse({'reviews': reviews_data})
+    else:
+        return JsonResponse({'error': 'Invalid request method'})
+
 
