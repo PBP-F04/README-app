@@ -3,132 +3,157 @@
 {% load static %}
 
 {% block meta %}
-    <title>Profile</title>>
+    <title>Profile</title>
 {% endblock meta %}
 
 {% block content %}
-<body>
-    <h1>Profile</h1>
-    <p>img: {{ profile_image }}</p>
-    <p>username: {{ username }}</p>
-    <p>name: {{ name }}</p>
-    <p>description: {{ description }}</p>
-    <p>favorite category: {{ favorite_category }}</p>
-    <button type="button" id="editButton">Edit Profile</button>
-    
-    <div class="col-md-6">
-        <form id="editProfileForm" onsubmit="return false" style="display: none;">
-            {% csrf_token %}
-            <div class="mb-3">
-                <label for="profile_image" class="col-form-label">Profile Image:</label>
-                <div class="input-group">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#imageModal">
-                        Select Image
-                    </button>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="username" class="col-form-label">Username:</label>
-                <input type="text" class="form-control" id="username" name="username">
-            </div>
-            <div class="mb-3">
-                <label for="name" class="col-form-label">Name:</label>
-                <input type="text" class="form-control" id="name" name="name">
-            </div>
-            <div class="mb-3">
-                <label for="description" class="col-form-label">Description:</label>
-                <textarea class="form-control" id="description" name="description"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="favorite_category" class="col-form-label">Favorite Category:</label>
-                <input type="text" class="form-control" id="favorite_category" name="favorite_category">
-            </div>
-            <button type="button" id="button_cancel">Cancel</button>
-            <button type="button" id="button_save_profile">Save</button>
-        </form>
-    </div>
+    {% include 'header.html' %}
+    <body>
+        <h1>Profile</h1>
+        <p>img: {{ profile_image }}</p>
+        <p>username: {{ username }}</p>
+        <p>name: {{ name }}</p>
+        <p>description: {{ description }}</p>
+        <p>favorite category: {{ favorite_category }}</p>
+        <button type="button" id="editButton">Edit Profile</button>
 
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Insert Image URL</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="col-md-6">
+            <form id="editProfileForm" style="display: none;">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="profile_image" class="col-form-label">Profile Image:</label>
+                    <div class="input-group">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            Select Image
+                        </button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <input type="text" class="form-control" id="insertImageUrl" placeholder="Enter Image URL">
+                <div class="mb-3">
+                    <label for="username" class="col-form-label">Username:</label>
+                    <input type="text" class="form-control" id="username" name="username" value="{{ username }}">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal">Close</button>
-                    <button type="button" id="insertImageBtn" data-bs-dismiss="modal">Insert</button>
+                <div class="mb-3">
+                    <label for="name" class="col-form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{ name }}">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="col-form-label">Description:</label>
+                    <textarea class="form-control" id="description" name="description">{{ description }}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="favorite_category" class="col-form-label">Favorite Category:</label>
+                    <select class="form-control" id="favorite_category" name="favorite_category">
+                        <option value="" disabled selected>Choose a category...</option>
+                    </select>
+                </div>
+                <button type="button" id="button_save_profile">Save</button>
+            </form>
+        </div>
+
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Insert Image URL</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" id="insertImageUrl" placeholder="Enter Image URL">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="insertImageBtn" data-bs-dismiss="modal">Insert</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-</body>
+    </body>
 
     <script>
-    document.getElementById('editButton').addEventListener('click', function () {
+        const editButton = document.getElementById('editButton');
         const editForm = document.getElementById('editProfileForm');
-        editForm.style.display = (editForm.style.display === 'none') ? 'block' : 'none';
-    });
+        const profileImage = document.getElementById('profile_image');
 
-    document.getElementById('button_cancel').addEventListener('click', function () {
-        document.getElementById('editProfileForm').style.display = 'none';
-    });
-
-    document.getElementById('insertImageBtn').addEventListener('click', function () {
-        const imageUrl = document.getElementById('insertImageUrl').value;
-        document.getElementById('profile_image').value = imageUrl;
-    });
-
-    document.getElementById('button_save_profile').addEventListener('click', function () {
-        // Get the form data
-        const formData = new FormData();
-        formData.append('profile_image', document.getElementById('profile_image').value);
-        formData.append('username', document.getElementById('username').value);
-        formData.append('name', document.getElementById('name').value);
-        formData.append('description', document.getElementById('description').value);
-        formData.append('favorite_category', document.getElementById('favorite_category').value);
-
-        // Send an AJAX request to save the profile
-        fetch('/profile/edit-profile/', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'X-CSRFToken': getCookie('csrftoken') // Include CSRF token in the request header
-            }
-        })
-        .then(response => {
-            if (response.status === 200) {
-                alert('Profile updated successfully');
-            } else if (response.status === 404) {
-                alert('Profile not found');
+        editButton.addEventListener('click', function () {
+            if (editForm.style.display === 'none') {
+                editForm.style.display = 'block';
+                editButton.innerText = 'Cancel';
+                loadCategories();
             } else {
-                alert('Profile update failed');
+                editForm.style.display = 'none';
+                editButton.innerText = 'Edit Profile';
             }
-        })
-        .catch(error => {
-            console.error('An error occurred:', error);
         });
-    });
 
-    // Function to get CSRF token from cookies
-    function getCookie(name) {
-        let cookieValue = null;
-        if (document.cookie && document.cookie !== '') {
-            const cookies = document.cookie.split(';');
-            for (let i = 0; i < cookies.length; i++) {
-                const cookie = cookies[i].trim();
-                if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
+        document.getElementById('insertImageBtn').addEventListener('click', function () {
+            const imageUrl = document.getElementById('insertImageUrl').value;
+            profileImage.value = imageUrl;
+        });
+
+        document.getElementById('button_save_profile').addEventListener('click', function () {
+            const formData = new FormData();
+            formData.append('profile_image', profileImage.value);
+            formData.append('username', document.getElementById('username').value);
+            formData.append('name', document.getElementById('name').value);
+            formData.append('description', document.getElementById('description').value);
+            formData.append('favorite_category', document.getElementById('favorite_category').value);
+
+            fetch('/profile/edit-profile/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': getCookie('csrftoken')
+                }
+            })
+            .then(response => {
+                if (response.status === 200) {
+                    alert('Profile updated successfully');
+                    editForm.style.display = 'block';
+                    editButton.innerText = 'Cancel';
+                } else if (response.status === 404) {
+                    alert('Profile not found');
+                } else {
+                    alert('Profile update failed');
+                }
+            })
+            .catch(error => {
+                console.error('An error occurred:', error);
+            });
+        });
+
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
                 }
             }
+            return cookieValue;
         }
-        return cookieValue;
-    }
-    </script>
 
+        function loadCategories() {
+            fetch('/get-categories/')
+                .then(response => response.json())
+                .then(data => {
+                    const selectCategory = document.getElementById('favorite_category');
+                    selectCategory.innerHTML = "";
+
+                    data.forEach(category => {
+                        const option = document.createElement('option');
+                        option.value = category.category_name;
+                        option.text = category.category_name;
+                        selectCategory.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading categories:', error);
+                });
+        }
+
+        loadCategories();
+    </script>
 {% endblock %}

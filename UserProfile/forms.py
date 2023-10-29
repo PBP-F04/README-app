@@ -5,7 +5,7 @@ from KatalogBuku.models import Category
 
 class ProfileForm(ModelForm):
     favorite_category = ModelChoiceField(queryset=Category.objects.all(), to_field_name="category_name", required=False,
-                                empty_label="null")
+                                empty_label="Choose a category...")
 
     class Meta:
         model = Profile
