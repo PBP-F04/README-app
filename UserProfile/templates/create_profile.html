@@ -7,19 +7,25 @@
 {% endblock meta %}
 
 {% block content %}
-<body>
-    <h1>Create your Profile</h1>
-        <form method="POST">
-            {% csrf_token %}
-            <table>
-                {{ form.as_table }}
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="submit" value="Create Profile"/>
-                    </td>
-                </tr>
-            </table>
-        </form>
-</body>
+    {% include 'header.html' %}
+    <body>
+        <div class="createbox">
+            <h1>Create Profile</h1>
+                <div class="createform">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <table>
+                            {{ form.as_table }}
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input class="createbutton" type="submit" value="Create Profile"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+        </div>
+    </body>
+    {% include 'footer.html' %}
 {% endblock %}
