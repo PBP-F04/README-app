@@ -1,0 +1,94 @@
+{% extends 'base-bootstrap.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Page Review by you</title>
+{% endblock meta %}
+
+{% block content %}
+    {% include 'header.html'%}
+<style>
+    body {
+        background-color: #F5F7FA; 
+    }
+
+    .container {
+        background-color: #fff; 
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        color: #738AB1; 
+    }
+
+    ul#review-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #F5F7FA;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="container">
+    <h1>Reviews by {{ profile.name }}</h1>
+    <ul id="review-list">
+    </ul>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        function loadReviews() {
+            const id = "{{book.id}}"
+            console.log(id)
+            const url = `{% url 'ReviewBuku:show_page_review_user_ajax' book_id="insert_id" %}`.replace("insert_id", id)
+            console.log(url)
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}"
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const reviewList = document.getElementById("review-list");
+                    reviewList.innerHTML = "";
+
+                    if (data.reviews.length > 0) {
+                        data.reviews.forEach(review => {
+                            const reviewItem = document.createElement("li");
+                            reviewItem.innerHTML = `
+                                <strong>User: ${review.user}</strong><br>
+                                Rating: ${review.review_score}<br>
+                                Review: ${review.review_content}<br>
+                                Created at: ${review.created_at}
+                            `;
+                            reviewList.appendChild(reviewItem);
+                        });
+                    } else {
+                        const noReviewsItem = document.createElement("li");
+                        noReviewsItem.textContent = "No reviews available.";
+                        reviewList.appendChild(noReviewsItem);
+                    }
+                })
+                .catch(error => {
+                    const reviewList = document.getElementById("review-list");
+                    reviewList.innerHTML = "<li>Error loading reviews.</li>";
+                });
+        }
+        loadReviews();
+    });
+</script>
+    
+    {% include 'footer.html'%}
+{% endblock content %}
