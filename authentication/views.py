@@ -7,13 +7,10 @@ from django.shortcuts import render
 from .models import User
 from django.urls import reverse
 import json
+from django.views.decorators.csrf import csrf_exempt
 
 
-@login_required(login_url='/login/')
-def show_test(request):
-    return render(request, 'test.html')
-
-
+@csrf_exempt
 def user_login(request):
     if request.method == "POST":
         body = json.loads(request.body)

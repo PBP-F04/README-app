@@ -98,14 +98,13 @@
             const data = await response.json();
 
             if (data.status === 200) {
-                window.location.href = "{% url 'authentication:test' %}";
+                window.location.href = "{% url 'UserProfile:create_profile' %}";
 
             } else {
                 document.getElementById("messages").innerHTML = `
                     <p>${data.message}</p>
                 `;
             }
-            console.log(data);
         }
 
         document.getElementById("login-button").addEventListener("click", login);

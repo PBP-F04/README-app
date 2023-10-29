@@ -3,15 +3,155 @@
 {% load static %}
 
 {% block meta %}
-    <title>Profile</title>>
+    <title>{{ username }}</title>
 {% endblock meta %}
 
 {% block content %}
-<body>
-    {{ profile_img }}
-    {{ username }}
-    {{ name }}
-    {{ description }}
-    {{ favorite_category }}
-</body>
+
+    {% include 'header.html' %}
+    <div class="container-profile">
+        <div class="profilebox">
+            <img class="imageprofile" src="{{ profile_image }}" alt="{{ username }}"/>
+            <div class="name_attributes">
+                <p style="font-size: 18px;">{{ username }}</p>
+                <h1 style="margin-top: -15px; margin-bottom: 20px; font-weight: 600;">{{ name }}</h1>
+                <p>{{ description }}</p>
+            </div>
+            <div class="descfav_attributes">
+                <p style="font-size: 14px;">Favorite Category</p>
+                <h2 style="font-weight: 700;">{{ favorite_category }}</h2>
+            </div>
+        </div>
+        <button class="editprofile" type="button" id="editButton">Edit Profile</button>
+
+        <div class="edit-form-container">
+            <div class="col-md-6">
+                <form id="editProfileForm" style="display: none;">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="username" class="col-form-label">Profile Image</label>
+                        <input type="url" class="form-control" id="profile_image" name="profile_image"
+                               value="{{ profile_image }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="col-form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" value="{{ username }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="col-form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" value="{{ name }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="col-form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description">{{ description }}</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="favorite_category" class="col-form-label">Favorite Category</label>
+                        <select class="form-control" id="favorite_category" name="favorite_category">
+                            <option value="" disabled selected>Choose a category...</option>
+                        </select>
+                    </div>
+                    <button type="button" id="button_save_profile">Save</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+
+        <button class="underbutton">
+            <a href="">My Books</a>
+        </button>
+
+        <button class="underbutton">
+            <a href="{% url 'ReviewBuku:show_page_review_user_ajax' %}">See My Reviews</a>
+        </button>
+    </div>
+
+    {% include 'footer.html' %}
+
+    <script>
+        const editButton = document.getElementById('editButton');
+        const editForm = document.getElementById('editProfileForm');
+
+        editButton.addEventListener('click', function () {
+            if (editForm.style.display === 'none') {
+                editForm.style.display = 'block';
+                editButton.innerText = 'Cancel';
+                loadCategories();
+            } else {
+                editForm.style.display = 'none';
+                editButton.innerText = 'Edit Profile';
+            }
+        });
+
+        document.getElementById('button_save_profile').addEventListener('click', function () {
+            const formData = new FormData();
+            formData.append('profile_image', document.getElementById('profile_image').value);
+            formData.append('username', document.getElementById('username').value);
+            formData.append('name', document.getElementById('name').value);
+            formData.append('description', document.getElementById('description').value);
+            formData.append('favorite_category', document.getElementById('favorite_category').value);
+
+            fetch('/profile/edit-profile/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': getCookie('csrftoken')
+                }
+            })
+                .then(response => {
+                    if (response.status === 200) {
+                        alert('Profile updated successfully');
+                        editForm.style.display = 'block';
+                        editButton.innerText = 'Cancel';
+                        window.location.reload()
+                    } else if (response.status === 404) {
+                        alert('Profile not found');
+                    } else {
+                        alert('Profile update failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('An error occurred:', error);
+                });
+        });
+
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        function loadCategories() {
+            fetch('{% url "UserProfile:get_categories" %}')
+                .then(response => response.json())
+                .then(data => {
+                    const selectCategory = document.getElementById('favorite_category');
+                    selectCategory.innerHTML = "";
+
+                    data.forEach(category => {
+                        const option = document.createElement('option');
+                        option.value = category.id;
+                        option.text = category.category_name;
+                        if (category.category_name === "{{favorite_category}}") {
+                            option.selected = true
+                        }
+                        selectCategory.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading categories:', error);
+                });
+        }
+
+        loadCategories();
+    </script>
 {% endblock %}

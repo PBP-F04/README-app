@@ -1,0 +1,109 @@
+{% extends 'base-tailwind.html' %}
+{% load static %}
+{% block content %}
+    {% include 'header.html' %}
+    <div class="relative py-4 lg:px-10 px-4 w-full">
+        <div class="relative flex flex-col gap-4">
+            <div class="w-[20%]">
+                <button class="px-10 py-2 rounded-[10px] text-[16px] text-white bg-[#5068A9] hover:bg-[#738AB1] transition-all text-center font-Inter mt-4"
+                        id="back-button"
+                >Back
+                </button>
+            </div>
+
+            <div class="relative flex flex-col lg:flex-row gap-8">
+                <div class="relative lg:w-[384px] lg:h-[384px] h-full w-fullbg-[#F5F7FA] rounded-[20px] shadow-md border-2 border-[#A9B7D1] p-[10px]">
+                    <img src="{% static 'images/books/'|add:data.book_code|add:'.webp' %}" alt="{{ data.book_code }}"
+                         style="object-fit: contain;width: 101%;height: 101%"
+                    />
+                </div>
+                <div class="relative flex flex-col w-full gap-4">
+                    <h1 class="font-InterBold text-2xl">{{ data.title }}</h1>
+                    <p class="font-Inter text-gray-400 font-sm">{{ data.subject }}</p>
+                    <p class="font-Inter text-black font-md">{{ data.synopsis }}</p>
+                    <div class="flex flex-col gap-2">
+                        <p class="font-InterBold text-xl">Book Infromation:</p>
+                        <div class="font-Inter text-md p-2 rounded-[10px] border-2 border-[#A9B7D1] w-full gap-2 flex flex-col">
+                            <p>Title : {{ data.title }}</p>
+                            <p>Author : {{ data.author }}</p>
+                            <p>Subject : {{ data.subject }}</p>
+                            <p>Issued Date : {{ data.issued }}</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row lg:gap-4 gap-2">
+                        <button id="like-button"
+                                class="px-2 w-[100px] py-2 rounded-[10px] text-[16px] font-Inter mt-4
+                       {% if data.is_liked %}
+                       text-black bg-gray-300 hover:bg-gray-400
+                       {% else %}
+                       text-white bg-[#5068A9] hover:bg-[#738AB1]
+                       {% endif %}"
+                        >
+                            {% if data.is_liked %}
+                                Unlike : {{ data.like }}
+                            {% else %}
+                                Like : {{ data.like }}
+                            {% endif %}
+                        </button>
+                        <button class="px-10 py-2 rounded-[10px] text-[16px] text-white bg-[#5068A9] hover:bg-[#738AB1] transition-all text-center font-Inter mt-4"
+                                id="read-button"
+                        >Read this book
+                        </button>
+                        <button class="px-10 py-2 rounded-[10px] text-[16px] text-white bg-[#5068A9] hover:bg-[#738AB1] transition-all text-center font-Inter mt-4"
+                                id="review-button"
+                        >Read Review for this Book
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+
+    <script>
+        const backButton = document.getElementById('back-button');
+        backButton.addEventListener('click', () => {
+            window.location.href = "{% url 'KatalogBuku:index' %}"
+        })
+
+        async function handleLike() {
+            const isBookLiked =
+                "{{ data.is_liked }}" === "True";
+            if (!isBookLiked) {
+                const id = "{{ data.id }}";
+                const url = `{% url 'KatalogBuku:like_book' book_id="insert_id" %}`.replace("insert_id", id);
+                const response = await fetch(url, {
+                    method: 'POST',
+                    "X-CSRFToken": "{{ csrf_token }}"
+                })
+                const data = await response.json();
+                if (data.status === 200) {
+                    window.location.reload();
+                }
+            } else {
+                const id = "{{ data.id }}";
+                const url = `{% url 'KatalogBuku:like_book' book_id="insert_id" %}`.replace("insert_id", id);
+                const response = await fetch(url, {
+                    'method': 'DELETE',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                })
+                const data = await response.json();
+                if (data.status === 200) {
+                    window.location.reload();
+                }
+            }
+        }
+
+        async function handleReview() {
+            const id = "{{ data.id }}"
+            window.location.href = `{% url 'ReviewBuku:show_page_review_ajax' book_id="insert_id" %}`.replace("insert_id", id);
+        }
+
+        const likeButton = document.getElementById('like-button');
+        likeButton.addEventListener('click', handleLike);
+
+        const reviewButton = document.getElementById('review-button');
+        reviewButton.addEventListener('click', handleReview);
+    </script>
+{% endblock content %}

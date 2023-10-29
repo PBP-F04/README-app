@@ -6,7 +6,6 @@ import uuid
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -18,10 +17,10 @@ class Migration(migrations.Migration):
             name='Book',
             fields=[
                 ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ('issued', models.CharField(max_length=100)),
                 ('book_code', models.CharField(max_length=100)),
                 ('title', models.CharField(max_length=100)),
                 ('author', models.CharField(max_length=100)),
-                ('cover_image_url', models.URLField()),
                 ('book_read_url', models.URLField()),
                 ('subject', models.CharField(max_length=100)),
                 ('synopsis', models.TextField()),
@@ -44,8 +43,10 @@ class Migration(migrations.Migration):
                 ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
-                ('book', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='book_likes', to='KatalogBuku.book')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='book_likes', to='UserProfile.profile')),
+                ('book', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='book_likes',
+                                           to='KatalogBuku.book')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='book_likes',
+                                           to='UserProfile.profile')),
             ],
         ),
         migrations.AddField(

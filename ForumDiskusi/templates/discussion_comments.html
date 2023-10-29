@@ -1,0 +1,95 @@
+{% extends 'base-bootstrap.html' %}
+
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+
+<h1>Discussion Comments</h1>
+
+<p>test</p>
+<p>{{ discussion.title }}</p>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Comment</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="form" onsubmit="return false;">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="title" class="col-form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" name="title"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="content" class="col-form-label">Content:</label>
+                        <textarea class="form-control" id="content" name="content"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="button_add" data-bs-dismiss="modal">Add Comment</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" id="comment_cards"></div>
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 10px;">Add Comment</button>
+
+
+<script>
+    async function getComments() {
+        return fetch("{% url 'ForumDiskusi:get_comment_json' discussion_id=discussion.id %}").then((res) => res.json());
+    }
+
+    async function refreshComments() {
+        const comments = await getComments();
+
+        const commentCardsContainer = document.getElementById("comment_cards");
+        commentCardsContainer.innerHTML = "";
+
+        comments.forEach((comment) => {
+            const card = document.createElement("div");
+            card.classList.add("col-lg-4", "col-md-6", "mb-4");
+
+            card.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">${comment.fields.title}</h5>
+                <p class="card-text">${comment.fields.content}</p>
+                <p class="card-text">Date Added: ${comment.fields.date_added}</p>
+                <a><button id="edit-${comment.pk}" class="btn btn-primary" type="submit">Edit</button></a>
+                <a><button onclick="deleteComment(${comment.pk})" class="btn btn-danger" type="submit">Delete</button></a>
+                </div>
+            </div>
+            `;
+            commentCardsContainer.appendChild(card);
+        });
+
+    }
+
+    refreshComments();
+
+    function addComment() {
+        fetch("{% url 'ForumDiskusi:add_comment_ajax' discussion_id=discussion.id %}", {
+            method: "POST",
+            body: new FormData(document.querySelector('#form'))
+        }).then(refreshComments);
+
+        document.getElementById("form").reset();
+        return false;
+    }
+
+    document.getElementById("button_add").onclick = addComment;
+</script>
+{% include 'footer.html' %}
+
+{% endblock content %}
+

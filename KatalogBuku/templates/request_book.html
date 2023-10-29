@@ -1,0 +1,42 @@
+{% extends 'base-tailwind.html' %}
+
+{% load static %}
+{% block content %}
+    {% include 'header.html' %}
+    <div class="relative w-full px-4 lg:px-20 py-4">
+        <div class="relative flex flex-col gap-4">
+            <h1 class="text-3xl font-bold text-center ">Requested Book</h1>
+
+            <div class="relative flex flex-col justify-center items-center lg:items-start">
+                <a href="{% url 'KatalogBuku:form_request_book' %}">
+                    <button
+                            class="px-4 py-2 rounded-[10px] text-[16px] text-white bg-[#5068A9] hover:bg-[#738AB1] transition-all text-center font-Inter"
+                    >
+                        Request a Book
+                    </button>
+                </a>
+            </div>
+            <div class="relative flex flex-col w-full gap-4">
+                {% for request in requests %}
+                    <div class="w-full border-2 rounded-[20px] bg-[#F5F7FA] shadow-sm hover:shadow-2xl transition-all flex flex-col p-[10px] gap-2">
+                        <h1 class="font-InterBold text-xl line-clamp-1">{{ request.title }}</h1>
+                        <h1 class="font-Inter text-md line-clamp-1">{{ request.author }}</h1>
+                        <p class="font-Inter text-sm text-gray-400 line-clamp-1">Requested
+                            by {{ request.user__username }}</p>
+                        <p class="font-Inter text-md">Reason:</p>
+                        <div class="relative w-full border-2 rounded-[10px] h-[100px] p-2">
+                            <p class="font-Inter text-md line-clamp-3">{{ request.reason }}</p>
+                        </div>
+                    </div>
+
+
+                {% endfor %}
+
+
+            </div>
+
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+{% endblock content %}

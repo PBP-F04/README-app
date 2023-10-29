@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Track Return Date</title>
+</head>
+<body>
+    <h1>Track Return Date</h1>
+    <p>Borrowed Book Information:</p>
+    <ul>
+        <li><strong>Title:</strong> {{ loan.book.title }}</li>
+        <li><strong>Borrowed Date:</strong> {{ loan.borrow_date }}</li>
+        <li><strong>Due Date:</strong> {{ loan.due_date }}</li>
+        <li><strong>Return Date:</strong> {{ loan.finished_date }}</li>
+    </ul>
+</body>
+</html>

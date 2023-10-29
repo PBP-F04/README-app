@@ -1,7 +1,12 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, ModelChoiceField
 from .models import Profile
+from KatalogBuku.models import Category
+
 
 class ProfileForm(ModelForm):
+    favorite_category = ModelChoiceField(queryset=Category.objects.all(), to_field_name="category_name", required=False,
+                                empty_label="Choose a category...")
+
     class Meta:
         model = Profile
-        fields = ["profile_img", "username", "name", "description", "favorite_category"]
+        fields = ["profile_image", "username", "name", "description", "favorite_category"]
