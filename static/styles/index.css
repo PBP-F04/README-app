@@ -27,6 +27,7 @@ body {
 .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
 
 .profilebox {
     display: flex;
