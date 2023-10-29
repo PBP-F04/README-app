@@ -6,3 +6,4 @@ requests
 urllib3
 django-extensions
 django-browser-reload
+django-environ
