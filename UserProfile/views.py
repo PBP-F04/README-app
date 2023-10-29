@@ -1,7 +1,8 @@
 from django.shortcuts import render
+from KatalogBuku.models import Category
 from .models import Profile
 from .forms import ProfileForm
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
@@ -69,3 +70,7 @@ def edit_profile(request):
         return HttpResponse(b"OK", status=200)
 
     return HttpResponseNotFound(b"Invalid request method", status=400)
+
+def get_categories(request):
+    categories = Category.objects.all().values('category_name')
+    return JsonResponse(list(categories), safe=False)
