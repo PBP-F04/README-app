@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-from django.http import JsonResponse
+from django.http import HttpResponseBadRequest, JsonResponse
+from UserProfile.models import Profile
 
 from KatalogBuku.models import Book
 from ReviewBuku.forms import ReviewForm
@@ -27,17 +29,19 @@ def show_page_review(request, book_id):
 @login_required(login_url='/login/')
 def review_buku(request, book_id):
     book = Book.objects.get(id=book_id)
-
+    user = request.user
     if request.method == 'POST':
         form = ReviewForm(request.POST)
-
+        profile = Profile.objects.filter(user=user.id).first()
         if form.is_valid():  
             book_review = form.save(commit=False)
-            book_review.user = request.user
+            book_review.user = profile
             book_review.book = book
             book_review.save()
 
-            return redirect('show_read_books')
+            return redirect(reverse('ReviewBuku:show_page_review_ajax', args=[book_id]))
+        else:
+            return HttpResponseBadRequest("Invalid form data")
 
     else:
         form = ReviewForm() 
@@ -52,7 +56,6 @@ def review_buku(request, book_id):
 @login_required(login_url='/login/')
 @csrf_exempt
 def show_page_review_ajax(request, book_id):
-    #TODO: method untuk menunjukkan hasil review yang sudah dilakukan per-buku menggunakan ajax
     book = Book.objects.get(id=book_id)
     book_reviews = BookReview.objects.filter(book=book)
 
@@ -66,6 +69,13 @@ def show_page_review_ajax(request, book_id):
             'created_at': review.created_at.strftime('%Y-%m-%d %H:%M:%S'),
         })
 
-    return JsonResponse({'reviews': review_data})
+    if request.method == 'POST':
+        return JsonResponse({'reviews': review_data})
+    
+    response = {
+        "book" : book
+    }
+    print(response)
+    return render(request, 'page_review.html', response)
 
 
