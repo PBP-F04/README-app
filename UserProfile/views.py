@@ -52,13 +52,12 @@ def edit_profile(request):
             profile = Profile.objects.get(user=request.user)
         except Profile.DoesNotExist:
             profile = Profile(user=request.user)
-
+        favorite_category = Category.objects.get(id=request.POST.get('favorite_category'))
         profile_image = request.POST.get("profile_image")
         username = request.POST.get("username")
         name = request.POST.get("name")
+        print(name)
         description = request.POST.get("description")
-        favorite_category = request.POST.get("favorite_category")
-
         profile.profile_image = profile_image
         profile.username = username
         profile.name = name
@@ -72,5 +71,5 @@ def edit_profile(request):
     return HttpResponseNotFound(b"Invalid request method", status=400)
 
 def get_categories(request):
-    categories = Category.objects.all().values('category_name')
+    categories = Category.objects.all().values('id','category_name')
     return JsonResponse(list(categories), safe=False)

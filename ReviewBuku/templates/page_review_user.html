@@ -49,9 +49,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         function loadReviews() {
-            const id = "{{book.id}}"
-            console.log(id)
-            const url = `{% url 'ReviewBuku:show_page_review_user_ajax' book_id="insert_id" %}`.replace("insert_id", id)
+            const url = `{% url 'ReviewBuku:show_page_review_user_ajax' %}`
             console.log(url)
             fetch(url, {
                 method: "POST",

@@ -12,12 +12,12 @@
         <div class="profilebox">
             <img class="imageprofile" src="{{profile_image}}" alt="{{username}}"/>
             <div class="name_attributes">
-                <p>{{ username }}</p>
+                <p style="font-size: 18px;">{{ username }}</p>
                 <h1 style="margin-top: -15px; margin-bottom: 20px; font-weight: 600;">{{ name }}</h1>
                 <p>{{ description }}</p>
             </div>
             <div class="descfav_attributes">
-                <p>Favorite Category</p>
+                <p style="font-size: 14px;">Favorite Category</p>
                 <h2 style="font-weight: 700;">{{ favorite_category }}</h2>
             </div>
         </div>
@@ -29,7 +29,7 @@
                     {% csrf_token %}
                     <div class="mb-3">
                         <label for="username" class="col-form-label">Profile Image</label>
-                        <input type="text" class="form-control" id="profile_image" name="profile_image" value="{{ profile_image }}">
+                        <input type="url" class="form-control" id="profile_image" name="profile_image" value="{{ profile_image }}">
                     </div>
                     <div class="mb-3">
                         <label for="username" class="col-form-label">Username</label>
@@ -55,7 +55,9 @@
         </div>
     <hr>
 
-    <button class="editprofile" type="button" id="review_button" href="{% url 'ReviewBuku:show_page_review_user_ajax' %}">See my reviews</button>
+    <button class="editprofile">
+        <a href="{% url 'ReviewBuku:show_page_review_user_ajax' %}">See My Reviews</a>
+    </button>
     </body>
     {% include 'footer.html' %}
 
@@ -94,6 +96,7 @@
                     alert('Profile updated successfully');
                     editForm.style.display = 'block';
                     editButton.innerText = 'Cancel';
+                    window.location.reload()
                 } else if (response.status === 404) {
                     alert('Profile not found');
                 } else {
@@ -129,7 +132,7 @@
 
                     data.forEach(category => {
                         const option = document.createElement('option');
-                        option.value = category.category_name;
+                        option.value = category.id;
                         option.text = category.category_name;
                         if(category.category_name === "{{favorite_category}}"){
                             option.selected = true
