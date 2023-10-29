@@ -1,0 +1,62 @@
+<div
+        id="filterModal"
+        tabindex="-1"
+        aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+>
+    <div class="relative w-full max-w-2xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow">
+            <div class="flex justify-between p-4 border-b rounded-t">
+                <h3 class="text-xl font-InterBold text-black text-center">
+                    Filter
+                </h3>
+                <button
+                        type="button"
+                        class="text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center hover:bg-gray-600 hover:text-white"
+                        data-modal-hide="filterModal"
+                >
+                    <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 14"
+                    >
+                        <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+
+            <div class="p-6 flex flex-col w-full justify-center">
+                <h1 class="text-left font-InterBold text-md">Category</h1>
+                <div class="relative grid grid-flow-row grid-cols-1 md:grid-cols-4 lg:grid-cols-3 md:gap-8 gap-6 mt-4"
+                     id="categories-container">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center p-6 space-x-2">
+                <button
+                        data-modal-hide="filterModal"
+                        id="reset-filter-button"
+                        class="p-2 rounded-[10px] text-[16px] text-white bg-[#D9534F] hover:bg-red-400 transition-all text-center font-Inter mt-4"
+                >
+                    Reset Filter
+                </button>
+                <button
+                        data-modal-hide="filterModal"
+                        type="button"
+                        id="apply-filter-button"
+                        class="p-2 rounded-[10px] text-[16px] text-white bg-[#5068A9] hover:bg-[#738AB1] transition-all text-center font-Inter mt-4"
+                >
+                    Apply Filter
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

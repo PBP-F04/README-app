@@ -4,7 +4,7 @@
 {% block content %}
     {% include 'header.html' %}
     <div class="relative py-4 px-10 lg:px-24 w-full overflow-hidden">
-        <div class="relative flex flex-col">
+        <div class="relative flex flex-col gap-4">
             <div class="w-full">
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -25,51 +25,65 @@
                 </div>
             </div>
 
+            <div class="relative font-Inter lg:flex-row flex-col-reverse gap-2 flex">
+                <label for="sort-by"></label>
+                <button type="submit"
+                        id="filter-button"
+                        data-modal-target="filterModal"
+                        data-modal-toggle="filterModal"
+                        class="p-2.5 lg:px-12 rounded-[10px] text-[16px] text-white bg-[#5068A9] hover:bg-[#738AB1] transition-all text-center font-Inter">
+                    Filter
+                </button>
+                <select id="sort-by"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm font-Inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+                    <option selected value="Default">Sort by</option>
+                    <option value="title">Title</option>
+                    <option value="author">Author</option>
+                    <option value="category">Category</option>
+                    <option value="issued">Release Date</option>
+                </select>
+                <label for="order-by"></label>
+                <select id="order-by"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm font-Inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+                    >
+                    <option selected value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+            </div>
         </div>
 
         <div class="relative grid grid-flow-row grid-cols-1 md:grid-cols-4 lg:grid-cols-5 md:gap-8 gap-6 mt-4"
              id="book-list">
         </div>
 
-        <div class="flex justify-center mt-8">
-            <div class="flex rounded-md mt-4">
+        <div class="relative flex justify-center mt-8 ">
+            <div class="flex flex-row rounded-md mt-4">
                 <p
                         id='prev-page'
-                        class="py-2 px-4 leading-tight bg-white border-2 border-gray-400 text-gray-800 border-r-0 ml-0 rounded-l hover:bg-gray-300 cursor-pointer">
+                        class="p-2 leading-tight bg-white border-2 border-gray-400 text-gray-800 border-r-0 ml-0 rounded-l hover:bg-gray-300 cursor-pointer">
                 </p>
                 <div>
                     <input
                             id='current-page'
                             type="text"
-                            class=" py-2 px-4 leading-tight bg-white border-2 border-gray-400 text-gray-800 border-r-0
+                            class="p-2 leading-tight bg-white border-2 border-gray-400 text-gray-800 border-r-0
                    hover:bg-gray-300 text-center"/>
                 </div>
 
                 <p id='next-page'
-                   class="py-2 px-4 leading-tight bg-white border-2 border-gray-400 text-gray-800 rounded-r
+                   class="p-2 leading-tight bg-white border-2 border-gray-400 text-gray-800 rounded-r
                 hover:bg-gray-300 cursor-pointer">
                 </p>
             </div>
         </div>
     </div>
 
-
-    {% if user.is_authenticated %}
-        <script>
-            const loginButton = document.getElementById("login-button");
-            const aLoginButton = document.getElementById("a-login-button");
-            aLoginButton.href = "{% url 'authentication:logout' %}";
-            loginButton.innerHTML = "Logout";
-            const loginButtonMobile = document.getElementById("login-button-mobile");
-            const aLoginButtonMobile = document.getElementById("a-login-button-mobile");
-            aLoginButtonMobile.href = "{% url 'authentication:logout' %}";
-            loginButtonMobile.innerHTML = "Logout";
-        </script>
-    {% endif %}
+    {% include 'filter-modal.html' %}
+    {% include 'footer.html' %}
 
     <script>
-        async function getBook(page = 1, search = "") {
-            const url = "{% url 'KatalogBuku:get_books' %}?page=" + page + "&&search=" + search
+        async function getBook(page = 1, search = "", sort = "", order = "", categories = "") {
+            const url = "{% url 'KatalogBuku:get_books' %}?page=" + page + "&&search=" + search + "&&sort=" + sort + "&&order=" + order + "&&category=" + categories
 
             const response = await fetch(url, {
                 method: "GET",
@@ -82,8 +96,8 @@
             return data
         }
 
-        async function refreshBook(page = 1, search = "") {
-            const book_fetch = await getBook(page, search)
+        async function refreshBook(page = 1, search = "", sort = "", order = "", categories = "") {
+            const book_fetch = await getBook(page, search, sort, order, categories)
             const books = book_fetch.data
             await pagination(book_fetch.pagination)
             const bookList = document.getElementById("book-list")
@@ -92,7 +106,7 @@
                 const src = "{% static 'images/books/' %}" + book.book_code + ".webp"
                 bookHTML += `
                      <div class="flex flex-col border-2 shadow-sm hover:shadow-2xl transition-all rounded-[12px] bg-[#F5F7FA]">
-                        <div class="w-full h-[250px] overflow-hidden rounded-t-[10px]">
+                        <div class="w-full h-[300px] overflow-hidden rounded-t-[10px]">
                             <img
                                     src="${src}"
                                     alt="book"
@@ -204,6 +218,98 @@
             }
         }
 
+        async function handleSort() {
+            isFetching = false;
+            const sortBy = document.getElementById("sort-by").value
+            const orderBy = document.getElementById("order-by").value
+            const searchValue = document.getElementById("search-book").value
+            if (sortBy === "Default" && orderBy === "asc" && !isFetching) {
+                isFetching = true;
+                await refreshBook(1, searchValue)
+                isFetching = false;
+                return
+            }
+            if (!isFetching) {
+                isFetching = true;
+                await refreshBook(1, searchValue, sortBy, orderBy)
+                isFetching = false;
+            }
+        }
+
+        async function fetchCategories() {
+            const response = await fetch("{% url 'KatalogBuku:get_categories' %}",
+                {
+                    method: 'GET',
+                    "X-CSRFToken": "{{ csrf_token }}"
+                }
+            )
+            const data = await response.json()
+            return data.data
+        }
+
+        async function refreshCategories() {
+            const categories = await fetchCategories()
+            const categoryContainer = document.getElementById("categories-container")
+            categoryContainer.innerHTML = ""
+            let categoryHTML = ""
+            for (const category of categories) {
+                categoryHTML +=
+                    `<div class="flex flex-row gap-2 items-center">
+                        <input id="category-checkbox-${category.id}" type="checkbox" value="${category.category_name}" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="category-checkbox-${category.id}" class="text-sm font-Inter">${category.category_name}</label>
+                    </div>`
+            }
+            categoryContainer.innerHTML = categoryHTML
+        }
+
+
+        async function handleFilter(categories) {
+            isFetching = false;
+            const searchValue = document.getElementById("search-book").value
+            const sortBy = document.getElementById("sort-by").value
+            const orderBy = document.getElementById("order-by").value
+            const categoryContainer = document.getElementById("categories-container")
+            const categoryCheckbox = categoryContainer.querySelectorAll("input[type=checkbox]")
+            let categoryValue = []
+            for (const checkbox of categoryCheckbox) {
+                if (checkbox.checked) {
+                    categoryValue.push(checkbox.value)
+                }
+            }
+            if (orderBy === "asc" && sortBy === "Default" && !isFetching && categoryValue.length === 0) {
+                isFetching = true;
+                await refreshBook(1, searchValue)
+                isFetching = false;
+                return
+            }
+
+            if (!isFetching) {
+                isFetching = true;
+                const query = categoryValue.join(";")
+                await refreshBook(1, searchValue, sortBy, orderBy, query)
+                isFetching = false;
+            }
+        }
+
+        async function resetFilter() {
+            const categoryContainer = document.getElementById("categories-container")
+            const categoryCheckbox = categoryContainer.querySelectorAll("input[type=checkbox]")
+            for (const checkbox of categoryCheckbox) {
+                checkbox.checked = false
+            }
+            await handleFilter()
+        }
+
+        const filterButton = document.getElementById("apply-filter-button")
+        filterButton.addEventListener("click", handleFilter)
+
+        const resetFilterButton = document.getElementById("reset-filter-button")
+        resetFilterButton.addEventListener("click", resetFilter)
+
+        const sortBy = document.getElementById("sort-by")
+        sortBy.addEventListener("change", handleSort)
+        const orderBy = document.getElementById("order-by")
+        orderBy.addEventListener("change", handleSort)
         const searchButton = document.getElementById("search-button")
         searchButton.addEventListener("click", handleSearch)
         const searchBook = document.getElementById("search-book")
@@ -213,5 +319,6 @@
             }
         })
         refreshBook()
+        refreshCategories()
     </script>
 {% endblock content %}
