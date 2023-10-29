@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block meta %}
-    <title>Profile</title>
+    <title>{{ username }}</title>
 {% endblock meta %}
 
 {% block content %}
@@ -136,7 +136,7 @@
         }
 
         function loadCategories() {
-            fetch('/get-categories/')
+            fetch('{% url "UserProfile:get_categories" %}')
                 .then(response => response.json())
                 .then(data => {
                     const selectCategory = document.getElementById('favorite_category');
