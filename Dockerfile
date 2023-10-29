@@ -23,7 +23,7 @@ RUN set -ex && \
 COPY . /code
 
 ENV SECRET_KEY "zUPAZa4ars3Ln8r9dFALjeEnyxIeHlUr6wS6XiHfeJi0U7JThg"
-ENV DJANGO_SETTINGS_MODULE=kelolaToko.settings
+ENV DJANGO_SETTINGS_MODULE=README.settings
 ENV PRODUCTION=TRUE
 ENV DATABASE_URL=$DATABASE_URL
 RUN python manage.py collectstatic --noinput
