@@ -26,4 +26,5 @@ urlpatterns = [
     path('profile/', include('UserProfile.urls')),
     path('review/', include('ReviewBuku.urls')),
     path('', include('ForumDiskusi.urls')),
+    path('loan-book/', include('pinjambuku.urls'))
 ]
