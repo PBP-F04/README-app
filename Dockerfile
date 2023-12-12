@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=3.11-slim-bullseye
+ARG PYTHON_VERSION=3.11-alpine
 
 FROM python:${PYTHON_VERSION}
 
@@ -30,7 +30,7 @@ ENV SECRET_KEY=$SECRET_KEY
 ENV DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
 ENV PRODUCTION=$PRODUCTION
 
-
+WORKDIR /code
 RUN python manage.py collectstatic --noinput
 RUN python manage.py migrate
 
