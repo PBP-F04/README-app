@@ -142,4 +142,4 @@ bun.lockb
 yar.lock
 package-lock.json
 node_modules
-```
+staticfiles

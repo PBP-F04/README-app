@@ -34,6 +34,6 @@ WORKDIR /code
 RUN python manage.py collectstatic --noinput
 RUN python manage.py migrate
 
-EXPOSE 8000
+EXPOSE 3000
 
-CMD ["gunicorn", "--bind", ":8000", "README.wsgi"]
+CMD ["gunicorn", "--bind", ":3000", "README.wsgi"]
