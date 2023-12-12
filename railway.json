@@ -26,6 +26,6 @@
     }
   },
   "start": {
-    "cmd": "python manage.py migrate && gunicorn README.wsgi"
+    "cmd": "python manage.py migrate && gunicorn README.wsgi && echo 'Server started' && sleep infinity"
   }
 }
