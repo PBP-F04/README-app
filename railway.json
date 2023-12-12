@@ -1,11 +1,27 @@
 {
-  "$schema": "https://railway.app/railway.schema.json",
-  "build": {
-    "builder": "NIXPACKS"
+  "providers": [],
+  "buildImage": "ghcr.io/railwayapp/nixpacks:ubuntu-1699920194",
+  "variables": {
+    "NIXPACKS_METADATA": "python,django,postgres",
+    "PYTHONUNBUFFERED": "1"
   },
-  "deploy": {
-    "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn mysite.wsgi",
-    "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10
+  "phases": {
+    "install": {
+      "dependsOn": ["setup"],
+      "cmds": [
+        "python -m venv --copies /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt"
+      ],
+      "cacheDirectories": ["/root/.cache/pip"],
+      "paths": ["/opt/venv/bin"]
+    },
+    "setup": {
+      "nixPkgs": ["python311", "postgresql", "gcc"],
+      "nixLibs": ["zlib", "stdenv.cc.cc.lib"],
+      "nixOverlays": [],
+      "nixpkgsArchive": "5148520bfab61f99fd25fb9ff7bfbb50dad3c9db"
+    }
+  },
+  "start": {
+    "cmd": "python manage.py migrate && gunicorn README.wsgi"
   }
 }

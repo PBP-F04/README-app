@@ -1,9 +1,11 @@
 django
 gunicorn
 whitenoise
-psycopg2-binary
+psycopg2
 requests
 urllib3
 django-extensions
 django-browser-reload
 django-environ
+sqlparse
+asgiref

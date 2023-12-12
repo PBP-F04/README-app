@@ -143,3 +143,4 @@ yar.lock
 package-lock.json
 node_modules
 staticfiles
+package.json
