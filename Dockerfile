@@ -6,11 +6,11 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # install psycopg2 dependencies.
-RUN apt-get update && apt-get install -y \
-    libpq-dev \
+RUN apk update && apk add \
+    postgresql-dev \
     gcc \
-    && rm -rf /var/lib/apt/lists/*
-
+    musl-dev
+    
 RUN mkdir -p /code
 
 COPY requirements.txt /tmp/requirements.txt
