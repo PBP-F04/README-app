@@ -13,8 +13,6 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir -p /code
 
-WORKDIR /code
-
 COPY requirements.txt /tmp/requirements.txt
 RUN set -ex && \
     pip install --upgrade pip && \
@@ -22,12 +20,20 @@ RUN set -ex && \
     rm -rf /root/.cache/
 COPY . /code
 
-ENV SECRET_KEY "szMPqPQUADxZ9Z73V7fsiHfwWwlKcT8OX8xApWklGVRpWnfqK7"
-ENV DJANGO_SETTINGS_MODULE=README.settings
-ENV PRODUCTION=TRUE
+ARG DATABASE_URL
+ARG SECRET_KEY
+ARG DJANGO_SETTINGS_MODULE
+ARG PRODUCTION
+
 ENV DATABASE_URL=$DATABASE_URL
+ENV SECRET_KEY=$SECRET_KEY
+ENV DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+ENV PRODUCTION=$PRODUCTION
+
+
 RUN python manage.py collectstatic --noinput
+RUN python manage.py migrate
 
 EXPOSE 8000
 
-CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "README.wsgi"]
+CMD ["gunicorn", "--bind", ":8000", "README.wsgi"]
