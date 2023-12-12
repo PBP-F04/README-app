@@ -19,13 +19,9 @@
       "nixLibs": ["zlib", "stdenv.cc.cc.lib"],
       "nixOverlays": [],
       "nixpkgsArchive": "5148520bfab61f99fd25fb9ff7bfbb50dad3c9db"
-    },
-    "build": {
-      "dependsOn": ["install"],
-      "cmds": ["python manage.py collectstatic --noinput"]
     }
   },
-  "start": {
-    "cmd": "python manage.py migrate && gunicorn README.wsgi && echo 'Server started' && sleep infinity"
+  "deploy": {
+    "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn mysite.wsgi"
   }
 }
