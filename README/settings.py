@@ -27,7 +27,7 @@ PRODUCTION = env("PRODUCTION", default=False)
 SECRET_KEY = env("SECRET_KEY", default="django")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env("DEBUG", default=False)
 
 ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = ["https://readme-app-production.up.railway.app/"]
