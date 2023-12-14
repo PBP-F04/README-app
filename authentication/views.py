@@ -1,6 +1,5 @@
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.shortcuts import render
@@ -20,16 +19,11 @@ def user_login(request):
         if user is not None:
             login(request, user)
             response = {"status": 200, "message": "Login success"}
-            return HttpResponse(
-                json.dumps(response), content_type="application/json", status=200
-            )
+            return JsonResponse(response, status=200)
         else:
-            return HttpResponse(
-                json.dumps({"status": 400, "message": "Incorrect Email and Password"}),
-                content_type="application/json",
-                status=400,
+            return JsonResponse(
+                {"status": 400, "message": "Incorrect Email and Password"}, status=400
             )
-
     return render(request, "index.html")
 
 
@@ -49,9 +43,7 @@ def user_register(request):
                 "message": "Email is not valid",
                 "errorCode": 402,
             }
-            return HttpResponse(
-                json.dumps(response), content_type="application/json", status=400
-            )
+            return JsonResponse(response, status=400)
 
         if len(email) == 0 or len(password) == 0 or len(confirm_password) == 0:
             response = {
@@ -59,9 +51,7 @@ def user_register(request):
                 "message": "Username, Password and Confirm Password cannot be empty",
                 "errorCode": 400,
             }
-            return HttpResponse(
-                json.dumps(response), content_type="application/json", status=400
-            )
+            return JsonResponse(response, status=400)
 
         if len(password) < 8:
             response = {
@@ -69,9 +59,7 @@ def user_register(request):
                 "message": "Password must be at least 8 characters",
                 "errorCode": 400,
             }
-            return HttpResponse(
-                json.dumps(response), content_type="application/json", status=400
-            )
+            return JsonResponse(response, status=400)
 
         if password != confirm_password:
             response = {
@@ -79,9 +67,7 @@ def user_register(request):
                 "message": "Password and Confirm Password not match",
                 "errorCode": 400,
             }
-            return HttpResponse(
-                json.dumps(response), content_type="application/json", status=400
-            )
+            return JsonResponse(response, status=400)
 
         if User.objects.filter(username=email).exists():
             response = {
@@ -89,16 +75,12 @@ def user_register(request):
                 "message": "Email already exists",
                 "errorCode": 401,
             }
-            return HttpResponse(
-                json.dumps(response), content_type="application/json", status=400
-            )
+            return JsonResponse(response, status=400)
 
         user = User.objects.create_user(username=email, password=password)
         user.save()
         response = {"status": 200, "message": "Register success"}
-        return HttpResponse(
-            json.dumps(response), content_type="application/json", status=200
-        )
+        return JsonResponse(response, status=200)
 
     return render(request, "register.html")
 
@@ -106,3 +88,9 @@ def user_register(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse("authentication:login"))
+
+
+@csrf_exempt
+def cookie_logout(request):
+    logout(request)
+    return JsonResponse({"status": 200, "message": "Logout success"}, status=200)
