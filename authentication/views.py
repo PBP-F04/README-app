@@ -18,7 +18,11 @@ def user_login(request):
         user = authenticate(request, username=email, password=password)
         if user is not None:
             login(request, user)
-            response = {"status": 200, "message": "Login success"}
+            response = {
+                "status": 200,
+                "message": "Login success",
+                "userame": request.user.username,
+            }
             return JsonResponse(response, status=200)
         else:
             return JsonResponse(
