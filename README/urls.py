@@ -19,12 +19,16 @@ from django.urls import path
 from django.urls import include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('authentication.urls')),
-    path('', include('KatalogBuku.urls')),
+    path("admin/", admin.site.urls),
+    path("", include("authentication.urls")),
+    path("", include("KatalogBuku.urls")),
     path("__reload__/", include("django_browser_reload.urls")),  # new
     path('profile/', include('UserProfile.urls')),
     path('review/', include('ReviewBuku.urls')),
     path('', include('ForumDiskusi.urls')),
     path('', include('pinjambuku.urls')),
+    path("profile/", include("UserProfile.urls")),
+    path("review/", include("ReviewBuku.urls")),
+    path("", include("ForumDiskusi.urls")),
+    path("read-book/", include("pinjambuku.urls")),
 ]
