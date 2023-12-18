@@ -2,9 +2,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from .models import User
 from django.urls import reverse
+from django.views.decorators.http import require_http_methods
 import json
 from django.views.decorators.csrf import csrf_exempt
 
@@ -98,3 +100,41 @@ def user_logout(request):
 def cookie_logout(request):
     logout(request)
     return JsonResponse({"status": 200, "message": "Logout success"}, status=200)
+
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def check_login(request):
+    if request.method == "GET":
+        if request.user.is_authenticated:
+            user = request.user
+            response = {
+                "status": 200,
+                "message": "User is logged in",
+                "user": user.username,
+            }
+
+            return JsonResponse(response)
+        else:
+            return JsonResponse(
+                {"status": 400, "message": "User is not logged in"}, status=400
+            )
+
+
+def login_required_json(view_func):
+    def _wrapped_view(request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return view_func(request, *args, **kwargs)
+        else:
+            return JsonResponse({"status": 401, "message": "Unauthorized"}, status=401)
+
+    return _wrapped_view
+
+
+@login_required_json
+@csrf_exempt
+@require_http_methods(["GET"])
+def check_auth(request):
+    if request.method == "GET":
+        response = {"status": 200, "message": "User is logged in"}
+        return JsonResponse(response)
