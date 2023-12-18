@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends "base-bootstrap.html" %}
+
+{% load static %}
+{% block content %}
     <title>Return Book</title>
-</head>
-<body>
     <h1>Return Book</h1>
     <p>Borrowed Book Information:</p>
     <ul>
@@ -16,5 +15,4 @@
         {% csrf_token %}
         <button type="submit">Return Book</button>
     </form>
-</body>
-</html>
+{% endblock content %}

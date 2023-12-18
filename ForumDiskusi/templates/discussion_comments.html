@@ -46,7 +46,7 @@
 </div>
 
 <div class="container">
-    <div class="row" class="d-flex flex-wrap" id="comment_cards"></div>
+    <div class="card-deck w-full" id="comment_cards"></div>
 </div>
 
 
@@ -70,9 +70,10 @@
             card.innerHTML = `
             <div class="card">
                 <div class="card-body">
+                <p class="card-text">by: ${comment.fields.name}</p>
                 <h5 class="card-title">${comment.fields.title}</h5>
                 <p class="card-text">${comment.fields.content}</p>
-                <p class="card-text">Date Added: <span class="formatted-date">${comment.fields.created_at}</span></p>
+                <p class="card-text">Date: <span class="formatted-date">${comment.fields.created_at}</span></p>
              
                 </div>
             </div>
