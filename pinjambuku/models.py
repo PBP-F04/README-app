@@ -1,13 +1,23 @@
+import uuid
 from django.db import models
-from UserProfile.models import User  # Import the User model, or your custom UserProfile model if you have one.
-from KatalogBuku.models import Book  # Import the Book model from your app, adjust the import as needed.
 
-app_name = 'pinjambuku'
+app_name = "pinjambuku"
+
 
 class BookLoan(models.Model):
-    id = models.UUIDField(primary_key=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)  
-    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    class status(models.TextChoices):
+        BORROWED = "BORROWED"
+        RETURNED = "RETURNED"
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        "UserProfile.Profile", on_delete=models.CASCADE, related_name="book_loans"
+    )
+    book = models.ForeignKey(
+        "KatalogBuku.Book", on_delete=models.CASCADE, related_name="book_loands"
+    )
     borrow_date = models.DateTimeField()
-    due_date = models.DateTimeField()
-    finished_date = models.DateTimeField(blank=True, null=True)
+    done_date = models.DateTimeField(null=True, blank=True)
+    status = models.CharField(
+        max_length=100, choices=status.choices, default=status.BORROWED
+    )

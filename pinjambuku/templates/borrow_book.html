@@ -3,12 +3,22 @@
 {% load static %}
 {% block content %}
 
-    <title>Borrow Book</title>
-    <h1>{{ book.title }}</h1>
-    <p>{{ book.description }}</p>
-
     <title>Borrow and Return Book</title>
-
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+    
+        {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
+    
+        {% for buku in book %}
+            <tr>
+                <td>{{buku.title}}</td>
+                <td>{{buku.author}}</td>
+            </tr>
+        {% endfor %}
+    </table>
     <button id="borrowButton">Borrow Book</button>
     <button id="returnButton">Return Book</button>
 
