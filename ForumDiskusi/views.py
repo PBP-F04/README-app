@@ -1,5 +1,6 @@
 import datetime
-from django.http import HttpResponse, HttpResponseNotFound
+import json
+from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 
@@ -114,5 +115,67 @@ def add_comment_ajax(request, discussion_id):
         
         return HttpResponse(response_data, status=201)
     return HttpResponseNotFound()
+
+
+def show_json_discussions(request):
+    data = BookDiscussion.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+# def show_json_discussions(request, book_id):
+#     data = BookDiscussion.objects.filter(book_id = book_id)
+#     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_json_comments(request, discussion_id):
+    data = DiscussionComment.objects.filter(discussion_id = discussion_id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+@csrf_exempt
+def create_discussion_flutter(request, book_id):
+    if request.method == 'POST':
+        
+        data = json.loads(request.body)
+
+        # new_product = Item.objects.create(
+        #     user = request.user,
+        #     name = data["name"],
+        #     amount = int(data["amount"]),
+        #     price = int(data["price"]),
+        #     description = data["description"]
+        # )
+
+        new_discussion = BookDiscussion.objects.create(
+            user = Profile.objects.filter(user=request.user).first(),
+            book = Book.objects.filter(id=book_id).first(),
+            title = data["title"],
+            content = data["content"],
+            upvotes = 0,
+            created_at = timezone.now(),
+        )
+
+        new_discussion.save()
+
+        return JsonResponse({"status": "success"}, status=200)
+    else:
+        return JsonResponse({"status": "error"}, status=401)
+    
+def create_comment_flutter(request, discussion_id):
+    if request.method == 'POST':
+        
+        data = json.loads(request.body)
+
+        new_comment = DiscussionComment.objects.create(
+            user = Profile.objects.filter(user=request.user).first(),
+            discussion = BookDiscussion.objects.filter(id=discussion_id).first(),
+            title = data["title"],
+            content = data["content"],
+            upvotes = 0,
+            created_at = timezone.now(),
+        )
+
+        new_comment.save()
+
+        return JsonResponse({"status": "success"}, status=200)
+    else:
+        return JsonResponse({"status": "error"}, status=401)
 
 

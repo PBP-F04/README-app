@@ -70,6 +70,7 @@
             card.innerHTML = `
             <div class="card">
                 <div class="card-body">
+                <p class="card-text">by: ${comment.fields.name}</p>
                 <h5 class="card-title">${comment.fields.title}</h5>
                 <p class="card-text">${comment.fields.content}</p>
                 <p class="card-text">Date: <span class="formatted-date">${comment.fields.created_at}</span></p>
