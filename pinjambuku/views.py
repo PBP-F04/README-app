@@ -1,47 +1,114 @@
+import json
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.views.decorators.http import require_http_methods
 from .models import BookLoan
 from KatalogBuku.models import Book
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
-from django.http import Http404
-from django.db.models import Q
-#TODO: ajax, bootstrap
+from UserProfile.models import Profile
+from datetime import datetime
+from django.views.decorators.csrf import csrf_exempt
 
-# Create your views here.
-"""
-Modul Pinjam Buku adalah fitur yang memungkinkan pengguna untuk mencari dan meminjam buku dari perpustakaan digital atau fisik. 
-Pengguna dapat mencari buku berdasarkan judul, penulis, atau kategori, lalu meminjam buku tersebut untuk dibaca. 
-Modul ini juga dapat melacak tenggat waktu pengembalian buku dan memberi pengguna akses ke buku yang telah mereka pinjam. 
-Selain itu, modul pinjam buku juga mempertimbangkan stok buku yang dapat dipinjam sehingga 
-stok yang dapat dipinjam habis maka pengguna tidak dapat meminjam buku jenis tersebut. 
-Tentunya selain pengguna dapat meminjam buku, mereka juga bisa mengembalikan buku.
-"""
 
 @login_required
-def track_return_date(request, loan_id):
-    loan = get_object_or_404(BookLoan, id=loan_id, user=request.user)
-
-    return render(request, 'track_return_date.html', {'loan': loan})
-
-@login_required
-def borrow_book(request):
-    book = get_object_or_404(Book)
-
+@csrf_exempt
+@require_http_methods(["POST", "GET", "PATCH"])
+def read_book(request):
     if request.method == "POST":
-        # Create a book loan record
-        loan = BookLoan(user=request.user, book=book, borrow_date=timezone.now(), due_date=timezone.now() + timezone.timedelta(days=14))
+        user = request.user
+        json_data = json.loads(request.body)
+        book_id = json_data["book_id"]
+        if book_id is None:
+            return JsonResponse(
+                {"status": 400, "message": "Book ID is empty"}, status=400
+            )
+        print(user.id)
+        profile = Profile.objects.filter(user=user.id).first()
+        if profile is None:
+            return JsonResponse(
+                {"status": 400, "message": "Profile not found"}, status=400
+            )
+        book = Book.objects.filter(id=book_id).first()
+        if book is None:
+            return JsonResponse(
+                {"status": 400, "message": "Book not found"}, status=400
+            )
+
+        loan = BookLoan.objects.filter(user=profile, book=book).first()
+        if loan is not None:
+            return JsonResponse(
+                {"status": 400, "message": "Book already borrowed"}, status=400
+            )
+
+        BookLoan.objects.create(user=profile, book=book, borrow_date=datetime.now())
+
+        return JsonResponse(
+            {"status": 200, "message": "success borrow book"}, status=200
+        )
+    elif request.method == "GET":
+        user = request.user
+        profile = Profile.objects.filter(user=user.id).first()
+        if profile is None:
+            return JsonResponse(
+                {"status": 400, "message": "Profile not found"}, status=400
+            )
+        loans = (
+            BookLoan.objects.filter(user=profile)
+            .select_related("book")
+            .values(
+                "id",
+                "book_id",
+                "book__title",
+                "book__book_code",
+                "book__author",
+                "borrow_date",
+                "done_date",
+                "status",
+            )
+        )
+        data = []
+        for loan in loans:
+            print(loan)
+            data.append(
+                {
+                    "loan_id": loan["id"],
+                    "book_id": loan["book_id"],
+                    "book_title": loan["book__title"],
+                    "book_code": loan["book__book_code"],
+                    "book_author": loan["book__author"],
+                    "borrow_date": loan["borrow_date"],
+                    "done_date": loan["done_date"],
+                    "status": loan["status"],
+                }
+            )
+        return JsonResponse(
+            {"status": 200, "message": "success", "data": data}, status=200
+        )
+    elif request.method == "PATCH":
+        user = request.user
+        json_data = json.loads(request.body)
+        loan_id = json_data["loan_id"]
+        if loan_id is None:
+            return JsonResponse(
+                {"status": 400, "message": "loan ID is empty"}, status=400
+            )
+        profile = Profile.objects.filter(user=user.id).first()
+        if profile is None:
+            return JsonResponse(
+                {"status": 400, "message": "Profile not found"}, status=400
+            )
+        loan = BookLoan.objects.filter(user=profile.id, id=loan_id).first()
+        if loan is None:
+            return JsonResponse(
+                {"status": 400, "message": "Loan not found"}, status=400
+            )
+
+        if loan.status == "RETURNED":
+            return JsonResponse(
+                {"status": 400, "message": "Book already returned"}, status=400
+            )
+        loan.done_date = datetime.now()
+        loan.status = "RETURNED"
         loan.save()
-        return redirect('my_borrowed_books')
-
-    return render(request, 'borrow_book.html', {'book': book})
-
-@login_required
-def return_book(request, loan_id):
-    loan = get_object_or_404(BookLoan, id=loan_id, user=request.user)
-
-    if request.method == "POST":
-        loan.finished_date = timezone.now()
-        loan.save()
-        return redirect('my_borrowed_books')
-
-    return render(request, 'return_book.html', {'loan': loan})
+        return JsonResponse({"status": 200, "message": "success"}, status=200)
