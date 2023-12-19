@@ -119,13 +119,13 @@ def add_comment_ajax(request, discussion_id):
     return HttpResponseNotFound()
 
 
-def show_json_discussions(request):
-    data = BookDiscussion.objects.all()
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
-
-# def show_json_discussions(request, book_id):
-#     data = BookDiscussion.objects.filter(book_id = book_id)
+# def show_json_discussions(request):
+#     data = BookDiscussion.objects.all()
 #     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_json_discussions(request, book_id):
+    data = BookDiscussion.objects.filter(book_id = book_id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def show_json_comments(request, discussion_id):
     data = DiscussionComment.objects.filter(discussion_id = discussion_id)
@@ -182,5 +182,6 @@ def create_comment_flutter(request, discussion_id):
         return JsonResponse({"status": "success"}, status=200)
     else:
         return JsonResponse({"status": "error"}, status=401)
+    
 
 
