@@ -1,3 +1,4 @@
+from profile import Profile
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.core.validators import validate_email
@@ -20,12 +21,19 @@ def user_login(request):
         user = authenticate(request, username=email, password=password)
         if user is not None:
             login(request, user)
-            response = {
-                "status": 200,
-                "message": "Login success",
-                "userame": request.user.username,
-            }
-            return JsonResponse(response, status=200)
+            existing_profile = Profile.objects.filter(user=User.objects.get(username=email)).first()
+            if existing_profile:
+                return JsonResponse({
+                    'status': 200,
+                    'message': 'Login sukses',
+                    'exist': True
+                }, status=200)
+            
+            return JsonResponse({
+                    'status': 200,
+                    'message': 'Login sukses',
+                    'exist': False
+                }, status=200)
         else:
             return JsonResponse(
                 {"status": 400, "message": "Incorrect Email and Password"}, status=400
