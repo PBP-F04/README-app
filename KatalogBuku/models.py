@@ -8,14 +8,17 @@ class Book(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     issued = models.CharField(max_length=100)
     book_code = models.CharField(max_length=100)
-    title = models.CharField(max_length=100)
-    author = models.CharField(max_length=100)
+    title = models.CharField(max_length=400)
+    author = models.CharField(max_length=400)
     book_read_url = models.URLField()
-    subject = models.CharField(max_length=100)
+    subject = models.CharField(max_length=400)
     synopsis = models.TextField()
     category = models.ManyToManyField('Category', related_name='books')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.title}'
 
 
 class Category(models.Model):
