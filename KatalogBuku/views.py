@@ -12,6 +12,7 @@ from UserProfile.models import Profile
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Q
 from .forms import RequestedBookForm
+from authentication.views import login_required_json
 
 
 @require_http_methods(["GET"])
@@ -108,6 +109,51 @@ def get_categories(request):
 
 
 @require_http_methods(["GET"])
+@login_required_json
+def get_book_by_id_json(request, book_id):
+    try:
+        user = request.user
+        profile = Profile.objects.filter(user=user.id).first()
+        if profile is None:
+            return JsonResponse({"status": 400, "message": "Bad Request"}, status=400)
+        book = (
+            Book.objects.filter(id=book_id)
+            .values(
+                "id",
+                "issued",
+                "book_code",
+                "title",
+                "author",
+                "book_read_url",
+                "subject",
+                "synopsis",
+                "category__category_name",
+            )
+            .first()
+        )
+        if book is None:
+            return JsonResponse(
+                {"status": 404, "message": "Book not found"}, status=404
+            )
+        book["id"] = str(book["id"])
+        book["category"] = book["category__category_name"]
+        issued = book["issued"].split("-")
+        issued = datetime.date(int(issued[0]), int(issued[1]), int(issued[2]))
+        book["issued"] = issued.strftime("%d %B %Y")
+        del book["category__category_name"]
+        return JsonResponse(
+            {"status": 200, "message": "success", "data": book}, status=200
+        )
+
+    except ValidationError as e:
+        response = {
+            "status": 400,
+            "message": "Bad Request",
+        }
+        return JsonResponse(response, status=400)
+
+
+@require_http_methods(["GET"])
 @login_required(login_url="authentication:login")
 def get_book_by_id(request, book_id):
     try:
@@ -153,60 +199,6 @@ def get_book_by_id(request, book_id):
         book["like"] = book_like
         response = {"status": 200, "message": "success", "data": book}
         return render(request, "detail-book.html", response)
-    except ValidationError as e:
-        response = {
-            "status": 400,
-            "message": "Bad Request",
-        }
-        return HttpResponseRedirect(reverse("KatalogBuku:index"))
-
-
-@require_http_methods(["GET"])
-@login_required(login_url="authentication:login")
-def get_book_by_id_json(request, book_id):
-    try:
-        user = request.user
-        profile = Profile.objects.filter(user=user.id).first()
-        if profile is None:
-            return HttpResponseRedirect(reverse("UserProfile:create_profile"))
-        book = (
-            Book.objects.filter(id=book_id)
-            .values(
-                "id",
-                "issued",
-                "book_code",
-                "title",
-                "author",
-                "book_read_url",
-                "subject",
-                "synopsis",
-                "category__category_name",
-            )
-            .first()
-        )
-        if book is None:
-            response = {
-                "status": 404,
-                "message": "Book not found",
-            }
-            return HttpResponseRedirect(reverse("KatalogBuku:index"))
-        book_like = BookLike.objects.filter(book=book["id"], user=profile).first()
-        if book_like is None:
-            book["is_liked"] = False
-        else:
-            book["is_liked"] = True
-
-        book["id"] = str(book["id"])
-        book["category"] = book["category__category_name"]
-        issued = book["issued"].split("-")
-        issued = datetime.date(int(issued[0]), int(issued[1]), int(issued[2]))
-        book["issued"] = issued.strftime("%d %B %Y")
-        del book["category__category_name"]
-
-        book_like = BookLike.objects.filter(book=book["id"]).count()
-        book["like"] = book_like
-        response = {"status": 200, "message": "success", "data": book}
-        return JsonResponse(response, status=200)
     except ValidationError as e:
         response = {
             "status": 400,
