@@ -10,9 +10,9 @@ from django.http import (
     JsonResponse,
 )
 from django.urls import reverse
+from django.forms.models import model_to_dict
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
-from django.core import serializers
 
 
 # Create your views here.
@@ -88,12 +88,19 @@ def get_categories(request):
     return JsonResponse(list(categories), safe=False)
 
 
-def show_profile_flutter(request, email):
-    profile = Profile.objects.filter(user_id=User.objects.get(username=email).id)
+def show_profile_flutter(request):
+    profile = Profile.objects.get(user=request.user)
+    if profile is None:
+        return JsonResponse({"status": "error"}, status=400)
+    profile_dict = model_to_dict(profile)
 
-    return HttpResponse(
-        serializers.serialize("json", profile), content_type="application/json"
-    )
+    response = {
+        "model": "Profile",
+        "pk": profile.id,
+        "fields": profile_dict,
+    }
+
+    return JsonResponse(response, status=200)
 
 
 @csrf_exempt
