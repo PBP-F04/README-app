@@ -17,7 +17,5 @@ class BookLoan(models.Model):
         "KatalogBuku.Book", on_delete=models.CASCADE, related_name="book_loands"
     )
     borrow_date = models.DateTimeField()
-    done_date = models.DateTimeField(null=True, blank=True)
-    status = models.CharField(
-        max_length=100, choices=status.choices, default=status.BORROWED
-    )
+    due_date = models.DateTimeField()
+    finished_date = models.DateTimeField(blank=True, null=True)
