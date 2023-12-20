@@ -157,5 +157,6 @@ def check_auth(request):
         profile = Profile.objects.filter(user=request.user).first()
         if profile is None:
             response = {"status": 200, "message": "User is logged in", "exist": False}
+            return JsonResponse(response)
         response = {"status": 200, "message": "User is logged in", "exist": True}
         return JsonResponse(response)
