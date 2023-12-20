@@ -154,5 +154,8 @@ def login_required_json(view_func):
 @require_http_methods(["GET"])
 def check_auth(request):
     if request.method == "GET":
-        response = {"status": 200, "message": "User is logged in"}
+        profile = Profile.objects.filter(user=request.user).first()
+        if profile is None:
+            response = {"status": 200, "message": "User is logged in", "exist": False}
+        response = {"status": 200, "message": "User is logged in", "exist": True}
         return JsonResponse(response)
