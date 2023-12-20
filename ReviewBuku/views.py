@@ -85,6 +85,15 @@ def get_reviews_json(request):
     all_reviews = BookReview.objects.all()
     return HttpResponse(serializers.serialize("json", all_reviews))
 
+def get_reviews_user_json(request, user_id):
+    user = Profile.objects.get(id=user_id)
+    all_reviews = BookReview.objects.filter(user=user_id)
+    return HttpResponse(serializers.serialize('json', all_reviews))
+
+def get_reviews_book_json(request, book_id):
+    book = Book.objects.get(id=book_id)
+    all_reviews = BookReview.objects.filter(book=book)
+    return HttpResponse(serializers.serialize('json', all_reviews))
 
 # @login_required(login_url="authentication:login")
 @csrf_exempt
