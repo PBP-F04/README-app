@@ -123,7 +123,6 @@ def create_profile_flutter(request):
 @csrf_exempt
 def edit_profile_flutter(request):
     if request.method == "POST":
-        email = request.headers.get("X-Custom-Email")
         profile_image = request.POST.get("profile_image")
         username = request.POST.get("username")
         name = request.POST.get("name")
@@ -131,7 +130,7 @@ def edit_profile_flutter(request):
         favorite_category_name = request.POST.get("favorite_category")
 
         try:
-            profile = Profile.objects.get(user__username=email)
+            profile = Profile.objects.get(user=request.user)
             category = Category.objects.get(category_name=favorite_category_name)
 
             profile.profile_image = profile_image
