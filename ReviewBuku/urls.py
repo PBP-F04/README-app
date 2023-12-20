@@ -1,11 +1,5 @@
 from django.urls import path
-from .views import (
-    show_page_review,
-    review_buku,
-    show_page_review_ajax,
-    show_page_review_user_ajax,
-    get_reviews_json,
-)
+from .views import *
 
 app_name = "ReviewBuku"
 
@@ -23,4 +17,9 @@ urlpatterns = [
         name="show_page_review_user_ajax",
     ),
     path("get-reviews-json/", get_reviews_json, name="get_reviews_json"),
+    path(
+        "review-buku-flutter/<str:book_id>/",
+        review_buku_flutter,
+        name="review_buku_flutter",
+    ),
 ]
