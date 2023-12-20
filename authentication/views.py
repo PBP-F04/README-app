@@ -9,6 +9,7 @@ from django.urls import reverse
 from django.views.decorators.http import require_http_methods
 import json
 from django.views.decorators.csrf import csrf_exempt
+from UserProfile.models import Profile
 
 
 @csrf_exempt
@@ -20,12 +21,29 @@ def user_login(request):
         user = authenticate(request, username=email, password=password)
         if user is not None:
             login(request, user)
-            response = {
-                "status": 200,
-                "message": "Login success",
-                "userame": request.user.username,
-            }
-            return JsonResponse(response, status=200)
+            existing_profile = Profile.objects.filter(
+                user=User.objects.get(username=email)
+            ).first()
+            if existing_profile:
+                return JsonResponse(
+                    {
+                        "status": 200,
+                        "exist": True,
+                        "message": "Login success",
+                        "userame": request.user.username,
+                    },
+                    status=200,
+                )
+
+            return JsonResponse(
+                {
+                    "status": 200,
+                    "exist": False,
+                    "message": "Login success",
+                    "userame": request.user.username,
+                },
+                status=200,
+            )
         else:
             return JsonResponse(
                 {"status": 400, "message": "Incorrect Email and Password"}, status=400
@@ -136,5 +154,9 @@ def login_required_json(view_func):
 @require_http_methods(["GET"])
 def check_auth(request):
     if request.method == "GET":
-        response = {"status": 200, "message": "User is logged in"}
+        profile = Profile.objects.filter(user=request.user).first()
+        if profile is None:
+            response = {"status": 200, "message": "User is logged in", "exist": False}
+            return JsonResponse(response)
+        response = {"status": 200, "message": "User is logged in", "exist": True}
         return JsonResponse(response)

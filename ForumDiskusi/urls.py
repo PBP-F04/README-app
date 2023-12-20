@@ -13,8 +13,8 @@ urlpatterns = [
     path('discussios/get-comment/<str:discussion_id>', get_comment_json, name='get_comment_json'),
     path('discussions/create-ajax/<str:discussion_id>', add_comment_ajax, name='add_comment_ajax'),
 
-    # path('discussions/json-discussions/<str:book_id>', show_json_discussions, name='show_json_discussions'),
-    path('discussions/json-discussions/', show_json_discussions, name='show_json_discussions'),
+    path('discussions/json-discussions/<str:book_id>', show_json_discussions, name='show_json_discussions'),
+    # path('discussions/json-discussions/', show_json_discussions, name='show_json_discussions'),
 
     path('discussions/json-comments/<str:discussion_id>', show_json_comments, name='show_json_comments'), #filter
     # path('discussions/json-comments/', show_json_comments, name='show_json_comments'),

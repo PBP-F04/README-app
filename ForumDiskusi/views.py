@@ -89,16 +89,18 @@ def add_comment_ajax(request, discussion_id):
     if request.method == 'POST':
         discussion = BookDiscussion.objects.filter(id = discussion_id).first()
         user = Profile.objects.filter(user=request.user).first()
-        user_name = user.name
+        user_name = user.username
         title = request.POST['title']
         content = request.POST['content']
         upvotes = 0
         created_at_iso8601 = datetime.datetime.now().isoformat()
-        created_at = created_at_iso8601.replace("T", " ")[:-7]
+        created_at = created_at_iso8601.replace("T", " ")[:-10]
         # print(created_at)
+        
 
         comment = DiscussionComment.objects.create(
             user=user,
+            username= user_name,
             discussion = discussion,
             title=title,
             content=content,
@@ -109,7 +111,7 @@ def add_comment_ajax(request, discussion_id):
 
         response_data = {
             'status': 'CREATED',
-            'user_name': user_name,
+            # 'user_name': user_name,
         }
 
         
@@ -117,13 +119,13 @@ def add_comment_ajax(request, discussion_id):
     return HttpResponseNotFound()
 
 
-def show_json_discussions(request):
-    data = BookDiscussion.objects.all()
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
-
-# def show_json_discussions(request, book_id):
-#     data = BookDiscussion.objects.filter(book_id = book_id)
+# def show_json_discussions(request):
+#     data = BookDiscussion.objects.all()
 #     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_json_discussions(request, book_id):
+    data = BookDiscussion.objects.filter(book_id = book_id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def show_json_comments(request, discussion_id):
     data = DiscussionComment.objects.filter(discussion_id = discussion_id)
@@ -146,6 +148,7 @@ def create_discussion_flutter(request, book_id):
         new_discussion = BookDiscussion.objects.create(
             user = Profile.objects.filter(user=request.user).first(),
             book = Book.objects.filter(id=book_id).first(),
+            username = Profile.objects.filter(user=request.user).first().username,
             title = data["title"],
             content = data["content"],
             upvotes = 0,
@@ -157,7 +160,8 @@ def create_discussion_flutter(request, book_id):
         return JsonResponse({"status": "success"}, status=200)
     else:
         return JsonResponse({"status": "error"}, status=401)
-    
+
+@csrf_exempt  
 def create_comment_flutter(request, discussion_id):
     if request.method == 'POST':
         
@@ -166,6 +170,7 @@ def create_comment_flutter(request, discussion_id):
         new_comment = DiscussionComment.objects.create(
             user = Profile.objects.filter(user=request.user).first(),
             discussion = BookDiscussion.objects.filter(id=discussion_id).first(),
+            username = Profile.objects.filter(user=request.user).first().username,
             title = data["title"],
             content = data["content"],
             upvotes = 0,
@@ -177,5 +182,6 @@ def create_comment_flutter(request, discussion_id):
         return JsonResponse({"status": "success"}, status=200)
     else:
         return JsonResponse({"status": "error"}, status=401)
+    
 
 
