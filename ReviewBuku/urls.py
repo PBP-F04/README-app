@@ -12,7 +12,7 @@ urlpatterns = [
         name="show_page_review_ajax",
     ),
     path(
-        "show_page_review_userajax/",
+        "show-page-review-user-ajax/",
         show_page_review_user_ajax,
         name="show_page_review_user_ajax",
     ),
