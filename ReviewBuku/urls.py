@@ -12,13 +12,13 @@ urlpatterns = [
         name="show_page_review_ajax",
     ),
     path(
-        "show_page_review_user_ajax/",
+        "show_page_review_userajax/",
         show_page_review_user_ajax,
         name="show_page_review_user_ajax",
     ),
     path("get-reviews-json/", get_reviews_json, name="get_reviews_json"),
     path(
-        "review-buku-flutter/<str:book_id>/",
+        "review-buku-flutter/",
         review_buku_flutter,
         name="review_buku_flutter",
     ),

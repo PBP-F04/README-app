@@ -62,20 +62,22 @@ def review_buku(request, book_id):
 
 @login_required(login_url="authentication:login")
 @csrf_exempt
-def review_buku_flutter(request, book_id):
+def review_buku_flutter(request):
     if request.method == "POST":
         data = json.loads(request.body)
+        review = data["review"]
+        score = data["score"]
 
-        new_review = BookReview.objects.create(
-            user=Profile.objects.filter(user=request.user).first(),
-            book=Book.objects.filter(id=book_id).first(),
-            username=Profile.objects.filter(user=request.user).first().username,
-            review=data["review"],
-            score=data["score"],
+        book_id = data["book_id"]
+
+        book = Book.objects.get(id=book_id)
+        user = request.user
+        profile = Profile.objects.filter(user=user.id).first()
+
+        book_review = BookReview.objects.create(
+            user=profile, book=book, review_content=review, review_score=score
         )
-
-        new_review.save()
-
+        book_review.save()
         return JsonResponse({"status": True}, status=200)
     else:
         return JsonResponse({"status": False}, status=401)
